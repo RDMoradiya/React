@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- logical Operators :- -->
+    <!-- &&  (logical and)
+        ||  (logical or)
+        !   (logical not) -->
+    <script>
+      let x = 25;
+      let y = 20;
+      let h = "<hr>";
+      //   &&  (logical and)
+      document.write("logical and");
+      document.write("<br>");
+      document.write(x > y && x != y); // true  (if both of them is right than true)
+      document.write("<br>");
+      document.write(x > y && x == y); // false  (if any one of them is wrong than false)
+      document.write("<br>");
+      document.write(h);
+      // ||  (logical or)
+      document.write("logical or");
+      document.write("<br>");
+      document.write(x > y || x == y); // true  (if both of them is right than true)
+      document.write("<br>");
+      document.write(x > y && x != y); // true  (if any one of them is wrong than true)
+      document.write("<br>");
+      document.write(x < y && x != y); // false  (if any both of them is wrong than false)
+      document.write("<br>");
+      document.write(h);
+      // !   (logical not)
+      document.write("logical not");
+      document.write("<br>");
+      document.write(!x > y); //false (if condition is right than false)
+      document.write("<br>");
+      document.write(!x < y); //true (if condition is wrong than true)
+    </script>
+  </body>
+</html>

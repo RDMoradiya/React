@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Email validation(innerHTML)</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <form action="" onsubmit="return emailvalidation()">
+      Email :-
+      <input type="text" id="email" />
+      <span id="eml" style="color: red; font-size: 10px"></span>
+      <br /><br />
+
+      <input type="submit" />
+    </form>
+
+    <!-- Javascript -->
+
+    <script>
+      //  Using innerHTML
+
+      function emailvalidation() {
+        let emailid = document.getElementById("email");
+        if (emailid.value == "" || emailid.value == null) {
+          document.getElementById("eml").innerHTML = "*Enter Mail Id*";
+          return false;
+        } else if (
+          /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(emailid.value)
+        ) {
+          return true;
+        } else {
+          document.getElementById("eml").innerHTML = "*Invalid Email ID*";
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>

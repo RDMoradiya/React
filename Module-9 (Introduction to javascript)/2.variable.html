@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Variable</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- what is variable? :- 
+    variable is a container to store a data. -->
+
+    <!-- right words :- Mydiv, mydiv, myDiv, my_div, my-div, mydiv1 wrong words :- my div, 1mydiv -->
+
+    <!-- 4 Ways to Declare a JavaScript Variable:
+    1) var
+    2) let
+    3) const -->
+
+    <!-- "var" used from 1995 -->
+    <!-- "let" and "const" introduced from 2015 -->
+    <!-- keywords variable_name assign(=) value -->
+
+    <!-- 1. var -->
+
+    <!-- ex :- 
+            var x=1
+            var x=2
+            var accept both the value -->
+    <!-- using "var" keyword you can "redeclare" and "reassign" the value. -->
+
+    <h1>JavaScript Variables [var] :-</h1>
+    <p>
+      var x = 5 <br />
+      In this example, <br />
+      var = keyword <br />
+      x = variable. <br />
+      "=" assignment <br />
+      "5" = value
+    </p>
+    <hr />
+    <p id="demo"></p>
+    <script>
+      var x = 5;
+      var y = 6;
+      var z = x + y;
+      document.getElementById("demo").innerHTML = "The value of z is: " + z;
+    </script>
+    <hr />
+
+    <!-- 2.let -->
+
+    <!-- ex :-
+            let x=hello
+            let x=world
+            let not accept both the value 
+        if let x=hello
+               x= world
+               than let accept the both value-->
+    <!-- using "let" keywords you can "reassign" the value "but not" "redeclared" -->
+
+    <h1>JavaScript Variables [let] :-</h1>
+    <p id="demo1"></p>
+    <script>
+      let a = "hello world";
+      document.write(a + "<br>");
+      a = "mini";
+      document.write(a);
+    </script>
+    <hr />
+
+    <!-- 3.const -->
+    <!-- const -> constant -> fix value -->
+    <!-- using const keyword you can "not reassign" or "not redeclare" the data -->
+    <h1>JavaScript Variables [const] :-</h1>
+    <p id="demo2"></p>
+
+    <script>
+      const price1 = 5;
+      const price2 = 6;
+      let total = price1 + price2;
+      document.getElementById("demo2").innerHTML = "The total is: " + total;
+    </script>
+  </body>
+</html>
