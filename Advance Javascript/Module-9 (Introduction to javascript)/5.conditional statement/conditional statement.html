@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional statement</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- Conditional Statements -->
+    <!-- In JavaScript we have the following conditional statements:
+        "if" -- specify a block of code to be executed, if a specified condition is true
+        "else" -- specify a block of code to be executed, if the same condition is false
+        "else if" -- specify a new condition to test, if the first condition is false
+        "switch" -- specify many alternative blocks of code to be executed -->
+
+    <!-- there is two type of conditional statement in javascript
+    1) if..statement
+        a) if...else statement
+        b) if... else if ... else statement
+    2) switch statement 
+    -->
+
+    <!-- if..statement -->
+
+    <script>
+      let x = 25;
+      let y = 33;
+      if (x < y) {
+        document.write("true");
+      }
+    </script>
+    <hr />
+    <!-- if...else statement -->
+    <script>
+      let a = 33;
+      let b = 47;
+      if (a > b) {
+        document.write("true");
+      } else {
+        document.write("false");
+      }
+    </script>
+    <hr />
+    <!-- if... else if ... else statement -->
+    <script>
+      let age = 115;
+      if (age >= 12 && age <= 19) {
+        document.write("tenager");
+      } else if (age < 12 && age > 0) {
+        document.write("child");
+      } else if (age > 19 && age <= 100) {
+        document.write("adult");
+      } else {
+        document.write("enter valid age");
+      }
+    </script>
+    <hr />
+    <!-- conditional Ternary operator -->
+    <script>
+      let c = 25;
+      let j = 57;
+      c > j ? document.write("true") : document.write("false");
+    </script>
+    <br />
+    <script>
+      let i = 15;
+      let o;
+      i > 10 ? (o = "true") : (o = "false");
+      document.write(o);
+    </script>
+    <hr />
+    <!-- switch statement -->
+    <script>
+      let day = 3;
+
+      if (day <= 6 && day > 0) {
+        switch (day) {
+          case 1:
+            document.write("today is monday");
+            break;
+
+          case 2:
+            document.write("today is tuesday");
+            break;
+
+          case 3:
+            document.write("today is wednesday");
+            break;
+          case 4:
+            document.write("today is thursday");
+            break;
+          case 5:
+            document.write("today is friday");
+            break;
+          case 6:
+            document.write("today is saturday");
+            break;
+          case 7:
+            document.write("today is sunday");
+            break;
+          default:
+            document.write("enter valid week day");
+            break;
+        }
+      } else {
+        document.write("lol");
+      }
+    </script>
+  </body>
+</html>

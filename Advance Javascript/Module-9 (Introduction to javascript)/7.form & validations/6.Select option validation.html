@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Select option validation</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <form action="" onsubmit="return selectvalidation()">
+      City :-
+      <select name="" id="city">
+        <option value="-1">--Select--</option>
+        <option value="">Surat</option>
+        <option value="">Vadodara</option>
+        <option value="">Mumbai</option>
+      </select>
+      <span id="slct1" style="color: red; font-size: 10px"></span>
+      <br /><br />
+
+      Eduction :-
+      <select name="" id="study">
+        <option value="-1">--select--</option>
+        <option value="">S.S.C</option>
+        <option value="">H.S.C</option>
+        <option value="">Graduation</option>
+        <option value="">Post Graduation</option>
+      </select>
+      <span id="edu1" style="color: red; font-size: 10px; visibility: hidden">
+        *Select Education*</span
+      >
+      <br /><br />
+      <input type="submit" />
+    </form>
+
+    <!-- Javascript -->
+
+    <script>
+      //  Using getElementById
+
+      function selectvalidation() {
+        let city = document.getElementById("city");
+        if (city.value == -1) {
+          document.getElementById("slct1").innerHTML = "*Select City*";
+          return false;
+        } else {
+          document.getElementById("slct1").innerHTML = "";
+        }
+
+        //  Using visibility
+
+        let studi = document.getElementById("study");
+        if (studi.value == -1) {
+          document.getElementById("edu1").style.visibility = "visible";
+          return false;
+        } else {
+          document.getElementById("slct1").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
