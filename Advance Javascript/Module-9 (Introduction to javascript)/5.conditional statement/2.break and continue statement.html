@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Break and Conitnue</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- Conitnue -->
+    <!-- The continue statement "jumps over" one iteration in the loop. -->
+    <h1>The continue statement "jumps over" one iteration in the loop.</h1>
+    <script>
+      for (let x = 5; x <= 10; x++) {
+        if (x == 8) {
+          document.write("if sttmnt :" + x + "<br>");
+          continue; //if not use continue 7 number print two times
+        }
+        document.write("number :" + x + "<br>");
+      }
+    </script>
+
+    <hr />
+    <!-- Break -->
+    <!-- The break statement "jumps out" of a loop. -->
+    <h1>The break statement "jumps out" of a loop.</h1>
+    <script>
+      for (let x = 5; x <= 10; x++) {
+        if (x == 6) {
+          document.write("if sttmnt :" + x + "<br>");
+          break; //if not use break number go up to 10
+        }
+        document.write("number :" + x + "<br>");
+      }
+    </script>
+  </body>
+</html>
