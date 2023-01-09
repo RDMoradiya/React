@@ -1,0 +1,12 @@
+JavaScript supports different kinds of loops:
+
+1) for - loops through a block of code a number of times.
+2) for/in - loops through the properties of an object.
+3) for/of - loops through the values of an iterable object.
+4) while - loops through a block of code while a specified condition is true.
+5) do/while - also loops through a block of code while a specified condition is true.
+
+what is loop?
+1.loop is count number of iteration.
+2.Loops can execute a block of code a number of times.
+

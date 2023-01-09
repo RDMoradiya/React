@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>While Loops</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- 1. The While Loop -->
+    <!-- The while loop loops through a block of code as long as a specified condition is true.
+        
+        Syntax :-
+        while (condition) {
+           statement
+        } -->
+
+    <!-- 1(initialization)
+            2(condition)
+            3(increment/decrement)-->
+    <!-- example - 1 -->
+    <script>
+      let x = 25; //initialization
+      while (x <= 30) {
+        //condition
+        document.write(x + " " + "RD" + "<br>");
+        x++; //increment/decrement
+      }
+    </script>
+    <hr />
+    <!-- example - 2 -->
+    <script>
+      let y = 30;
+      while (y >= 25) {
+        document.write(y + " " + "RD" + "<br>");
+        y--;
+      }
+    </script>
+    <hr />
+    <!-- example - 3 -->
+    <script>
+      let z = 1;
+      document.write("<ul>");
+      while (z <= 10) {
+        document.write("<li>Hello World</li>");
+        z++;
+      }
+      document.write("</ul>");
+    </script>
+  </body>
+</html>
