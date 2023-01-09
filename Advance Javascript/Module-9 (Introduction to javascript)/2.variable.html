@@ -28,7 +28,7 @@
             var x=1
             var x=2
             var accept both the value -->
-    <!-- using "var" keyword you can "redeclare" and "reassign" the value. -->
+    <!-- using "var" keyword you can "reassign" and "redeclare" the value. -->
 
     <h1>JavaScript Variables [var] :-</h1>
     <p>
@@ -81,6 +81,39 @@
       const price2 = 6;
       let total = price1 + price2;
       document.getElementById("demo2").innerHTML = "The total is: " + total;
+    </script>
+    <hr />
+
+    <!-- Global variable  -->
+    <!-- 1.which is out side the function
+         2.global variable use in out side and in side of the function-->
+    <h1>Global variable :-</h1>
+
+    <script>
+      let e = 25;
+      function print() {
+        document.write(e);
+      }
+      print();
+      document.write("<br>");
+      document.write(e); //global variable work inside and outside the function
+    </script>
+
+    <hr />
+    <!-- local variable  -->
+    <!-- 1.which is in side the function
+             2.local variable not use in out side of the function -->
+    <h1>local variable :-</h1>
+
+    <script>
+      let g = 11;
+      function print() {
+        let g = 25;
+        document.write(g);
+      }
+      print();
+      document.write("<br>");
+      document.write(g); //local variable not work outside the function
     </script>
   </body>
 </html>
