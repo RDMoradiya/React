@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link rel="icon" href="../logo.png" />
+  </head>
+  <body onload="alrt()">
+    <!-- Q.1 -->
+    <h1>Q.1 Write a program to Show an alert.</h1>
+    <script>
+      function alrt() {
+        alert("Alert Message");
+      }
+    </script>
+    <hr />
+    <!-- Q.2 (a)-->
+    <h1>Q.2 What will be the result for these expressions?</h1>
+    <h1>Q.2 (a)</h1>
+    <script>
+      let x = 5;
+      let y = 4;
+      if (x > y) {
+        document.write(" 5 > 4 " + " => ");
+        document.write("True");
+      } else {
+        document.write(" 5 > 4 " + " => ");
+        document.write("False");
+      }
+    </script>
+    <!-- Q.2 (b)-->
+    <h1>Q.2 (b)</h1>
+    <script>
+      let a = "apple";
+      let b = "Pineapple";
+      if (a.length > b.length) {
+        document.write(" apple " + " > " + "Pineapple" + " => ");
+        document.write("True");
+      } else {
+        document.write(" apple " + " > " + "Pineapple" + " => ");
+        document.write("False");
+      }
+    </script>
+    <!-- Q.2 (c)-->
+    <h1>Q.2 (c)</h1>
+    <script>
+      let q = "2";
+      let w = "12";
+      if (q.length > w.length) {
+        document.write("2" + " > " + "12" + " => ");
+        document.write("True");
+      } else {
+        document.write("2" + " > " + "12" + " => ");
+        document.write("False");
+      }
+    </script>
+    <!-- Q.2 (d)-->
+    <h1>Q.2 (d)</h1>
+    <script>
+      if (undefined == null) {
+        document.write("undefined" + " == " + "null" + " => ");
+        document.write("True");
+      } else {
+        document.write("undefined" + " == " + "null" + " => ");
+        document.write("False");
+      }
+    </script>
+    <!-- Q.2 (e)-->
+    <h1>Q.2 (e)</h1>
+    <script>
+      if (undefined === null) {
+        document.write("undefined" + " === " + "null" + " => ");
+        document.write("True");
+      } else {
+        document.write("undefined" + " === " + "null" + " => ");
+        document.write("False");
+      }
+    </script>
+    <!-- Q.2 (f)-->
+    <h1>Q.2 (f)</h1>
+    <script>
+      let z = "\n0\n";
+      if (null == z) {
+        document.write("null" + " == " + "\n0\n" + " => ");
+        document.write("True");
+      } else {
+        document.write("null" + " == " + "\n0\n" + " => ");
+        document.write("False");
+      }
+    </script>
+    <!-- Q.2 (g)-->
+    <h1>Q.2 (g)</h1>
+    <script>
+      let d = +"\n0\n";
+      if (null === d) {
+        document.write("null" + " === " + "+\n0\n" + " => ");
+        document.write("True");
+      } else {
+        document.write("null" + " === " + "+\n0\n" + " => ");
+        document.write("False");
+      }
+    </script>
+    <hr />
+
+    <!-- Q.3 -->
+    <h1>Q.3 Will alert be shown? a. if ("0") { alert( 'Hello'); }</h1>
+    <p>Yes, It will show alert message</p>
+    <script>
+      if ("0") {
+        alert("Hello");
+      }
+    </script>
+    <hr />
+
+    <!-- Q.4 -->
+    <h1>
+      Q.4 What is the code below going to output? alert( null || 2 || undefined)
+    </h1>
+    <p>It will show 2 in alert</p>
+
+    <script>
+      if ("0") {
+        alert(null || 2 || undefined);
+      }
+    </script>
+    <hr />
+
+    <!-- Q.5 -->
+    <h1>
+      Q.5 The following function returns true if the parameter age is greater
+      than 18. Otherwise it asks for a confirmation and returns its result:
+    </h1>
+    <p>if age > 18 : It will show "True"</p>
+    <p>
+      if age < 18 : It will show "False" <br />
+      Also if you click ok it will show "True" <br />
+      Also if you click cancle it will show "False"
+    </p>
+
+    <script>
+      function chechAge(age) {
+        if (age > 18) {
+          document.write("True" + "<br>");
+          return true;
+        } else {
+          document.write("False" + "<br>");
+          if (confirm("did parents allow you")) {
+            console.log("True");
+          } else {
+            console.log("False");
+          }
+        }
+      }
+
+      chechAge(20);
+      chechAge(10);
+    </script>
+    <hr />
+
+    <!-- Q.6 -->
+    <h1>
+      Q.6 Replace Function Expressions with arrow functions in the code below:
+    </h1>
+    <p>
+      Function <br />
+      ask(question, yes, no) <br />
+      {
+      <br />
+      if (confirm(question))yes(); <br />
+      else no(); <br />
+      } ask <br />( "Do you agree?", <br />
+      function() { alert("You agreed."); }, <br />
+      function() { <br />
+      alert("You canceled the execution."); } <br />
+      )
+    </p>
+
+    <script>
+      let ask = (question, yes, no) => {
+        if (confirm(question)) {
+          yes();
+        } else {
+          no();
+        }
+      };
+      ask(
+        "Do you agree?",
+        () => {
+          document.write("<h1>" + "You agreed." + "</h1>");
+        },
+        () => {
+          document.write("<h1>" + "you canceled the execution" + "</h1>");
+        }
+      );
+    </script>
+    <hr />
+  </body>
+</html>

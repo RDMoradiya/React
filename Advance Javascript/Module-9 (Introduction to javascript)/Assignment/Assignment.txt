@@ -1,0 +1,88 @@
+**************************** Assignment *******************************
+
+1)=> Write a program to Show an alert.
+
+    answer => 
+
+    <body onload="alrt()">
+        <script>
+            function alrt() {
+                alert("Alert Message");
+            }
+            </script>
+    </body>
+
+2)=> What will be the result for these expressions?
+
+    answer => 
+
+    a) 5 > 4                    => True
+    b) "apple" > "Pineapple"    => False
+    c) "2" > "12"               => False
+    d) undefined == null        => True
+    e) undefined === null       => False
+    d) null == "\n0\n"          => False
+    e) null === +"\n0\n"        => False
+
+3)=> Will alert be shown? 
+    if ("0") { alert( 'Hello'); } ,
+
+    answer => Yes, It will show alert message
+
+4)=> What is the code below going to output? 
+    alert( null || 2 || undefined);
+
+    answer => It will show 2 in alert
+
+5)=> The following function returns true if the parameter age is greater than 18. Otherwise it asks for a confirmation and returns its result:
+
+    answer => It will show "True"            
+              if age < 18 : It will show "False" 
+              Also if you click ok it will show "True" 
+              Also if you click cancle it will show "False"
+    
+            <script>
+                function chechAge(age) {
+                    if (age > 18) {
+                        document.write("True" + "<br>");
+                        return true;
+                    } else {
+                        document.write("False" + "<br>");
+                            if (confirm("did parents allow you")) {
+                                document.write("True");
+                            } else {
+                                document.write("False");
+                            }
+                        }
+                    }
+                chechAge(20);
+                chechAge(10);
+            </script>
+
+6)=> Replace Function Expressions with arrow functions in the code below:
+
+        Function ask(question, yes, no)
+            {
+            if (confirm(question))yes();
+            else no();
+            }
+            ask(
+            "Do you agree?",
+        function() { alert("You agreed."); },
+        function() {
+            alert("You canceled the execution."); }
+        )       
+
+        answer =>
+
+        Arrow function :
+
+            const ask = (question, yes, no) => {
+            if (confirm(question)) yes();
+            else
+            no();
+            }
+            ask("Do you agree?",
+            () => { alert("You agreed."); },
+            () => { alert("you canceled the execution") }
+            )
