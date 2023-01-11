@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Arrays and Objects</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <script>
+      // Nested Arrays and Objects
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
+      };
+
+      for (let x in myObj.cars) {
+        document.write("<h2>" + myObj.cars[x].name + "</h2>");
+        for (let y in myObj.cars[x].models) {
+          document.write(myObj.cars[x].models[y] + "<br>");
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>for of loop</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- for of loop :- 
+        always used with array.
+      
+      syntax :- 
+        for(varaible of interable){
+          code for exicution
+        } -->
+
+    <script>
+      //   Looping over an Array
+      let num = ["one", "two", "three", "four"];
+      for (let x of num) {
+        document.write(x + "<br>" + "<hr>");
+        console.log(x);
+      }
+
+      //   Looping over a String
+      let string = "java";
+      for (let y of string) {
+        document.write(y + "<br>");
+      }
+    </script>
+  </body>
+</html>

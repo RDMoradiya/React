@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>forEach loop</title>
+    <link rel="icon" href="../logo.png" />
+  </head>
+  <!-- forEach loop :-
+
+    syntax :-
+
+    var car=["car1","car2",car3"];
+    car.forEach(myfunction);o444
+    function myfunction(item,index,array){
+        statements
+        body of function
+    }
+-->
+  <body>
+    <script>
+      // item
+      let fruits = ["banana", "mango", "greps", "apple"];
+      fruits.forEach(fruit);
+
+      function fruit(item) {
+        document.write(item + " <br>");
+      }
+
+      //   index
+      let fruit1 = ["banana", "mango", "greps", "apple"];
+      fruit1.forEach(fruit_s);
+
+      function fruit_s(item, index) {
+        document.write(index + "=>" + item + " <br>");
+      }
+
+      //   array
+      let phone = ["apple", "mi", "oppo", "vivo"];
+      phone.forEach(myphone);
+
+      function myphone(item, index, Array) {
+        Array[index] = "*" + item + "*";
+      }
+
+      phone.forEach(myphones);
+      function myphones(item, index) {
+        document.write(index + "=>" + item + "<br>");
+      }
+    </script>
+  </body>
+</html>

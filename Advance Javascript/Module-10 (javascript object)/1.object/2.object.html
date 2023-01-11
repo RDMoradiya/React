@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Objects</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- objects :-
+        In JavaScript, objects are king. If you understand objects, you understand JavaScript.
+        Booleans can be objects (if defined with the new keyword)
+        Numbers can be objects (if defined with the new keyword)
+        Strings can be objects (if defined with the new keyword)
+        Dates are always objects
+        Maths are always objects
+        Regular expressions are always objects
+        Arrays are always objects
+        Functions are always objects
+        Objects are always objects
+        All JavaScript values, except primitives, are objects.
+        It is a common practice to declare objects with the const keyword. -->
+
+    <script>
+      // ex-1
+      const name = { fname: "raj", lname: "moradiya", age: 27 };
+      document.write(name.fname + "<br>" + "<hr>");
+
+      //   ex-2
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      document.write(
+        person.firstName +
+          " is " +
+          person.age +
+          " years old. " +
+          "<br>" +
+          "<hr>"
+      );
+
+      //  Adding New Properties :-
+      const persone = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      persone.nationality = "English";
+      document.write(persone.firstname + " is " + persone.nationality + "<hr>");
+
+      //   ex-3 This example creates an empty JavaScript object, and then adds 4 properties :-
+      const persons = {};
+      persons.firstName = "John";
+      persons.lastName = "Doe";
+      persons.age = 50;
+      persons.eyeColor = "blue";
+      document.write(persons.age + "<br>" + "<hr>");
+
+      //   Using the JavaScript Keyword "new" :-
+      const nam = new Object();
+      nam.firstName = "John";
+      nam.lastName = "Doe";
+      nam.age = 50;
+      nam.eyeColor = "blue";
+      document.write(nam.age + "<br>" + "<hr>");
+
+      // JavaScript Objects are Mutable :-
+      // Objects are mutable: They are addressed by reference, not by value.
+      // If person is an object, the following statement will not create a copy of person:
+
+      const nm = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      const x = nm;
+      x.firstName = "Raj";
+      document.write(x.firstName + "<br>" + "<hr>");
+
+      //   Deleting Properties :-
+      //   The delete keyword deletes both the value of the property and the property itself.
+      //   After deletion, the property cannot be used before it is added back again.
+      //   The delete operator is designed to be used on object properties. It has no effect on variables or functions.
+      //   The delete operator should not be used on predefined JavaScript object properties. It can crash your application.
+      const personee = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      delete personee.age;
+      delete personee["age"];
+      document.write(
+        personee.firstname +
+          " is " +
+          personee.age +
+          " year old " +
+          "<br>" +
+          "<hr>"
+      );
+
+      //   Nested Objects :-
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+      document.write(myObj.cars.car2 + "<hr>");
+      document.write(myObj["cars"]["car2"] + "<hr>");
+    </script>
+  </body>
+</html>

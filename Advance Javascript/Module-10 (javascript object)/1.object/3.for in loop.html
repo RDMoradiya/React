@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>For in loop</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- for in loop :-
+      for in loop used with always in objects
+    
+    syntax :-
+      for(varaible in interable){
+          code for exicution
+        } -->
+  <body>
+    <script>
+      const person = {
+        fname: "John",
+        lname: "Doe",
+        age: 25,
+      };
+
+      for (let x in person) {
+        document.write(x + "=>" + person[x] + "<br>");
+      }
+    </script>
+  </body>
+</html>
