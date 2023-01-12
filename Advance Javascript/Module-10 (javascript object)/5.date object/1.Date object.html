@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>date</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- 
+        date()              to get current date and time according to browser.
+        getFullYear()	    Returns the year
+        getMonth()	        Returns the month (from 0-11)
+        getDate()	        Returns the day of the month (from 1-31)
+        getHours()	        Returns the hour (from 0-23)
+        getMinutes()	    Returns the minutes (from 0-59)
+        getSeconds()	    Returns the seconds (from 0-59)
+        getMilliseconds()	Returns the milliseconds (from 0-999)
+        getDay()	        Returns the day of the week (from 0-6)
+        gettime()	        get the time (milliseconds since january 1,1970)
+ -->
+  <body>
+    <h1 id="res0"></h1>
+    <h1 id="res1"></h1>
+    <h1 id="res2"></h1>
+    <h1 id="res3"></h1>
+    <h1 id="res4"></h1>
+    <h1 id="res5"></h1>
+    <h1 id="res6"></h1>
+    <h1 id="res7"></h1>
+    <h1 id="res8"></h1>
+    <h1 id="res9"></h1>
+    <h1 id="res10"></h1>
+    <button onclick="getfulldate()">full date</button>
+    <button onclick="getyear()">year</button>
+    <button onclick="getmonth()">month</button>
+    <button onclick="gethourse()">horse</button>
+    <button onclick="getminut()">minutes</button>
+    <button onclick="getsecond()">second</button>
+    <button onclick="getmilisecond()">milisecond</button>
+    <button onclick="getdate()">date</button>
+    <button onclick="getday()">day</button>
+    <button onclick="gettime()">time</button>
+    <script>
+      let date = new Date();
+      function getfulldate() {
+        document.getElementById("res0").innerHTML = date;
+      }
+      function getyear() {
+        document.getElementById("res1").innerText = date.getFullYear();
+      }
+      function getmonth() {
+        document.getElementById("res2").innerText = date.getMonth();
+      }
+      function getmonth() {
+        let months = [
+          "jan",
+          "feb",
+          "march",
+          "apr",
+          "may",
+          "jun",
+          "july",
+          "augst",
+          "sept",
+          "oct",
+          "november",
+          "dec",
+        ];
+        // let x = date.getMonth();
+        document.getElementById("res3").innerText = months[date.getMonth()];
+        // document.getElementById("res3").innerText = x + 1;
+      }
+      function gethourse() {
+        document.getElementById("res4").innerText = date.getHours();
+      }
+      function getminut() {
+        document.getElementById("res5").innerText = date.getMinutes();
+      }
+      function getsecond() {
+        document.getElementById("res6").innerText = date.getSeconds();
+      }
+      function getmilisecond() {
+        document.getElementById("res7").innerText = date.getMilliseconds();
+      }
+      function getdate() {
+        document.getElementById("res8").innerText = date.getDate();
+      }
+      function getday() {
+        document.getElementById("res9").innerText = date.getDay();
+      }
+      function gettime() {
+        document.getElementById("res10").innerText = date.getTime();
+      }
+    </script>
+  </body>
+</html>

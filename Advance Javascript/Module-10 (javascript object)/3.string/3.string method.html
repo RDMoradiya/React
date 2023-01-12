@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>string method</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- JavaScript counts positions from zero.
+        First position is 0.
+        Second position is 1. -->
+    <h1>Length :-</h1>
+    <p>To find the length of a string, use the built-in length property.</p>
+    <script>
+      let abc = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      document.write(abc + "<br>");
+      document.write("abc.length" + "<br>");
+      document.write(abc.length);
+    </script>
+    <br />
+    <hr />
+
+    <h1>slice() :-</h1>
+    <h3>
+      The method takes 2 parameters: start position, and end position (end not
+      included).
+    </h3>
+    <script>
+      let text = "Apple, Banana, Kiwi";
+      document.write(text + "<br>");
+      document.write("text.slice(7, 13)" + "<br>");
+      let part = text.slice(7, 13);
+      document.write(part);
+    </script>
+    <br />
+
+    <h3>
+      If you omit the second parameter, the method will slice out the rest of
+      the string.
+    </h3>
+    <script>
+      let text1 = "Apple, Banana, Kiwi";
+      document.write(text1 + "<br>");
+      document.write("text.slice(7)" + "<br>");
+      let part1 = text.slice(7);
+      document.write(part1);
+    </script>
+    <br />
+
+    <h3>
+      If a parameter is negative, the position is counted from the end of the
+      string.
+    </h3>
+    <script>
+      let ttext = "Apple, Banana, Kiwi";
+      document.write(ttext + "<br>");
+      let ppart = ttext.slice(-12);
+      document.write("text.slice(-12)" + "<br>");
+      document.write(ppart);
+    </script>
+    <br />
+
+    <h3>
+      This example slices out a portion of a string from position -12 to
+      position -6.
+    </h3>
+    <script>
+      let tteext = "Apple, Banana, Kiwi";
+      document.write(tteext + "<br>");
+      let ppeart = tteext.slice(-12, -6);
+      document.write("text.slice(-12,-6)" + "<br>");
+      document.write(ppeart);
+    </script>
+    <br />
+    <hr />
+
+    <h1>substring() :-</h1>
+    <p>
+      substring() is similar to slice(). <br />
+      The difference is that start and end values less than 0 are treated as 0
+      in substring().
+    </p>
+    <script>
+      let str = "Apple, Banana, Kiwi";
+      document.write(str + "<br>");
+      document.write("str.substring(7, 13)" + "<br>");
+      document.write(str.substring(7, 13));
+    </script>
+    <h3>
+      If you omit the second parameter, substring() will slice out the rest of
+      the string.
+    </h3>
+    <hr />
+
+    <h1>substr() :-</h1>
+    <p>
+      substr() is similar to slice(). <br />
+      The difference is that the second parameter specifies the length of the
+      extracted part.
+    </p>
+    <script>
+      let stre = "Apple, Banana, Kiwi";
+      document.write(stre + "<br>");
+      document.write("stre.substr(7, 6)" + "<br>");
+      document.write(stre.substr(7, 6));
+    </script>
+
+    <h3>
+      If you omit the second parameter, substr() will slice out the rest of the
+      string.
+    </h3>
+    <script>
+      let str1 = "Apple, Banana, Kiwi";
+      document.write(str1 + "<br>");
+      document.write("str1.substr(7)" + "<br>");
+      document.write(str1.substr(7));
+    </script>
+
+    <h3>
+      If the first parameter is negative, the position counts from the end of
+      the string.
+    </h3>
+    <script>
+      let str1a = "Apple, Banana, Kiwi";
+      document.write(str1a + "<br>");
+      document.write("str1.substr(-8)" + "<br>");
+      document.write(str1a.substr(-8));
+    </script>
+    <br />
+    <hr />
+
+    <!-- replace() :-
+            The replace() method does not change the string it is called on.
+            The replace() method returns a new string.
+            The replace() method replaces only the first match -->
+    <h1>replace() :-</h1>
+    <p>
+      The replace() method replaces a specified value with another value in a
+      string.
+    </p>
+    <h3>By default, the replace() method replaces only the first match.</h3>
+    <button onclick="myFunction()">replace</button>
+
+    <p id="demo">Please visit Microsoft!</p>
+
+    <script>
+      function myFunction() {
+        let text = document.getElementById("demo").innerHTML;
+        document.getElementById("demo").innerHTML = text.replace(
+          "Microsoft",
+          "W3Schools"
+        );
+      }
+    </script>
+
+    <h3>
+      By default, the replace() method is case sensitive. Writing MICROSOFT
+      (with upper-case) will not work.
+    </h3>
+    <button onclick="myFunctionse()">replace</button>
+
+    <p id="demoe">Please visit Microsoft!</p>
+
+    <script>
+      function myFunctionse() {
+        let text = document.getElementById("demoe").innerHTML;
+        document.getElementById("demoe").innerHTML = text.replace(
+          "MICROSOFTs",
+          "W3Schools"
+        );
+      }
+    </script>
+
+    <h3>
+      To replace case insensitive, use a regular expression with an " /i " flag
+      (insensitive).
+    </h3>
+    <button onclick="repl()">replace</button>
+
+    <p id="dme">Please visit Microsoft!</p>
+
+    <script>
+      function repl() {
+        let text = document.getElementById("dme").innerHTML;
+        document.getElementById("dme").innerHTML = text.replace(
+          /MICROSOFT/i,
+          "W3Schools"
+        );
+      }
+    </script>
+
+    <h3>
+      To replace all matches, use a regular expression with a " /g " flag
+      (global match).
+    </h3>
+    <button onclick="repls()">replace</button>
+
+    <p id="dme1">Please visit Microsoft and Microsoft!</p>
+
+    <script>
+      function repls() {
+        let text = document.getElementById("dme1").innerHTML;
+        document.getElementById("dme1").innerHTML = text.replace(
+          /Microsoft/g,
+          "W3Schools"
+        );
+      }
+    </script>
+    <hr />
+
+    <h1>ReplaceAll() :-</h1>
+    <p>
+      In 2021, JavaScript introduced the string method replaceAll(). <br />
+      The replaceAll() method allows you to specify a regular expression instead
+      of a string to be replaced. <br />
+      If the parameter is a regular expression, the global flag (g) must be set
+      set, otherwise a TypeError is thrown.
+    </p>
+    <script>
+      let textq =
+        "I love cats. Cats are very easy to love. Cats are very popular";
+      document.write(textq + "<br>");
+      textq = textq.replaceAll(/Cats/g, "Dogs");
+      textq = textq.replaceAll(/cats/g, "dogs");
+      document.write(textq);
+    </script>
+    <h4>
+      replaceAll() is an ES2021 feature. <br />
+      replaceAll() does not work in Internet Explorer.
+    </h4>
+    <hr />
+
+    <h1>toUpperCase() :-</h1>
+    <p>A string is converted to upper case.</p>
+    <button onclick="uper()">toUpperCase</button>
+    <p id="dm">Hello World!</p>
+    <script>
+      function uper() {
+        let x = document.getElementById("dm").innerHTML;
+        document.getElementById("dm").innerHTML = x.toUpperCase();
+      }
+    </script>
+    <hr />
+
+    <h1>toLowerCase() :-</h1>
+    <p>A string is converted to lower case.</p>
+    <button onclick="lowr()">tolowerCase</button>
+    <p id="dms">Hello World!</p>
+    <script>
+      function lowr() {
+        let x = document.getElementById("dms").innerHTML;
+        document.getElementById("dms").innerHTML = x.toLowerCase();
+      }
+    </script>
+    <hr />
+
+    <h1>concat() :-</h1>
+    <p>concat() joins two or more strings.</p>
+    <script>
+      let a = "Hello";
+      let b = "World!";
+      let c = a.concat(" " + b);
+      document.write(c);
+    </script>
+
+    <h4>
+      The concat() method can be used instead of the plus operator. These two
+      lines do the same. <br />
+      text = "Hello" + " " + "World!"; <br />
+      text = "Hello".concat(" ", "World!"); <br />
+    </h4>
+    <hr />
+
+    <h1>trim() :-</h1>
+    <p>The trim() method removes whitespace from both sides of a string.</p>
+    <script>
+      let tex1 = "     Hello World!     ";
+      let tex2 = tex1.trim();
+      document.write("Length of tex-1" + " = " + tex1.length + "<br>");
+      document.write("Length of tex-2" + " = " + tex2.length);
+    </script>
+    <hr />
+
+    <h1>trimStart() :-</h1>
+    <p>
+      The trimStart() method works like trim(), but removes whitespace only from
+      the start of a string.
+    </p>
+    <script>
+      let wrd = "     Hello World!     ";
+      let wrdd = wrd.trimStart();
+      document.write("Length of tex-1" + " = " + wrd.length + "<br>");
+      document.write("Length of tex-2" + " = " + wrdd.length);
+    </script>
+    <hr />
+
+    <h1>trimEnd() :-</h1>
+    <p>
+      The trimEnd() method works like trim(), but removes whitespace only from
+      the end of a string.
+    </p>
+    <script>
+      let wrd1 = "     Hello World!     ";
+      let wrdd1 = wrd1.trimEnd();
+      document.write("Length of tex-1" + " = " + wrd1.length + "<br>");
+      document.write("Length of tex-2" + " = " + wrdd1.length);
+    </script>
+    <hr />
+
+    <h1>padStart() :-</h1>
+    <p>The padStart() method pads a string with another string.</p>
+    <script>
+      let wd1 = "5";
+      document.write(wd1.padStart(7, "x") + "<br>");
+    </script>
+    <script>
+      let wda1 = "5";
+      document.write(wda1.padStart(7, "0") + "<br>");
+    </script>
+
+    <!-- The padStart() method is a string method.
+        To pad a number, convert the number to a string first.
+        See the example below. -->
+    <script>
+      let numb = 5;
+      let ttextt = numb.toString();
+      document.write(ttextt.padStart(4, 0));
+    </script>
+    <hr />
+
+    <h1>padEnd() :-</h1>
+    <p>The padEnd() method pads a string with another string.</p>
+    <script>
+      let wdaa1 = "7";
+      document.write(wdaa1.padEnd(7, "x") + "<br>");
+    </script>
+    <script>
+      let wdaaa1 = "7";
+      document.write(wdaaa1.padEnd(7, "0") + "<br>");
+    </script>
+
+    <!-- The padEnd() method is a string method.
+        To pad a number, convert the number to a string first.
+        See the example below. -->
+    <script>
+      let numb1 = 5;
+      let ttextt1 = numb1.toString();
+      document.write(ttextt1.padEnd(4, 0));
+    </script>
+    <hr />
+  </body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Math Object</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- math object :-
+        The math object contains some predefined mathematical methods.
+        These method are used to perform mathematical calculation on unmerical value.
+        To accces these method Math. keyword is used. -->
+
+  <!-- 
+            Math.PI :- Returns PI (approx. 3.14)
+            Math.round(x) :- Return the rounded value of x to its nearest integer.
+            Math.pow(x,y) :- Return the value of x to the power y.
+            Math.sqrt(x) :- Return the square root of x.
+            Math.abs(-x) :- Return the positive value of x.
+            Math.ceil(x) :- Return the value of x rounded "up" to its nearest integer.
+            Math.floor(x) :- Return the value of x rounded "down" to its nearest integer.
+            Math.mix(x,y,z) :- Return the minimum value among x,y and z.
+            Math.max(x,y,z) :- Return the maximum value among x,y and z.
+            Math.random :- Return random decimal value in between 0 and 1.
+            cos(x) :- Returns the cosine of x (x is in radians).
+            sin(x) :- Returns the sine of x (x is in radians).
+            tan(x) :- Returns the tangent of an angle.
+            log(x)	:- Returns the natural logarithm of x.
+            log10(x) :- Returns the base-10 logarithm of x. -->
+  <body>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <h1></h1>
+    <script>
+      let x = 36.55;
+      let q = -99;
+      let w = 0;
+      let tn = 45;
+      let y = document.getElementsByTagName("h1")[0];
+      y.innerHTML = x;
+      let z = Math.round(x);
+      document.getElementsByTagName("h1")[1].innerHTML =
+        "Math.round : " + " " + z;
+      let a = Math.sqrt(x);
+      document.getElementsByTagName("h1")[2].innerHTML = "Math.sqrt : " + a;
+      let b = Math.abs(q);
+      document.getElementsByTagName("h1")[3].innerHTML = "Math.abs : " + b;
+      let c = Math.pow(2, 5);
+      document.getElementsByTagName("h1")[4].innerHTML = "Math.pow : " + c;
+      let d = Math.ceil(x);
+      document.getElementsByTagName("h1")[5].innerHTML = "Math.ceil : " + d;
+      let e = Math.floor(x);
+      document.getElementsByTagName("h1")[6].innerHTML = "Math.floor : " + e;
+      let f = Math.min(25, 55, 95);
+      document.getElementsByTagName("h1")[7].innerHTML = "Math.min : " + f;
+      let g = Math.max(25, 55, 95);
+      document.getElementsByTagName("h1")[8].innerHTML = "Math.max : " + g;
+      let h = Math.random();
+      document.getElementsByTagName("h1")[9].innerHTML =
+        "Math.random : " + h * 1000;
+      let i = Math.floor(Math.random() * 1000);
+      document.getElementsByTagName("h1")[10].innerHTML = "OTP : " + i;
+      let j = Math.cos(w);
+      document.getElementsByTagName("h1")[11].innerHTML = "Math.cos : " + j;
+      let k = Math.sin(w);
+      document.getElementsByTagName("h1")[12].innerHTML = "Math.sin : " + k;
+      let l = Math.log(9);
+      document.getElementsByTagName("h1")[13].innerHTML = "Math.log : " + l;
+      let m = Math.log10(1000);
+      document.getElementsByTagName("h1")[14].innerHTML = "Math.log10 : " + m;
+    </script>
+  </body>
+</html>
