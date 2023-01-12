@@ -21,12 +21,14 @@
 --> JavaScript variables can also contain many values.
 --> Objects are variables too. But objects can contain many values.
 --> Object values are written as name : value pairs (name and value separated by a colon).
---> It is a common practice to declare objects with the const keyword.
+--> It is a common practice to declare objects with the "const" keyword.
 
 syntax :- 
 
 const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
 document.write(persone.age)
+or//
+document.write(persone["age"])
 
 output :-
 50
