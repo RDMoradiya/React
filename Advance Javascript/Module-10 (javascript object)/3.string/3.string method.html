@@ -232,26 +232,46 @@
     </h4>
     <hr />
 
-    <h1>toUpperCase() :-</h1>
-    <p>A string is converted to upper case.</p>
+    <h1>toUpperCase() & toLocaleUpperCase() :-</h1>
+    <p>toUpperCase() :- A string is converted to upper case.</p>
+    <p>
+      toLocaleUpperCase() :- It converts the given string into uppercase letter
+      on the basis of host?s current locale.
+    </p>
     <button onclick="uper()">toUpperCase</button>
+    <button onclick="uper1()">toLocaleUpperCase</button>
     <p id="dm">Hello World!</p>
+    <p id="dm1">Hello World!</p>
     <script>
       function uper() {
         let x = document.getElementById("dm").innerHTML;
         document.getElementById("dm").innerHTML = x.toUpperCase();
       }
+      function uper1() {
+        let x = document.getElementById("dm1").innerHTML;
+        document.getElementById("dm1").innerHTML = x.toLocaleUpperCase();
+      }
     </script>
     <hr />
 
-    <h1>toLowerCase() :-</h1>
-    <p>A string is converted to lower case.</p>
+    <h1>toLowerCase() & toLocaleLowerCase() :-</h1>
+    <p>toLowerCase() :- A string is converted to lower case.</p>
+    <p>
+      toLocaleLowerCase() :- It converts the given string into lowercase letter
+      on the basis of host?s current locale.
+    </p>
     <button onclick="lowr()">tolowerCase</button>
+    <button onclick="lowr1()">toLocaleLowerCase</button>
     <p id="dms">Hello World!</p>
+    <p id="dms1">Hello World!</p>
     <script>
       function lowr() {
         let x = document.getElementById("dms").innerHTML;
         document.getElementById("dms").innerHTML = x.toLowerCase();
+      }
+      function lowr1() {
+        let x = document.getElementById("dms1").innerHTML;
+        document.getElementById("dms1").innerHTML = x.toLocaleLowerCase();
       }
     </script>
     <hr />
@@ -350,5 +370,109 @@
       document.write(ttextt1.padEnd(4, 0));
     </script>
     <hr />
+
+    <h1>charAt() :-</h1>
+    <p>
+      The charAt() method returns the character at a specified index (position)
+      in a string.
+    </p>
+    <script>
+      var abcd = "HELLO WORLD";
+      document.write(abcd.charAt(8) + "<br>");
+      // also you can write this
+      document.write(abcd[8]);
+    </script>
+    <hr />
+
+    <h1>charCodeAt() :-</h1>
+    <p>
+      The charCodeAt() method returns the unicode of the character at a
+      specified index in a string.
+    </p>
+    <script>
+      let sdwrd = "HELLO WORLD";
+      document.write(sdwrd.charCodeAt(0));
+    </script>
+    <hr />
+
+    <!-- tostring() :-
+        It provides a string representing the particular object. -->
+
+    <h1>tostring() :-</h1>
+    <p>It provides a string representing the particular object.</p>
+    <p id="demo1"></p>
+    <script>
+      const fruits1 = {
+        one: "Banana",
+        two: "Orange",
+        three: "Apple",
+        four: "Mango",
+      };
+      document.getElementById("demo1").innerHTML = fruits1.two.toString();
+    </script>
+    <hr />
+
+    <!-- valueOf() :-
+        It provides the primitive value of string object. -->
+
+    <h1>valueOf() :-</h1>
+    <p>It provides the primitive value of string object.</p>
+    <p id="demo13dsz"></p>
+
+    <script>
+      let frtq = { a1: "one", a2: "two", a3: "three", a4: "four" };
+      let flags = frtq.a2.valueOf(frtq);
+      document.getElementById("demo13dsz").innerHTML = flags;
+    </script>
+    <hr />
+
+    <!-- search() :-
+      The search() method matches a string against a regular expression **
+      The search() method returns the index (position) of the first match.
+      The search() method returns -1 if no match is found.
+      The search() method is case sensitive.
+      ** If the search value is a string, it is converted to a regular expression. -->
+    <h1>search() :-</h1>
+    <p>
+      The search() method matches a string against a regular expression **
+      <br />
+      The search() method returns the index (position) of the first match.
+      <br />
+      The search() method returns -1 if no match is found. <br />
+      The search() method is case sensitive. <br />
+      ** If the search value is a string, it is converted to a regular
+      expression.
+    </p>
+    <script>
+      let text3 = "Mr. Blue has a blue house";
+      document.write(text3 + "<br>");
+      let position = text3.search("blue");
+      document.write("text3.search('blue')" + "<br>");
+      document.write(position);
+    </script>
+    <hr />
+
+    <!-- indexOf() :-
+        It provides the position of a char value present in the given string. -->
+
+    <h1>indexOf() :-</h1>
+    <p>It provides the position of a char value present in the given string.</p>
+    <script>
+      var str2 = "Hello world";
+      document.write(str2.indexOf("w") + "<br>");
+      var str3 = "javascript scripting language";
+      document.write(str3.indexOf("script"));
+    </script>
+    <hr />
+
+    <h1>LastIndexOf() :-</h1>
+    <p>
+      It provides the position of a char value present in the given string by
+      searching a character from the last position.
+    </p>
+    <script>
+      var lstr = "hello world this is javascript language";
+      document.write(lstr.lastIndexOf("s"));
+    </script>
   </body>
 </html>

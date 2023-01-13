@@ -28,25 +28,54 @@
 7) --> toUpperCase() :-
     --> A string is converted to upper case.
 
-8) --> toLowerCase() :-
+8) --> toLocalUpperCase() :-
+    --> It converts the given string into uppercase letter on the basis of host?s current locale.
+
+9) --> toLowerCase() :-
     --> A string is converted to lower case.
 
-9) --> concat() :-
+10) --> toLocalLowerCase() :-
+    --> It converts the given string into lowercase letter on the basis of host?s current locale.
+
+11) --> concat() :-
     --> concat() joins two or more strings.
 
-10) --> trim() :-
+12) --> trim() :-
     --> The trim() method removes whitespace from both sides of a string.
 
-11) --> trimStart() :-
+13) --> trimStart() :-
     --> ECMAScript 2019 added the String method trimStart() to JavaScript.
     --> The trimStart() method works like trim(), but removes whitespace only from the start of a string.
 
-12) --> trimEnd() :-
+14) --> trimEnd() :-
     --> ECMAScript 2019 added the String method trimEnd() to JavaScript.
     --> The trimStart() method works like trim(), but removes whitespace only from the start of a string.
 
-13) --> padStart() :-
+15) --> padStart() :-
     --> The padStart() method pads a string with another string.
 
-14) --> padEnd() :-
+16) --> padEnd() :-
     --> The padEnd() method pads a string with another string.
+
+17) --> charAt() :-
+    --> The charAt() method returns the character at a specified index (position) in a string.
+
+18) --> charCodeAt() :-
+    --> The charCodeAt() method returns the unicode of the character at a specified index in a string.
+
+19) --> toString() :-
+    --> It provides a string representing the particular object.
+
+20) --> valueOf() :-
+    --> It provides the primitive value of string object.
+
+21) --> search() :-
+    --> The search() method matches a string against a regular expression **
+    --> The search() method returns the index (position) of the first match.
+    --> The search() method returns -1 if no match is found.
+    --> The search() method is case sensitive.
+    --> ** If the search value is a string, it is converted to a regular expression.
+
+22) --> indexOf() :-
+    --> It provides the position of a char value present in the given string.
+
