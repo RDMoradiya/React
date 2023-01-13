@@ -17,7 +17,7 @@
     answer => 
 
     a) 5 > 4                    => True
-    b) "apple" > "Pineapple"    => True
+    b) "apple" > "Pineapple"    => False
     c) "2" > "12"               => True
     d) undefined == null        => True
     e) undefined === null       => False
