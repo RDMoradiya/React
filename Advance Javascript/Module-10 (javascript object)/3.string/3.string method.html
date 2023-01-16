@@ -474,5 +474,18 @@
       var lstr = "hello world this is javascript language";
       document.write(lstr.lastIndexOf("s"));
     </script>
+    <hr />
+
+    <h1>split() :-</h1>
+    <p>A string can be converted to an array with the split() method.</p>
+    <p id="demod"></p>
+    <p id="demod1"></p>
+    <script>
+      let textd = "a*b*c*d*e*f";
+      const myArray = textd.split("*");
+      document.getElementById("demod").innerHTML = myArray[5];
+      document.getElementById("demod1").innerHTML = myArray[3];
+    </script>
+    <hr />
   </body>
 </html>

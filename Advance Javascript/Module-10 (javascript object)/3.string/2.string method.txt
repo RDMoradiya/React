@@ -79,3 +79,6 @@
 22) --> indexOf() :-
     --> It provides the position of a char value present in the given string.
 
+22) --> split() :-
+    --> A string can be converted to an array with the split() method.
+
