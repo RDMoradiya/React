@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt Box</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- Prompt Box -->
+
+    <!-- Example - 1 -->
+    <!-- <script>
+      let x = prompt("wht is your age");
+      alert(x);
+    </script> -->
+
+    <!-- Example - 2 -->
+    <!-- <script>
+      let x = prompt("wht is your age");
+      document.write(x);
+    </script> -->
+
+    <!-- Example - 3 -->
+    <script>
+      // prompt popup boxes
+      function prompt_check() {
+        let username = prompt("enter your name");
+        if (username == "") {
+          alert("enter your name");
+        } else {
+          document.getElementById("p1").innerHTML = username;
+        }
+      }
+    </script>
+    <button onclick="prompt_check()">Prompt</button>
+    <p id="p1"></p>
+
+    <!-- Example - 4 -->
+    <script>
+      let age = prompt("enter your age");
+      if (age >= 12 && age <= 19) {
+        document.write("tenager");
+      } else if (age < 12 && age > 0) {
+        document.write("child");
+      } else if (age > 19 && age <= 100) {
+        document.write("adult");
+      } else {
+        document.write("enter valid age");
+      }
+    </script>
+  </body>
+</html>

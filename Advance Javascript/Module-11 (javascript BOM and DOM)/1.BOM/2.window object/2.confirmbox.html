@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>confirm box</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- confirm box -->
+
+    <!-- Example-1 -->
+    <!-- <script>
+      confirm("do you like my web site");
+    </script> -->
+
+    <!-- Example-2 -->
+    <!-- <script>
+      let x = confirm("do you like my web site");
+      alert(x);
+    </script> -->
+
+    <!-- Example-3 -->
+    <!-- <script>
+      let a = confirm("Nice Tea");
+      if (a) {
+        alert("Thank You");
+      } else {
+        alert("Oh Sorry");
+      }
+    </script> -->
+
+    <!-- Example-4 -->
+    <!-- <script>
+      let a = confirm("are you happy");
+      if (a) {
+        document.write("nice");
+      } else {
+        document.write("sorry");
+      }
+    </script> -->
+
+    <!-- Example-5 -->
+    <script>
+      function confirm_check() {
+        if (confirm("are you sure want to leave this page?")) {
+          document.body.style.backgroundColor = "blue";
+        } else {
+          document.body.style.backgroundColor = "red";
+        }
+      }
+    </script>
+    <button onclick="confirm_check()">Confirm</button>
+
+    <p id="p1"></p>
+  </body>
+</html>

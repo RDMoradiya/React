@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clearInterval</title>
+    <link rel="icon" href="../logo.png" />
+  </head>
+  <!-- clearInterval() :-
+        The clearInterval() method clears a timer set with the setInterval() method.
+        This method clear a timer set with the setInterval() method.
+        The ID value returned by setInterval() is used as the parameter for the clearInterval() method.
+
+    
+        syntax :-    
+            myVar = setInterval(function,miliseconds);
+            clearInterval(myVar);
+        
+            here, function : first parameter is the function to be ececuted.
+            miliseconds : indicates the length of the time-interval between each execution.
+
+            1 second = 1000 miliseconds
+        -->
+  <body>
+    <h1></h1>
+    <button onclick="stop()">stop</button>
+    <script>
+      let my = setInterval(count, 1000);
+      c = 0;
+      function count() {
+        document.getElementsByTagName("h1")[0].innerHTML = c;
+        c++;
+      }
+      function stop() {
+        clearInterval(my);
+      }
+    </script>
+  </body>
+</html>

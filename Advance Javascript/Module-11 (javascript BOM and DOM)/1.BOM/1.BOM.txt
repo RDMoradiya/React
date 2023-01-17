@@ -1,0 +1,18 @@
+
+******************************* BOM (browser object model) *************************************
+
+--> BOM :- browser object model
+
+
+window :- 
+
+1) --> document
+2) --> history
+3) --> screen
+4) --> navigator
+5) --> location
+
+
+photo link :-
+
+https://learnhindituts.com/assets/images/js/js-bom.png

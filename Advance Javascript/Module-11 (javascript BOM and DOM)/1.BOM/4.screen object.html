@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Screen object</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- 
+    availHeight	:- Returns the height of the screen (excluding the Windows Taskbar)
+    height	    :- Returns the total height of the screen
+    availWidth	:- Returns the width of the screen (excluding the Windows Taskbar)
+    width	    :- Returns the total width of the screen
+    colorDepth	:- Returns the bit depth of the color palette for displaying images
+    pixelDepth	:- Returns the color resolution (in bits per pixel) of the screen
+   -->
+  <style>
+    * {
+      margin: 10px;
+    }
+  </style>
+  <body>
+    <h1></h1>
+    <button onclick="availHeight()">Screen avlheight</button>
+    <h1></h1>
+    <button onclick="height()">height</button>
+    <h1></h1>
+    <button onclick="availWidth()">availWidth</button>
+    <h1></h1>
+    <button onclick="width()">width</button>
+    <h1></h1>
+    <button onclick="colorDepth()">colorDepth</button>
+    <h1></h1>
+
+    <button onclick="pixelDepth()">pixelDepth</button>
+  </body>
+  <script>
+    function availHeight() {
+      let a = window.screen.availHeight;
+      document.getElementsByTagName("h1")[0].innerHTML = a;
+    }
+    function height() {
+      let b = window.screen.height;
+      document.getElementsByTagName("h1")[1].innerHTML = b;
+    }
+    function availWidth() {
+      let c = window.screen.availWidth;
+      document.getElementsByTagName("h1")[2].innerHTML = c;
+    }
+    function width() {
+      let d = window.screen.width;
+      document.getElementsByTagName("h1")[3].innerHTML = d;
+    }
+    function colorDepth() {
+      let e = window.screen.colorDepth;
+      document.getElementsByTagName("h1")[4].innerHTML = e;
+    }
+    function pixelDepth() {
+      let f = window.screen.pixelDepth;
+      document.getElementsByTagName("h1")[5].innerHTML = f;
+    }
+  </script>
+</html>

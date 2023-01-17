@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>clearTimeout</title>
+    <link rel="icon" href="../logo.png" />
+  </head>
+  <!-- clearTimeout() :-
+        The clearTimeout() method clears a timer set with the setTimeout() method.
+        This method clear a timer set with the setTimeout() method.
+        The ID value returned by setTimeout() is used as the parameter for the clearTimeout() method.
+
+    
+        syntax :-    
+            myVar = setTimeoout(function,miliseconds);
+            clearTimeout(myVar);
+        
+            here, function : first parameter is the function to be ececuted.
+            miliseconds : indicates the length of the time-interval between each execution.
+
+            1 second = 1000 miliseconds
+        -->
+  <body>
+    <h1></h1>
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">stop</button>
+    <script>
+      let my;
+      function start() {
+        my = setTimeout(function () {
+          document.getElementsByTagName("h1")[0].innerHTML = "welcome";
+        }, 3000);
+      }
+      function stop() {
+        clearTimeout(my);
+        document.getElementsByTagName("h1")[0].innerHTML = "Timeout Stop";
+      }
+    </script>
+  </body>
+</html>

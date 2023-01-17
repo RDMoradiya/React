@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>History object</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- history object :-
+        It contains the URLs visited by the user (within a browser window).
+        It is part of the window object and is accessed through the window.history property.
+        All the major browser supports it. 
+    
+        1) back()       :- load the previous URL in the history list        [ window.history.back() ]
+        2) forward()    :- load the next URL in the history list            [ window.history.forward() ]
+        3) go()         :- load the specific URl from the history list      [ window.history.go() ]    -->
+  <body>
+    <h1></h1>
+    <button onclick="window.history.forward()">next</button>
+    <button onclick="window.history.back()">Back</button>
+    <button onclick="window.history.go(11)">Go</button>
+  </body>
+  <script>
+    let c = window.history.length;
+    document.getElementsByTagName("h1")[0].innerHTML = c;
+  </script>
+</html>
