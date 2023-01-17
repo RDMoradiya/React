@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Method</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+
+    <!-- var x = 102; //integer value
+    var y = 102.2; // floating point value
+    var z = 13e4; //exponent value
+    var n = new Number(16); //integer value by number object -->
+
+    <!-- ************************************ JavaScript Number Methods **************************************************** -->
+    <!-- The toString() method returns a number as a string. -->
+    <!-- All number methods can be used on any type of numbers (literals,
+      variables, or expressions). -->
+    <h1>toString() :-</h1>
+    <>The toString() method returns a number as a string. <br>
+      All number methods can be used on any type of numbers (literals,
+      variables, or expressions).
+    </p>
+    <script>
+      document.write("let x = 123;" + "<br>");
+      let x = 123;
+      document.write(
+        "document.write(x.tostring()+(123).tostring()+(100+23).tostring()" +
+          "<br>"
+      );
+      document.write(
+        x.toString() +
+          "<br>" +
+          (123).toString() +
+          "<br>" +
+          (100 + 23).toString()
+      );
+    </script>
+    <hr />
+
+    <!-- toExponential() returns a string, with a number rounded and written using
+      exponential notation. -->
+    <!-- A parameter defines the number of characters behind the decimal point -->
+    <h1>toExponential() :-</h1>
+    <A>
+      toExponential() returns a string, with a number rounded and written using
+      exponential notation.
+    <br> A parameter defines the number of characters behind the decimal point</p>
+    <script>
+      let y = 9.656;
+      document.write("let y = 9.656;" + "<br>");
+      document.write(
+        "document.write(y.toExponential() +y.toExponential(2) +y.toExponential(4) +y.toExponential(6))" +
+          "<br>"
+      );
+      document.write(
+        y.toExponential() +
+          "<br>" +
+          y.toExponential(2) +
+          "<br>" +
+          y.toExponential(4) +
+          "<br>" +
+          y.toExponential(6)
+      );
+    </script>
+    <hr />
+
+    <!-- toFixed() returns a string, with the number written with a specified number of decimals. -->
+    <h1>toFixed() :-</h1>
+    <p>
+      toFixed() returns a string, with the number written with a specified
+      number of decimals.
+    </p>
+    <script>
+      let z = 9.656;
+      document.write("let z = 9.656;" + "<br>");
+      document.write(
+        "document.write(z.toFixed() +z.toFixed(2) +z.toFixed(4) +z.toFixed(6))" +
+          "<br>"
+      );
+      document.write(
+        z.toFixed() +
+          "<br>" +
+          z.toFixed(2) +
+          "<br>" +
+          z.toFixed(4) +
+          "<br>" +
+          z.toFixed(6)
+      );
+    </script>
+    <hr />
+
+    <!-- toPrecision() returns a string, with a number written with a specified length. -->
+    <h1>toPrecision() :-</h1>
+    <p>
+      toPrecision() returns a string, with a number written with a specified
+      length.
+    </p>
+    <script>
+      let a = 9.656;
+      document.write("let a = 9.656;" + "<br>");
+      document.write(
+        "document.write(a.toPrecision() +a.toPrecision(2) +a.toPrecision(4) +a.toPrecision(6))" +
+          "<br>"
+      );
+      document.write(
+        a.toPrecision() +
+          "<br>" +
+          a.toPrecision(2) +
+          "<br>" +
+          a.toPrecision(4) +
+          "<br>" +
+          a.toPrecision(6)
+      );
+    </script>
+    <hr />
+
+    <!-- valueOf() returns a number as a number. -->
+    <!-- The valueOf() method is used internally in JavaScript to convert Number objects to primitive values. -->
+    <h1>valueOf() :-</h1>
+    <p>
+      valueOf() returns a number as a number. <br />
+      The valueOf() method is used internally in JavaScript to convert Number
+      objects to primitive values. <br />
+      In JavaScript, a number can be a primitive value (typeof = number) or an
+      object (typeof = object).
+    </p>
+    <script>
+      let b = 9.656;
+      document.write("let b = 9.656;" + "<br>");
+      document.write(
+        "document.write(b.valueOf() +b.valueOf(2) +b.valueOf(4) +b.valueOf(6))" +
+          "<br>"
+      );
+      document.write(
+        b.valueOf() +
+          "<br>" +
+          b.valueOf(2) +
+          "<br>" +
+          b.valueOf(4) +
+          "<br>" +
+          b.valueOf(6)
+      );
+    </script>
+    <hr />
+
+
+    <!-- ************************************************ Converting Variables to Numbers ************************************* -->
+    <!-- The Number() method can be used to convert JavaScript variables to numbers. -->
+    <h1>Number() :-</h1>
+    <p>
+        The Number() method can be used to convert JavaScript variables to numbers.
+    </p>
+    <script>
+      document.write('document.write(number(true)+Number(false)+Number("10")+Number(   "10")+Number("10    ")+Number("  10    ")+Number("10.33")+Number("10,33")+Number("10    33")+Number("John")'+"<br>")
+      document.write(Number(true) + "<br>" +
+        Number(false) + "<br>" +
+        Number("10") + "<br>" + 
+        Number("  10") + "<br>" +
+        Number("10  ") + "<br>" +
+        Number(" 10  ") + "<br>" +
+        Number("10.33") + "<br>" + 
+        Number("10,33") + "<br>" +
+        Number("10 33") + "<br>" +
+        Number("John"))   
+    </script>
+    <hr />
+
+    <!-- parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned. -->
+    <!-- If the number cannot be converted, NaN (Not a Number) is returned. -->
+    <h1>parseInt() :-</h1>
+    <p>
+      parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned.
+      <br>If the number cannot be converted, NaN (Not a Number) is returned.
+    </p>
+    <script>
+      document.write('document.write(parseInt("-10")+parseInt("-10.33")+parseInt("10")+parseInt("10.33")+parseInt("10 6")+parseInt("10 year")+parseInt("year 10")'+"<br>")
+      document.write( 
+        parseInt("-10") + "<br>" +
+        parseInt("-10.33") + "<br>" +
+        parseInt("10") + "<br>" +
+        parseInt("10.33") + "<br>" +
+        parseInt("10 6") + "<br>" +  
+        parseInt("10 years") + "<br>" +  
+        parseInt("years 10"))   
+    </script>
+    <hr />
+
+    <!-- parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned. -->
+    <!-- If the number cannot be converted, NaN (Not a Number) is returned. -->
+    <h1>parseFloat() :-</h1>
+    <p>
+      parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned. <br>
+      If the number cannot be converted, NaN (Not a Number) is returned.
+    </p>
+    <script>
+      document.write('document.write(parseFloat("10")+parseFloat("10.33")+parseFloat("10 6")+parseFloat("10 year")+parseFloat("year 10")'+"<br>")
+      document.write( 
+        parseFloat("10") + "<br>" +
+        parseFloat("10.33") + "<br>" +
+        parseFloat("10 6") + "<br>" +  
+        parseFloat("10 years") + "<br>" +
+        parseFloat("years 10"))    
+    </script>
+    <hr />
+
+<!-- ******************************************* Number Object Methods **************************************************** -->
+
+    <!-- The Number.isInteger() method returns true if the argument is an integer. -->
+    <h1>Number.isInteger() :-</h1>
+    <p>
+      The Number.isInteger() method returns true if the argument is an integer.
+    </p>
+    <script>
+      document.write('document.write(Number.isInteger(10) + Number.isInteger(10.5))'+"<br>")
+      document.write(Number.isInteger(10) + "<br>" + Number.isInteger(10.5));
+    </script>
+    <hr />
+
+     <!-- A safe integer is an integer that can be exactly represented as a double precision number. -->
+     <!-- The Number.isSafeInteger() method returns true if the argument is a safe integer. -->
+     <h1>Number.isSafeInteger() :-</h1>
+     <p>
+      A safe integer is an integer that can be exactly represented as a double precision number. <br>
+      The Number.isSafeInteger() method returns true if the argument is a safe integer. <br> Safe integers are all integers from -(2 <sup>53</sup>  - 1) to +(2 <sup>53</sup>  - 1). <br>
+      This is safe: 9007199254740991. This is not safe: 9007199254740992.  </p>
+     <script>
+      document.write('document.write(Number.isSafeInteger(10) + Number.isSafeInteger(12345678901234567890))'+"<br>")
+       document.write(Number.isSafeInteger(10) + "<br>" + Number.isSafeInteger(12345678901234567890));
+     </script>
+     <hr />
+
+     <!-- Number.parseFloat() parses a string and returns a number. -->
+     <!-- Spaces are allowed. Only the first number is returned. -->
+     <!-- If the number cannot be converted, NaN (Not a Number) is returned. -->
+     <h1>Number.parseFloat() :-</h1>
+     <p>
+      Number.parseFloat() parses a string and returns a number. <br> Spaces are allowed. Only the first number is returned. <br>If the number cannot be converted, NaN (Not a Number) is returned.  </p>
+     <script>
+      document.write('document.write(Number.perseFloat("10") + Number.perseFloat("10.33")+Number.parseFloat("10 20 30")+Number.parseFloat("10 years")+Number.parseFloat("years 10"))'+"<br>");
+      document.write(Number.parseFloat("10") + "<br>" +
+        Number.parseFloat("10.33") + "<br>" +
+        Number.parseFloat("10 20 30") + "<br>" +
+        Number.parseFloat("10 years") + "<br>" +
+        Number.parseFloat("years 10"));
+     </script>
+     <hr />
+
+     <!-- Number.parseInt() parses a string and returns a whole number. -->
+     <!-- Spaces are allowed. Only the first number is returned. -->
+     <!-- If the number cannot be converted, NaN (Not a Number) is returned. -->
+     <h1>Number.parseInt() :-</h1>
+     <p>
+      Number.parseInt() parses a string and returns a whole number. <br>If the number cannot be converted, NaN (Not a Number) is returned.  </p>
+     <script>
+      document.write('document.write(Number.parseInt("-10") + Number.parseInt("-10.33")+Number.parseInt("10")+Number.parseInt("10.33")+Number.parseInt("10   6")+Number.parseInt("10 year")+Number.parseInt("years 10"))'+"<br>");
+      document.write(Number.parseInt("-10") + "<br>" +
+          Number.parseInt("-10.33") + "<br>" +
+          Number.parseInt("10") + "<br>" +
+          Number.parseInt("10.33") + "<br>" +
+          Number.parseInt("10 6") + "<br>" +  
+          Number.parseInt("10 years") + "<br>" +  
+          Number.parseInt("years 10"));  
+     </script>
+     <hr />
+
+
+  </body>
+</html>
