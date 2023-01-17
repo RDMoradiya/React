@@ -1,0 +1,17 @@
+
+********************************** DOM (Document Object Model) ****************************
+
+--> DOM :- Document Object Model
+
+************************************ DOM Methods **************************************
+
+1 --> getElementById
+2 --> getElementsByClassName
+3 --> querySelector
+4 --> getElementsByName
+5 --> getElementsByTagName
+
+************************************** DOM Property ******************************
+
+1 --> innerHTML - display in HTML structure. 
+2 --> innerText - display text in particular element
