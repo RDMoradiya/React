@@ -1,3 +1,17 @@
 
 ************************************ Object methods **************************************
 
+1) --> assign() :-
+    --> syntax : Object.assign(target, sources)
+    --> this method returns the target object
+
+2) --> create() :-
+    --> syntax : Object.create(prototype[, propertiesObject])
+
+3) --> entries() :-
+    --> syntax : Object.entries(obj);
+    --> This method returns an array with arrays of the key, value pairs.
+
+4) --> freeze() :-
+    --> syntax : Object.freeze(obj)
+    --> This method prevents existing properties from being removed.
