@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apply()</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- apply() :-
+        -> With the apply() method, you can write a method that can be used on different objects.
+        -> The apply() method is similar to the call() method (previous chapter). -->
+
+    <script>
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      const person1 = {
+        firstName: "Raj",
+        lastName: "Moradiya",
+      };
+
+      document.write(person.fullName.apply(person1));
+    </script>
+    <hr />
+
+    <!-- The apply() method accepts arguments in an array -->
+    <h1>apply() :-</h1>
+    <script>
+      const persn = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const persn1 = {
+        firstName: "Raju",
+        lastName: "Manohar",
+      };
+
+      document.write(persn.fullName.apply(persn1, ["Gujarat", "India"]));
+    </script>
+    <hr />
+
+    <!-- using call() method  -->
+    <h1>call() :-</h1>
+    <script>
+      const prson = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const prson1 = {
+        firstName: "Raju",
+        lastName: "Manohar",
+      };
+
+      const prson2 = {
+        firstName: "Mary",
+        lastName: "Doe",
+      };
+
+      document.write(prson.fullName.call(prson1, "Gujarat", "India"));
+    </script>
+  </body>
+</html>

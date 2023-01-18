@@ -1,0 +1,6 @@
+
+********************************* difference beetwen call() and apply() ***********************************
+
+1) --> The call() method takes arguments separately.
+
+2) --> The apply() method takes arguments as an array.
