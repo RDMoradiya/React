@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function call</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- JavaScript Function call() :-
+        -> With the call() method, you can write a method that can be used on different objects.
+        -> The call() method is a predefined JavaScript method.
+        -> It can be used to invoke (call) a method with an owner object as an argument (parameter).
+        -> With call(), an object can use a method belonging to another object. -->
+
+    <script>
+      const myObject = {
+        firstName: "John",
+        lastName: "Doe",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      document.write(myObject.fullName());
+    </script>
+    <hr />
+
+    <!-- Ex-2 -->
+    <script>
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      const person1 = {
+        firstName: "RD",
+        lastName: "Moradiya",
+      };
+      const person2 = {
+        firstName: "PD",
+        lastName: "Moradiya",
+      };
+      document.write(person.fullName.call(person1));
+    </script>
+    <hr />
+
+    <!-- The call() Method with Arguments :-
+        The call() method can accept arguments: -->
+
+    <script>
+      const persn = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const persn1 = {
+        firstName: "Raj",
+        lastName: "Moradiya",
+      };
+
+      const persn2 = {
+        firstName: "Mary",
+        lastName: "Doe",
+      };
+
+      document.write(persn.fullName.call(persn1, "Surat", "India"));
+    </script>
+    <hr />
+  </body>
+</html>
