@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment</title>
+    <link rel="icon" href="../logo.png" />
+  </head>
+  <body>
+    <h1>Q-1. (a) Create an empty object user.</h1>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      const name = {};
+      document.write("const user = {};" + "<br>");
+      document.write("console.log(user);");
+      console.log(name);
+    </script>
+
+    <h1>Q-1. (b) Add the property name with the value John.</h1>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      const name1 = { fname: "John" };
+      document.write('const usre = { name: "John" };' + "<br>");
+      document.write("document.write(user.name);" + "<br>");
+      document.write(name1.fname);
+    </script>
+
+    <h1>Q-1. (c) Add the property surname with the value Smith.</h1>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      const name2 = { fname: "John", surname: "Smith" };
+      document.write(
+        'const user = { name: "John", surname: "Smith" };' + "<br>"
+      );
+      document.write("document.write(user.surname);" + "<br>");
+      document.write(name2.surname);
+    </script>
+
+    <h1>Q-1. (d) Change the value of the name to Pete.</h1>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      const name3 = { fname: "John" };
+      name3.fname = "Pete";
+      document.write('const user = { name: "John" };' + "<br>");
+      document.write('user.name = "Pete";' + "<br>");
+      document.write("document.write(user.name);" + "<br>");
+      document.write(name3.fname);
+    </script>
+
+    <h1>Q-1. (e) Remove the property name from the object.</h1>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      const name4 = { fname: "John", surname: "Smith" };
+      delete name4.fname;
+      document.write(
+        'const user = { name: "John", surname: "Smith" };' + "<br>"
+      );
+      document.write("delete user.name;" + "<br>");
+      document.write("document.write(user.name);" + "<br>");
+      document.write(name4.fname);
+    </script>
+    <hr />
+
+    <h1>Q-2. Is array copied?</h1>
+    <h4>
+      let fruits = ["Apples", "Pear", "Orange"]; <br />
+      // push a new value into the "copy" <br />
+      let shoppingCart = fruits; <br />
+      shoppingCart.push("Banana"); <br />
+      // what's in fruits? <br />
+      alert( fruits.length );
+    </h4>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      let fruits = ["Apple", "Pear", "Orange"];
+      let shoppingCart = fruits;
+      shoppingCart.push("Banana");
+      document.write("fruits => " + fruits + "<br>");
+      document.write("fruits length => " + fruits.length);
+      alert("Q-2." + " " + "fruits.length => " + fruits.length);
+    </script>
+    <hr />
+
+    <h1>Q-3. Map to names</h1>
+    <h4>
+      let john = { name: "John", age: 25 }; <br />
+      let pete = { name: "Pete", age: 30 }; <br />
+      let mary = { name: "Mary", age: 28 }; <br />
+      let users = [ john, pete, mary ]; <br />
+      let names = /* ... your code */ <br />
+      alert( names ); // John, Pete, Mary
+    </h4>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      let john = { name: "John", age: 25 };
+      let pete = { name: "Pete", age: 30 };
+      let mary = { name: "Mary", age: 28 };
+
+      let users = [john, pete, mary];
+
+      let names = users.map((item) => item.name);
+      document.write(names);
+      alert("Q-3. => " + names);
+    </script>
+    <hr />
+
+    <h1>Q-4. Map to objects.</h1>
+    <h4>
+      let john = { name: "John", surname: "Smith", id: 1 }; <br />
+      let pete = { name: "Pete", surname: "Hunt", id: 2 }; <br />
+      let mary = { name: "Mary", surname: "Key", id: 3 }; <br />
+      let users = [ john, pete, mary ]; <br />
+      let usersMapped = /* ... your code ... */ <br />
+      /* <br />
+      usersMapped = [ <br />
+      { fullName: "John Smith", id: 1 }, <br />
+      { fullName: "Pete Hunt", id: 2 }, <br />
+      { fullName: "Mary Key", id: 3 } <br />
+      ] <br />
+      */ <br />
+      alert( usersMapped[0].id ); // 1 <br />
+      alert( usersMapped[0].fullName ); // John Smith
+    </h4>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      let john1 = { name: "John", surname: "Smith", id: 1 };
+      let pete1 = { name: "Pete", surname: "Hunt", id: 2 };
+      let mary1 = { name: "Mary", surname: "Key", id: 3 };
+
+      let users1 = [john1, pete1, mary1];
+
+      let users1Mapped = users1.map((user) => ({
+        fullName: `${user.name} ${user.surname}`,
+        id: user.id,
+      }));
+
+      /*
+      usersMapped = [
+      { fullName: "John Smith", id: 1 },
+      { fullName: "Pete Hunt", id: 2 },
+      { fullName: "Mary Key", id: 3 }
+      ]
+      */
+
+      document.write(users1Mapped[0].id);
+      document.write(users1Mapped[0].fullName);
+      // alert(users1Mapped[0].id);
+      // alert(users1Mapped[0].fullName);
+    </script>
+    <hr />
+
+    <h1>
+      Q-5. Sum the properties There is a salaries object with arbitrary number
+      of salaries. Write the function sumSalaries(salaries) that returns the sum
+      of all salaries using Object.values and the for..of loop.If salaries is
+      empty, then the result must be 0.
+    </h1>
+    <h4>
+      let salaries = { <br />
+      "John": 100, <br />
+      "Pete": 300, <br />
+      "Mary": 250 <br />
+      }; <br />
+      alert( sumSalaries(salaries) ); // 650
+    </h4>
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      let salaries = {
+        John: 100,
+        Pete: 300,
+        Mary: 250,
+      };
+
+      function sumSalaries(salaries) {
+        let sum = salaries.John + salaries.Pete + salaries.Mary;
+        for (let sallary of Object.entries(salaries)) {
+          if (salaries.John == 0 || salaries.Pete == 0 || salaries.Mary == 0) {
+            return document.write("0");
+          } else {
+            return document.write(sum);
+            // return alert(sum);
+          }
+        }
+      }
+      sumSalaries(salaries);
+    </script>
+    <hr />
+
+    <h1>
+      Q-6. Destructuring assignment We have an object: Write the Destructuring
+      assignment that reads:
+    </h1>
+    <h4>
+      (a) Name property into the variable name. <br />
+      (b) Year’s property into the variable age. <br />(c) isAdmin property into
+      the variable isAdmin (false, if no such property) <br />(d) let user = {
+      name: "John", years: 30};
+    </h4>
+
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      let user = { Name_1: "John Smith", Years: 35 };
+      let { Name_1: name_1, Years: age_1, isAdmin = false } = user;
+      document.write(name_1 + "<br>");
+      document.write(age_1 + "<br>");
+      document.write(isAdmin);
+    </script>
+    <hr />
+
+    <h1>
+      Q-7. Turn the object into JSON and back Turn the user into JSON and then
+      read it back into another variable.
+    </h1>
+    <h4>user = { name: "John Smith", age: 35};</h4>
+
+    <h3 style="color: green">Answer :-</h3>
+    <script>
+      let user_1 = { name: "John Smith", age: 35 };
+      let user_2 = JSON.parse(JSON.stringify(user_1));
+      document.write('let user_1 = { name: "John Smith", age: 35 };' + "<br>");
+      document.write(
+        "let user_2 = JSON.parse(JSON.stringify(user_1));" + "<br>"
+      );
+    </script>
+  </body>
+</html>
