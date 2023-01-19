@@ -56,7 +56,7 @@
 
     answer => 
         <script>            
-                let names = users.map((item) => item.name);
+          let names = users.map((item) => item.name);
         </script>
 
 4)=> Map to Object. 
@@ -78,7 +78,7 @@
     answer => 
         <script>
 
-            let users1Mapped = users1.map((user) => ({
+            let usersMapped = users1.map((user) => ({
                 fullName: `${user.name} ${user.surname}`,
                 id: user.id,
             }));
