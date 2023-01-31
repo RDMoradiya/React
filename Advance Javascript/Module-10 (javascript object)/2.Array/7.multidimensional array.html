@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multidimensional Array</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <script>
+    let array = [
+      ["raj", 25, "Male", "Civil", "-"],
+      ["Mital", 25, "Female", "BCA", "-"],
+      ["parth", 23, "Male", "MCA", "-"],
+      ["Heena", 24, "Female", "BCA", "-"],
+      ["Jenil", 10, "Male", "BCA", "student"],
+    ];
+    // document.write(array);
+    document.write(array.length + "<br>" + "<br>");
+    document.write(
+      "<table border='1px' cellspacing='0' cellpadding='20px' text-align='center'>"
+    );
+    // outer array
+    for (let a = 0; a < array.length; a++) {
+      document.write("<tr>");
+      // inner array
+      for (let b = 0; b < array[a].length; b++) {
+        document.write("<td>" + array[a][b] + "</td>");
+      }
+      document.write("<tr>");
+    }
+    document.write("</table>");
+  </script>
+  <body></body>
+</html>
