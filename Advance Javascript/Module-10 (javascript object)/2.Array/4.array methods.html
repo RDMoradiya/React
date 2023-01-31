@@ -336,6 +336,7 @@
         The slice() method slices out a piece of an array into a new array.
         The slice() method creates a new array.
         The slice() method does not remove any elements from the source array.
+        The method takes 2 parameters: start position, and end position (end not included).
       
       ex:-
       let x = ["mango", "apple", "pineapple", "abcs"];
@@ -348,7 +349,7 @@
       apple
 
       note:- 
-      
+      slice(start,end)
       as shown above (1,2) means remove 1st item from the start and remove 2 item after 2 item from the start -->
 
     <hr />
@@ -375,6 +376,8 @@
 
     <!-- splice() :-
         The splice() method adds new items to an array.
+        The splice(start,howmany delet,"new value")
+
       ex:-
       let x = ["mango", "apple", "pineapple", "papita"];
       x.splice(0, 4, "mi", "vivo");
@@ -402,6 +405,31 @@
       document.getElementById("e1m13d1szq").innerHTML = c1scsc;
       c1scsc.splice(1, 3, "mi", "vivo");
       document.getElementById("d1em131dszq").innerHTML = c1scsc;
+    </script>
+
+    <!-- includes() :-
+        The includes() method returns true if an array contains a specified value.
+        The includes() method returns false if the value is not found.
+        The includes() method is case sensitive. -->
+
+    <hr />
+    <h1>includes() :-</h1>
+    <hr />
+    <span style="color: red"
+      >The includes() method returns true if an array contains a specified
+      value. <br />
+      The includes() method returns false if the value is not found. <br />
+      The includes() method is case sensitive.
+    </span>
+    <br />
+    <br />
+    <script>
+      let a = ["sanjay", "aman", "rehan", "rahul"];
+      document.write(a + "<br>");
+      let b = a.includes("aman");
+      document.write(b + "<br>");
+      let c = "neha";
+      document.write(c);
     </script>
   </body>
 </html>

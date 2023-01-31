@@ -44,9 +44,10 @@
     --> The reverse() method reverses the elements in an array.
 
 15 --> slice() :-
-    --> The slice() method slices out a piece of an array into a new array.
+    --> The slice(start,end) method slices out a piece of an array into a new array.
     --> The slice() method creates a new array.
     --> The slice() method does not remove any elements from the source array.
+    --> The method takes 2 parameters: start position, and end position (end not included).
 
     --> ex:-
       let x = ["mango", "apple", "pineapple", "abcs"];
@@ -64,6 +65,7 @@
 
 16 --> splice() :-
     --> The splice() method adds new items to an array.
+    --> The splice(start,howmany delet,"new value")
 
     --> ex:-
       let x = ["mango", "apple", "pineapple", "papita"];
@@ -77,3 +79,9 @@
       note:- 
       
       as shown above (0,4) means add mi/vivo after 0(zero) and delet 4 item after adding mi/vivo start.
+
+17 --> includes() :-
+    --> The includes() method returns true if an array contains a specified value.
+    --> The includes() method returns false if the value is not found.
+    --> The includes() method is case sensitive.
+
