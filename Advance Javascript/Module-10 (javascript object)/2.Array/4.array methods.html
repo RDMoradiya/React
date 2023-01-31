@@ -428,7 +428,7 @@
       document.write(a + "<br>");
       let b = a.includes("aman");
       document.write(b + "<br>");
-      let c = "neha";
+      let c = a.includes("neha");
       document.write(c);
     </script>
 
@@ -484,6 +484,82 @@
       document.write(age + "<br>");
       let ages = age.every(some_function);
       document.write(ages);
+      function some_function(some) {
+        return some >= 18;
+      }
+    </script>
+
+    <!-- find() :-
+        The find() method returns the value of the first element that passes a test.
+        The find() method executes a function for each array element.
+        The find() method returns undefined if no elements are found.
+        The find() method does not execute the function for empty elements.
+        The find() method does not change the original array.  -->
+
+    <hr />
+    <h1>find() :-</h1>
+    <hr />
+    <span style="color: red">
+      The find() method returns the value of the first element that passes a
+      test.
+    </span>
+    <br />
+    <br />
+    <script>
+      let age_ = [10, 20, 23, 15];
+      document.write(age_ + "<br>");
+      let ages_ = age_.find(some_function);
+      document.write(ages_);
+      function some_function(some) {
+        return some >= 18;
+      }
+    </script>
+
+    <!-- findindex() :-
+        The findIndex() method executes a function for each array element.
+        The findIndex() method returns the index (position) of the first element that passes a test.
+        The findIndex() method returns -1 if no match is found.
+        The findIndex() method does not execute the function for empty array elements.
+        The findIndex() method does not change the original array.  -->
+
+    <hr />
+    <h1>findindex() :-</h1>
+    <hr />
+    <span style="color: red">
+      The findIndex() method returns the index (position) of the first element
+      that passes a test.
+    </span>
+    <br />
+    <br />
+    <script>
+      let _age_ = [10, 20, 23, 15];
+      document.write(_age_ + "<br>");
+      let _ages_ = _age_.findIndex(some_function);
+      document.write(_ages_);
+      function some_function(some) {
+        return some >= 18;
+      }
+    </script>
+
+    <!-- filter() :-
+        The filter() method creates a new array filled with elements that pass a test provided by a function.
+        The filter() method does not execute the function for empty elements.
+        The filter() method does not change the original array.  -->
+
+    <hr />
+    <h1>filter() :-</h1>
+    <hr />
+    <span style="color: red">
+      The filter() method creates a new array filled with elements that pass a
+      test provided by a function.
+    </span>
+    <br />
+    <br />
+    <script>
+      let age_1 = [10, 20, 23, 15];
+      document.write(age_1 + "<br>");
+      let ages_1 = age_1.filter(some_function);
+      document.write(ages_1);
       function some_function(some) {
         return some >= 18;
       }

@@ -65,7 +65,7 @@
 
 16 --> splice() :-
     --> The splice() method adds new items to an array.
-    --> The splice(start,howmany delet,"new value")
+    --> The splice(start,how many delet,"new value")
 
     --> ex:-
       let x = ["mango", "apple", "pineapple", "papita"];
@@ -108,6 +108,43 @@
 
     syntax :-
 
-            every(functionname)
+            every(function_name)
 
-            function functionname(parameter)
+            function function_name(parameter)
+
+20 --> find() :-
+    --> The find() method returns the value of the first element that passes a test.
+    --> The find() method executes a function for each array element.
+    --> The find() method returns undefined if no elements are found.
+    --> The find() method does not execute the function for empty elements.
+    --> The find() method does not change the original array.
+
+    syntax :-
+
+            find(function_name)
+
+            function function_name(parameter)
+
+21 --> findIndex() :-
+    --> The findIndex() method executes a function for each array element.
+    --> The findIndex() method returns the index (position) of the first element that passes a test.
+    --> The findIndex() method returns -1 if no match is found.
+    --> The findIndex() method does not execute the function for empty array elements.
+    --> The findIndex() method does not change the original array.  
+
+    syntax :-
+
+            findIndex(function_name)
+
+            function function_name(parameter)
+
+22 --> filter() :-
+    --> The filter() method creates a new array filled with elements that pass a test provided by a function.
+    --> The filter() method does not execute the function for empty elements.
+    --> The filter() method does not change the original array.  
+
+    syntax :-
+
+            filter(function_name)
+
+            function function_name(parameter)
