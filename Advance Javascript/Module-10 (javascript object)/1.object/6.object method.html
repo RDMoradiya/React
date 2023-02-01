@@ -8,22 +8,28 @@
     <link rel="icon" href="logo.png" />
   </head>
   <body>
-    <!-- syntax : Object.assign(target, sources) -->
-    <!-- this method returns the target object -->
+    <!-- assign() :-
+      
+      syntax : 
+      
+      Object.assign(target, sources) 
+
+      this method returns the target object -->
+
     <h1>assign() :-</h1>
     <script>
       let obj1 = { a: 1, b: 2, c: 3 };
-      document.write("let obj1 = { a: 1, b: 2, c: 3 };" + "<br>");
       let obj2 = Object.assign({ c: 5, d: 55 }, obj1);
-      document.write(
-        "let obj2 = Object.assign({ c: 5, d: 55 }, obj1);" + "<br>"
-      );
-      document.write("document.write(obj2.c, obj2.d);" + "<br>");
       document.write(obj2.c, obj2.d);
     </script>
     <hr />
 
-    <!-- syntax : Object.create(prototype[, propertiesObject]) -->
+    <!-- create() :-
+      
+      syntax : 
+      
+      Object.create(prototype[, propertiesObject]) -->
+
     <h1>create() :-</h1>
     <script>
       function frt() {
@@ -38,32 +44,35 @@
     </script>
     <hr />
 
-    <!-- This method returns an array with arrays of the key, value pairs. -->
-    <!-- syntax : Object.entries(obj); -->
+    <!-- entries() :-
+      
+      This method returns an array with arrays of the key, value pairs. 
+      syntax : 
+      
+      Object.entries(obj); -->
+
     <h1>entries() :-</h1>
     <p>This method returns an array with arrays of the key, value pairs.</p>
     <script>
       const eobj = { 1: "abc", 2: "xyz", 3: "pqr" };
-      document.write('eobj =  {1: "abc", 2: "xyz", 3: "pqr"}' + "<br>");
       let eo = Object.entries(eobj)[2];
-      document.write("document.write(Object.entries(eobj)[1])" + "<br>");
-      document.write(Object.entries(eobj)[1] + "<br>");
       document.write(eo);
     </script>
     <hr />
 
-    <!-- This method prevents existing properties from being removed. -->
-    <!-- syntax : Object.freeze(obj) -->
+    <!-- freeze() :-
+      
+      This method prevents existing properties from being removed.
+      syntax :
+      
+      Object.freeze(obj) -->
+
     <h1>freeze() :-</h1>
     <p>This method prevents existing properties from being removed.</p>
     <script>
       const f1 = { property4: "New data" };
-      document.write("f1 = { property4: 'New data' };" + "<br>");
       const f2 = Object.freeze(f1);
-      document.write("f2 = Object.freeze(f1);" + "<br>");
       f2.property4 = "New another data";
-      document.write('f2.property4 = "New another data";' + "<br>");
-      document.write("document.write(f2.property4)" + "<br>");
       document.write(f2.property4);
     </script>
     <hr />
