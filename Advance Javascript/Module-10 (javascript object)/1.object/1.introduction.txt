@@ -1,5 +1,5 @@
 
-********************* Objescts :- **********************
+********************* Objects :- **********************
 
 --> In JavaScript, objects are king. If you understand objects, you understand JavaScript.
 
@@ -26,9 +26,9 @@
 syntax :- 
 
 const person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};
-document.write(persone.age)
+document.write(person.age)
 or//
-document.write(persone["age"])
+document.write(person["age"])
 
 output :-
 50

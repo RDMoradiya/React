@@ -26,7 +26,7 @@
       // ex-1
       const name = { fname: "raj", lname: "moradiya", age: 27 };
       document.write(name.fname + "<br>");
-      // also you can writ elike this
+      // also you can write like this
       document.write(name["lname"] + "<br>" + "<hr>");
 
       //   ex-2
@@ -122,6 +122,21 @@
       };
       document.write(myObj.cars.car2 + "<hr>");
       document.write(myObj["cars"]["car2"] + "<hr>");
+    </script>
+
+    <!-- Array of object -->
+    <script>
+      var stu = [
+        { name: "raj", age: 25 },
+        { name: "meet", age: 23 },
+        { name: "raja", age: 21 },
+      ];
+      console.log(stu);
+      for (var a = 0; a < stu.length; a++) {
+        document.write(
+          stu[a]["name"] + " is " + stu[a]["age"] + " year old. " + "<br>"
+        );
+      }
     </script>
   </body>
 </html>
