@@ -97,7 +97,9 @@
 
             some(function-name)
 
-            function function-name(parameter)
+            function function-name(parameter){
+                return condition/statement;
+            }
 
 19 --> every() :-
     --> The every() method executes a function for each array element.
@@ -110,7 +112,9 @@
 
             every(function_name)
 
-            function function_name(parameter)
+            function function_name(parameter){
+                return condition/statement;
+            }
 
 20 --> find() :-
     --> The find() method returns the value of the first element that passes a test.
@@ -123,7 +127,9 @@
 
             find(function_name)
 
-            function function_name(parameter)
+            function function_name(parameter){
+                return condition/statement;
+            }
 
 21 --> findIndex() :-
     --> The findIndex() method executes a function for each array element.
@@ -136,7 +142,9 @@
 
             findIndex(function_name)
 
-            function function_name(parameter)
+            function function_name(parameter){
+                return condition/statement;
+            }
 
 22 --> filter() :-
     --> The filter() method creates a new array filled with elements that pass a test provided by a function.
@@ -147,4 +155,20 @@
 
             filter(function_name)
 
-            function function_name(parameter)
+            function function_name(parameter){
+                return condition/statement;
+            }
+
+23 --> mpa() :-
+    --> map() creates a new array from calling a function for every array element.
+    --> map() calls a function once for each element in an array.
+    --> map() does not execute the function for empty elements.  
+    --> map() does not change the original array.
+
+    syntax :-
+
+            map(function_name)
+
+            function function_name(parameter){
+                return condition/statement;
+            }

@@ -564,5 +564,47 @@
         return some >= 18;
       }
     </script>
+
+    <!-- map() :-
+    Return a new array with the all element values.
+    map() creates a new array from calling a function for every array element.
+    map() calls a function once for each element in an array.
+    map() does not execute the function for empty elements.
+    map() does not change the original array. -->
+
+    <hr />
+    <h1>map() :-</h1>
+    <hr />
+    <span style="color: red">
+      map() creates a new array from calling a function for every array element.
+      <br />
+      map() does not change the original array.
+    </span>
+    <br />
+    <br />
+    <script>
+      // ex-1
+      let num = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+      document.write(num + "<br>");
+      let num_map = num.map(map_function);
+      document.write(num_map + "<br>");
+
+      function map_function(num) {
+        return num * 10;
+      }
+
+      // ex-2
+      let num1 = [
+        { fname: "raj", lname: "moradiya" },
+        { fname: "parth", lname: "patel" },
+        { fname: "mital", lname: "bhingradiya" },
+      ];
+      let num1_map = num1.map(map_functions);
+      document.write(num1_map.join(" ") + "<br>");
+
+      function map_functions(num) {
+        return num.fname + " " + num.lname + "<br>";
+      }
+    </script>
   </body>
 </html>
