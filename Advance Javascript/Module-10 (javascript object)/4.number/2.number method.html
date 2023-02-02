@@ -154,10 +154,10 @@
         The Number() method can be used to convert JavaScript variables to numbers.
     </p>
     <script>
-      document.write('document.write(number(true)+Number(false)+Number("10")+Number(   "10")+Number("10    ")+Number("  10    ")+Number("10.33")+Number("10,33")+Number("10    33")+Number("John")'+"<br>")
+      document.write('document.write(Number(true)+Number(false)+Number("-10")+Number(   "10")+Number("10    ")+Number("  10    ")+Number("10.33")+Number("10,33")+Number("10    33")+Number("John")'+"<br>")
       document.write(Number(true) + "<br>" +
         Number(false) + "<br>" +
-        Number("10") + "<br>" + 
+        Number("-10") + "<br>" + 
         Number("  10") + "<br>" +
         Number("10  ") + "<br>" +
         Number(" 10  ") + "<br>" +
@@ -165,7 +165,7 @@
         Number("10,33") + "<br>" +
         Number("10 33") + "<br>" +
         Number("John"))   
-    </script>
+    </script>    
     <hr />
 
     <!-- parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned. -->
@@ -198,7 +198,7 @@
     <script>
       document.write('document.write(parseFloat("10")+parseFloat("10.33")+parseFloat("10 6")+parseFloat("10 year")+parseFloat("year 10")'+"<br>")
       document.write( 
-        parseFloat("10") + "<br>" +
+        parseFloat("-10") + "<br>" +
         parseFloat("10.33") + "<br>" +
         parseFloat("10 6") + "<br>" +  
         parseFloat("10 years") + "<br>" +
