@@ -27,8 +27,12 @@
             sin(x) :- Returns the sine of x (x is in radians).
             tan(x) :- Returns the tangent of an angle.
             log(x)	:- Returns the natural logarithm of x.
-            log10(x) :- Returns the base-10 logarithm of x. -->
+            log10(x) :- Returns the base-10 logarithm of x.
+            Math.cbrt(x) :- Returns cubic root of x.
+            Math.trunc(x) :- Return integer numbers without decimal. -->
   <body>
+    <h1></h1>
+    <h1></h1>
     <h1></h1>
     <h1></h1>
     <h1></h1>
@@ -81,7 +85,10 @@
       document.getElementsByTagName("h1")[13].innerHTML = "Math.log : " + l;
       let m = Math.log10(1000);
       document.getElementsByTagName("h1")[14].innerHTML = "Math.log10 : " + m;
-      console.log(x);
+      let n = Math.trunc(x);
+      document.getElementsByTagName("h1")[15].innerHTML = "Math.trunc : " + n;
+      let o = Math.cbrt(125);
+      document.getElementsByTagName("h1")[16].innerHTML = "Math.cbrt : " + o;
     </script>
   </body>
 </html>
