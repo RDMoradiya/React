@@ -7,19 +7,29 @@
     <title>date</title>
     <link rel="icon" href="logo.png" />
   </head>
-  <!-- 
-        date()              to get current date and time according to browser.
+  <!--   
+        toDateString()    It returns the date portion of a Date object.
+        date()            to get current date and time according to browser.
         getFullYear()	    Returns the year
-        getMonth()	        Returns the month (from 0-11)
+        getMonth()	      Returns the month (from 0-11)
         getDate()	        Returns the day of the month (from 1-31)
-        getHours()	        Returns the hour (from 0-23)
+        getHours()	      Returns the hour (from 0-23)
         getMinutes()	    Returns the minutes (from 0-59)
         getSeconds()	    Returns the seconds (from 0-59)
         getMilliseconds()	Returns the milliseconds (from 0-999)
         getDay()	        Returns the day of the week (from 0-6)
         gettime()	        get the time (milliseconds since january 1,1970)
+        setDate()	        It sets the day value for the specified date on the basis of local time.
+        setDay()	        It sets the particular day of the week on the basis of local time.
+        setMonth()	      It sets the month value for the specified date on the basis of local time.
+        setFullYears()	  It sets the year value for the specified date on the basis of local time.
+        setHours()	      It sets the hour value for the specified date on the basis of local time.
+        setSeconds()	    It sets the second value for the specified date on the basis of local time.
+        setMilliseconds()	It sets the millisecond value for the specified date on the basis of local time.
+        setMinutes()	    It sets the minute value for the specified date on the basis of local time.
  -->
   <body>
+    <h1 id="res"></h1>
     <h1 id="res0"></h1>
     <h1 id="res1"></h1>
     <h1 id="res2"></h1>
@@ -31,18 +41,23 @@
     <h1 id="res8"></h1>
     <h1 id="res9"></h1>
     <h1 id="res10"></h1>
+
+    <button onclick="todateString()">toDateString</button>
     <button onclick="getfulldate()">full date</button>
     <button onclick="getyear()">year</button>
     <button onclick="getmonth()">month</button>
     <button onclick="gethourse()">horse</button>
     <button onclick="getminut()">minutes</button>
     <button onclick="getsecond()">second</button>
-    <button onclick="getmilisecond()">milisecond</button>
+    <button onclick="getmilisecond()">millisecond</button>
     <button onclick="getdate()">date</button>
     <button onclick="getday()">day</button>
     <button onclick="gettime()">time</button>
     <script>
       let date = new Date();
+      function todateString() {
+        document.getElementById("res").innerHTML = date.toDateString();
+      }
       function getfulldate() {
         document.getElementById("res0").innerHTML = date;
       }
@@ -61,7 +76,7 @@
           "may",
           "jun",
           "july",
-          "augst",
+          "august",
           "sept",
           "oct",
           "november",
