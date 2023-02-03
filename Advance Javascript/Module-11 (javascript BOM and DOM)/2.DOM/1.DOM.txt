@@ -1,7 +1,7 @@
 
-********************************** DOM (Document Object Model) ****************************
+********************************** DOM (Document Object Module) ****************************
 
---> DOM :- Document Object Model
+--> DOM :- Document Object Module
 
 ************************************ DOM Methods **************************************
 
