@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en" id="main">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Traversal Methods</title>
+    <link rel="icon" href="logo.png" />
+    <style>
+      #outer {
+        width: 400px;
+        height: 400px;
+        border: 1px solid green;
+        margin: auto;
+        margin-top: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: grey;
+      }
+      #inner {
+        width: 300px;
+        height: 300px;
+        border: 1px solid blue;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: aqua;
+      }
+      #inner div {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: chartreuse;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outer">
+      <div id="inner" style="display: flex">
+        <div id="a" style="border: 1px solid red">A</div>
+        <div id="b" style="border: 1px solid red">B</div>
+        <div id="c" style="border: 1px solid red">C</div>
+        <div id="d" style="border: 1px solid red">D</div>
+        <div id="e" style="border: 1px solid red">E</div>
+      </div>
+    </div>
+    <script>
+      let a = (document.getElementById("inner").parentElement.style.background =
+        "pink");
+
+      let b = document.getElementById("main").parentNode;
+      console.log(b);
+
+      let c = document.getElementById("outer").children;
+      console.log(c);
+
+      let d = document.getElementById("inner").children[1];
+      console.log(d);
+
+      let e = document.getElementById("inner").childNodes;
+      console.log(e);
+
+      let f = document.getElementById("inner").childNodes[3];
+      console.log(f);
+
+      let g = document.getElementById("inner").firstElementChild;
+      console.log(g);
+
+      let h = document.getElementById("inner").lastElementChild.innerHTML;
+      console.log(h);
+
+      let i = document.getElementById("inner").firstChild;
+      console.log(i);
+
+      let j = document.getElementById("inner").lastChild;
+      console.log(j);
+
+      let k = document.getElementById("c").nextElementSibling;
+      console.log(k);
+
+      let l = document.getElementById("c").previousElementSibling;
+      console.log(l);
+
+      let m = document.getElementById("c").nextSibling;
+      console.log(m);
+
+      let n = document.getElementById("c").nextSibling;
+      console.log(n);
+    </script>
+  </body>
+</html>
