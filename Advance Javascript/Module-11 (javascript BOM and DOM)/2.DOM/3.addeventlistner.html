@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Addeventlistner</title>
+    <link rel="icon" href="../logo.png" />
+    <style>
+      #nav {
+        border: 1px solid red;
+        width: 50%;
+        height: 200px;
+        background-color: yellowgreen;
+      }
+      #nav1 {
+        border: 1px solid red;
+        width: 50%;
+        height: 200px;
+        background-color: rgb(109, 89, 196);
+      }
+    </style>
+    <script>
+      function check_valid() {
+        alert("Hello user");
+      }
+    </script>
+    <!-- addEventListner() :-
+        addEventListner is a event.
+        write addeventlistener code bottom of the HTML code before <body> tag.
+        The addEventListener() method attaches an event handler to the specified element.
+        The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+        The addEventListener() method makes it easier to control how the event reacts to bubbling.
+        You can easily remove an event listener by using the removeEventListener() method.
+      
+        Syntax :-
+          element.addEventListener(event, function); 
+        
+        note :- 
+          The first parameter is the type of the event (like "click" or "mousedown" or any other HTML DOM Event.
+          The second parameter is the function we want to call when the event occurs. -->
+  </head>
+  <body>
+    <button id="btn1" onclick="check_valid()">Click Here</button>
+
+    <button id="btn2">AddEventListner</button>
+
+    <!-- example - 1 -->
+
+    <script>
+      document.getElementById("btn2").addEventListener("click", function () {
+        alert("event Listener");
+      });
+    </script>
+    <hr />
+
+    <!-- example - 2 -->
+
+    <div id="nav"></div>
+    <script>
+      function navi() {
+        document.getElementById("nav").addEventListener("click", function () {
+          document.getElementById("nav").style.border = "5px dotted blue";
+        });
+      }
+      document.getElementById("nav").addEventListener("click", navi());
+      document.getElementById("nav").addEventListener("click", function () {
+        document.getElementById("nav").style.background = "red";
+      });
+    </script>
+    <hr />
+    <!-- example - 3 -->
+
+    <div id="nav1"></div>
+    <script>
+      function navi1() {
+        document.getElementById("nav1").addEventListener("click", function () {
+          document.getElementById("nav1").style.border = "5px dotted black";
+        });
+      }
+      document.getElementById("nav1").addEventListener("click", navi1());
+      document.getElementById("nav1").addEventListener("click", function () {
+        this.style.background = "grey"; //using "this"
+      });
+    </script>
+  </body>
+</html>
