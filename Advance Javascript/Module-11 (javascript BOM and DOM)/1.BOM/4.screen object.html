@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Screen object</title>
+    <title>Screen height width</title>
     <link rel="icon" href="logo.png" />
   </head>
   <!-- 
@@ -14,10 +14,6 @@
     width	      :- Returns the total width of the screen
     colorDepth	:- Returns the bit depth of the color palette for displaying images
     pixelDepth	:- Returns the color resolution (in bits per pixel) of the screen
-    innerHeight :- The innerHeight property returns the height of a window's content area.
-    outerHeight :- The outerHeight property returns the outer height of the browser window, including all interface elements (like toolbars/scrollbars).
-    innerWidth  :- The innerWidth property returns the width of a window's content area.
-    outerWidth  :- The outerWidth property returns the outer width of the browser window, including all interface elements (like toolbars/scrollbars).
    -->
 
   <style>
@@ -39,14 +35,6 @@
     <button onclick="colorDepth()">screen colorDepth</button>
     <h1></h1>
     <button onclick="pixelDepth()">screen pixelDepth</button>
-    <h1></h1>
-    <button onclick="innerheight()">window innerHeight</button>
-    <h1></h1>
-    <button onclick="outerheight()">window outerHeight</button>
-    <h1></h1>
-    <button onclick="innerwidth()">window innerWidth</button>
-    <h1></h1>
-    <button onclick="outerwidth()">window outerWidth</button>
   </body>
   <script>
     function availHeight() {
@@ -72,22 +60,6 @@
     function pixelDepth() {
       let f = window.screen.pixelDepth;
       document.getElementsByTagName("h1")[5].innerHTML = f;
-    }
-    function innerheight() {
-      let g = window.innerHeight;
-      document.getElementsByTagName("h1")[6].innerHTML = g;
-    }
-    function outerheight() {
-      let h = window.outerHeight;
-      document.getElementsByTagName("h1")[7].innerHTML = h;
-    }
-    function innerwidth() {
-      let i = window.innerWidth;
-      document.getElementsByTagName("h1")[8].innerHTML = i;
-    }
-    function outerwidth() {
-      let j = window.outerWidth;
-      document.getElementsByTagName("h1")[9].innerHTML = j;
     }
   </script>
 </html>

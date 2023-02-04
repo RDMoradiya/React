@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>window height width object</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- 
+    innerHeight :- The innerHeight property returns the height of a window's content area.
+    outerHeight :- The outerHeight property returns the outer height of the browser window, including all interface elements (like toolbars/scrollbars).
+    innerWidth  :- The innerWidth property returns the width of a window's content area.
+    outerWidth  :- The outerWidth property returns the outer width of the browser window, including all interface elements (like toolbars/scrollbars).
+   -->
+
+  <style>
+    * {
+      margin: 10px;
+    }
+  </style>
+
+  <body>
+    <h1></h1>
+    <button onclick="innerheight()">window innerHeight</button>
+    <h1></h1>
+    <button onclick="outerheight()">window outerHeight</button>
+    <h1></h1>
+    <button onclick="innerwidth()">window innerWidth</button>
+    <h1></h1>
+    <button onclick="outerwidth()">window outerWidth</button>
+  </body>
+  <script>
+    function innerheight() {
+      let g = window.innerHeight;
+      document.getElementsByTagName("h1")[0].innerHTML = g;
+    }
+    function outerheight() {
+      let h = window.outerHeight;
+      document.getElementsByTagName("h1")[1].innerHTML = h;
+    }
+    function innerwidth() {
+      let i = window.innerWidth;
+      document.getElementsByTagName("h1")[2].innerHTML = i;
+    }
+    function outerwidth() {
+      let j = window.outerWidth;
+      document.getElementsByTagName("h1")[3].innerHTML = j;
+    }
+  </script>
+</html>
