@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moveby moveto window</title>
+    <link rel="icon" href="logo.png" />
+
+    <!-- moveBy() :- The moveBy() method moves a window a number of pixels relative to its current coordinates.
+         moveTo() :- The moveTo() method moves a window to the specified coordinates. -->
+    <script>
+      let win;
+      function openwindow() {
+        win = window.open("", "", "width=500,height=500");
+        win.document.write(
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid alias accusantium quos molestiae odio mollitia odit tempore excepturi ipsam eaque nisi et, delectus culpa, minima distinctio cumque quod quasi."
+        );
+      }
+      function movebywindow() {
+        win.moveBy(250, 250);
+      }
+      function movetowindow() {
+        win.moveBy(250, 250);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="openwindow()">open-window</button>
+    <button onclick="movebywindow()">moveby-window</button>
+    <button onclick="movetowindow()">moveto-window</button>
+    <p></p>
+  </body>
+</html>

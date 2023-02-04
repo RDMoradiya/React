@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>resizeBy resizeTto window</title>
+    <link rel="icon" href="logo.png" />
+
+    <!-- resizeBy() :- The resizeBy() method resizes a window by a specified amount.
+         resizeTo() :- The resizeTo() method resizes a window to a new width and height. -->
+    <script>
+      let win;
+      function openwindow() {
+        win = window.open("", "", "width=100,height=100");
+        win.document.write(
+          "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut aliquid alias accusantium quos molestiae odio mollitia odit tempore excepturi ipsam eaque nisi et, delectus culpa, minima distinctio cumque quod quasi."
+        );
+      }
+      function resizebywindow() {
+        win.resizeBy(250, 250);
+      }
+      function resizetowindow() {
+        win.resizeTo(250, 250);
+      }
+    </script>
+  </head>
+  <body>
+    <button onclick="openwindow()">open-window</button>
+    <button onclick="resizebywindow()">resizeBy-window</button>
+    <button onclick="resizetowindow()">resizeTo-window</button>
+    <p></p>
+  </body>
+</html>
