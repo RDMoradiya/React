@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Events(addeventlistner)</title>
+    <link rel="icon" href="logo.png" />
+    <style>
+      h1 {
+        color: green;
+      }
+    </style>
+  </head>
+  <!-- Form Events :-
+        1.keydown       (onkeydown)
+        2.keypress      (onkeypress)
+        3.keyup         (onkeyup)
+        4.focus         (onfocus)
+        5.blur          (onblur)
+        6.input         (oninput)
+        7.change        (onchange)
+        8.select        (onselect)
+        9.submit        (onsubmit)
+        10.invalid      (oninvalid)
+-->
+  <body>
+    <form action="" id="frm">
+      <h1>Focus / Blue :-</h1>
+      <label for="">First Name :-</label>
+      <input type="text" id="fname" />
+      <hr />
+      <h1>Input :-</h1>
+      <label for="">Middle Name</label>
+      <input type="text" id="mname" />
+      <p id="inpt" style="border: 1px solid red"></p>
+      <hr />
+      <h1>Change :-</h1>
+      <label for="">Last Name</label>
+      <input type="text" id="lname" />
+      <p id="inpt1" style="border: 1px solid blue"></p>
+      <hr />
+      <h1>Select :-</h1>
+      <label for="">Address :-</label>
+      <input type="text" id="add" />
+      <hr />
+      <h1>Invalid :-</h1>
+      <label for="">Confirm Address :-</label>
+      <!-- invalid -->
+      <input type="text" oninvalid="return alert('Enter Address')" required />
+      <hr />
+      <h1>Submit :-</h1>
+      <input type="submit" name="" />
+      <p id="sbmt1" style="color: green; font-size: 30px"></p>
+    </form>
+    <br /><br /><br /><br /><br /><br /><br />
+    <script>
+      //    focus
+      document.getElementById("fname").addEventListener("focus", function () {
+        this.style.background = "lightgrey";
+      });
+
+      //    blur
+      document.getElementById("fname").addEventListener("blur", function () {
+        this.style.background = "";
+      });
+      //    input
+      document.getElementById("mname").addEventListener("input", function () {
+        let x = this.value; //value
+        document.getElementById("inpt").innerHTML = x;
+      });
+      //    change
+      document.getElementById("lname").addEventListener("change", function () {
+        let y = this.value; //value
+        document.getElementById("inpt1").innerHTML = y;
+      });
+      //    select
+      document.getElementById("add").addEventListener("select", function () {
+        alert("selected");
+      });
+      //    submit
+      document.getElementById("frm").addEventListener("submit", function () {
+        // alert("Thank you ");
+
+        // let d = document.getElementById("fname").value;
+        // alert("Thank You : " + d);
+
+        document.getElementById("sbmt1").innerHTML = "--Thank You--";
+        return false;
+      });
+    </script>
+  </body>
+</html>

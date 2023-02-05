@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Validation</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <form action="" onsubmit="return numbervalidation()">
+      Telephone Number :-
+      <input type="tel" maxlength="10" id="telnum" />
+      <span id="telnbr" style="color: red; font-size: 10px; visibility: hidden"
+        >*Enter Telephone Number*</span
+      >
+      <br /><br />
+      Mobile Number :-
+      <input type="tel" maxlength="10" id="mblnum" />
+      <span id="mnbr" style="color: red; font-size: 10px"></span>
+      <br /><br />
+      <input type="submit" />
+    </form>
+    <script>
+      //   Using Visibility
+
+      function numbervalidation() {
+        let telno = document.getElementById("telnum");
+        if (telno.value == "") {
+          document.getElementById("telnbr").style.visibility = "visible";
+          return false;
+        } else if (isNaN(telno.value)) {
+          document.getElementById("telnbr").innerHTML = "*Enter Digit Only*";
+          return false;
+        } else if (telno.value.length < 10) {
+          document.getElementById("telnbr").innerHTML = "*Enter 10 Digit*";
+          return false;
+        } else if (telno.value.length > 10) {
+          document.getElementById("telnbr").innerHTML = "*Enter 10 Digit*";
+          return false;
+        } else {
+          document.getElementById("telnbr").innerHTML = "";
+        }
+
+        //   Using innerHTML
+
+        let mno = document.getElementById("mblnum");
+        if (mno.value == "") {
+          document.getElementById("mnbr").innerHTML = "*Enter Mobile Number*";
+          return false;
+        } else if (isNaN(mno.value)) {
+          document.getElementById("mnbr").innerHTML = "*Enter Digit Only*";
+          return false;
+        } else if (mno.value.length < 10) {
+          document.getElementById("mnbr").innerHTML = "*Enter 10 Digit*";
+          return false;
+        } else if (mno.value.length > 10) {
+          document.getElementById("mnbr").innerHTML = "*Enter 10 Digit*";
+          return false;
+        } else {
+          document.getElementById("mnbr").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>

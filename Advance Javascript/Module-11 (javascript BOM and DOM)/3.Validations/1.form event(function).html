@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.Form Events(function)</title>
+    <link rel="icon" href="logo.png" />
+    <style>
+      h1 {
+        color: green;
+      }
+    </style>
+  </head>
+  <!-- Form Events :-
+        1.keydown       (onkeydown)
+        2.keypress      (onkeypress)
+        3.keyup         (onkeyup)
+        4.focus         (onfocus)
+        5.blur          (onblur)
+        6.input         (oninput)
+        7.change        (onchange)
+        8.select        (onselect)
+        9.submit        (onsubmit)
+        10.invalid      (oninvalid)
+-->
+  <body>
+    <form action="" id="frm" onsubmit=" return sbmt()">
+      <h1>Focus / Blue :-</h1>
+      <label for="">First Name :-</label>
+      <input type="text" id="fname" onfocus="fcs()" onblur="blr()" />
+      <hr />
+      <h1>Input :-</h1>
+      <label for="">Middle Name</label>
+      <input type="text" id="mname" oninput="inptt()" />
+      <p id="inpt" style="border: 1px solid red"></p>
+      <hr />
+      <h1>Change :-</h1>
+      <label for="">Last Name</label>
+      <input type="text" id="lname" onchange="changg()" />
+      <p id="inpt1" style="border: 1px solid blue"></p>
+      <hr />
+      <h1>Select :-</h1>
+      <label for="">Address :-</label>
+      <input type="text" id="add" onselect=" sclt()" />
+      <p id="slct1" style="color: red"></p>
+      <hr />
+      <h1>Invalid :-</h1>
+      <label for="">Confirm Address :-</label>
+      <!-- invalid -->
+      <input type="text" oninvalid="return alert('Enter Address')" required />
+
+      <hr />
+      <h1>Submit :-</h1>
+      <input type="submit" name="" />
+      <p id="sbmt1" style="color: green; font-size: 30px"></p>
+    </form>
+    <br /><br /><br /><br /><br /><br /><br />
+    <script>
+      //  focus
+      function fcs() {
+        document.getElementById("fname").style.background = "lightgrey";
+      }
+      //  blur
+      function blr() {
+        document.getElementById("fname").style.background = "";
+      }
+      //  input
+      function inptt() {
+        let x = document.getElementById("mname").value;
+        document.getElementById("inpt").innerHTML = x;
+      }
+      //  change
+      function changg() {
+        let y = document.getElementById("lname").value;
+        document.getElementById("inpt1").innerHTML = y;
+      }
+      // select
+      function sclt() {
+        document.getElementById("slct1").innerHTML = "selected";
+      }
+      //  submit
+      function sbmt() {
+        let a = document.getElementById("frm").value;
+        document.getElementById("sbmt1").innerHTML = "--Thank you--";
+        return false;
+      }
+    </script>
+  </body>
+</html>

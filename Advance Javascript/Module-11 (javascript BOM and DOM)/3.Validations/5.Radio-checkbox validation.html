@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio-Checkbox Validation</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <form action="" onsubmit="return radiovalidation()">
+      Gender :-
+      <input type="radio" name="gender" id="male" />
+      <label for="male">Male</label>
+      <input type="radio" name="gender" id="female" />
+      <label for="female">Female</label>
+      <input type="radio" name="gender" id="other" />
+      <label for="other">Other</label>
+      <span id="rdio1" style="color: red; font-size: 10px; visibility: hidden"
+        >*Select Gender*</span
+      >
+
+      <br /><br />
+      Hobbies :-
+      <input type="checkbox" id="study" />
+      <label for="study">Study</label>
+      <input type="checkbox" id="Travel" />
+      <label for="Travel">Travelling</label>
+      <input type="checkbox" id="music" />
+      <label for="music">Music</label>
+      <span id="cked" style="color: red; font-size: 10px"></span>
+      <br /><br />
+      <input type="submit" />
+    </form>
+
+    <!-- Javascript -->
+
+    <script>
+      //  Radio Button Validation
+      //  Using visibility
+      //  Using getElementById = remove <span>tag text also remove visibility on <span> tag
+
+      function radiovalidation() {
+        let y = document.getElementById("male");
+        let z = document.getElementById("female");
+        let a = document.getElementById("other");
+        if (y.checked == false && z.checked == false && a.checked == false) {
+          // alert("hello");
+          document.getElementById("rdio1").style.visibility = "visible";
+          // document.getElementById("rdio1").innerHTML = "*Select Gender*";
+          return false;
+        } else {
+          document.getElementById("rdio1").innerHTML = "";
+        }
+
+        //  Checkbox Button Validation
+
+        let std = document.getElementById("study");
+        let trv = document.getElementById("Travel");
+        let msc = document.getElementById("music");
+        if (
+          std.checked == false &&
+          trv.checked == false &&
+          msc.checked == false
+        ) {
+          document.getElementById("cked").innerHTML = "*Select Hobbies*";
+          return false;
+        } else {
+          document.getElementById("cked").innerHTML = "";
+        }
+      }
+    </script>
+  </body>
+</html>
