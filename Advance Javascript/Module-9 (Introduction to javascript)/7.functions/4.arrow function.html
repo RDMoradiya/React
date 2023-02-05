@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrow Function</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <script>
+      // Using normal function
+      let welcome = function () {
+        return "Hello & welcome Mr.";
+      };
+      console.log(welcome());
+
+      // Using normal function with parameter
+      let welcome_1 = function (name) {
+        return "Hello & welcome" + " " + name; // you can also write this
+        return `Hello & welcome Mr. ${name}`;
+      };
+      console.log(welcome_1("RAJ"));
+
+      //   Arrow function :-
+      //   if you can use single line of statement - not use curly braces
+      let welcome_2 = () => "Hello and welcome Mr.";
+      console.log(welcome_2());
+
+      // Arrow function :-
+      // Using normal function with parameter
+      let welcome_3 = (name, age) =>
+        `Hello & welcome Mr. ${name}. Your age is ${age}`;
+      console.log(welcome_3("RAJ MORADIYA", 26));
+      console.log(typeof welcome_3);
+    </script>
+  </body>
+</html>
