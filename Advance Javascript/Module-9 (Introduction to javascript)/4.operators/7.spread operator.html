@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spread operator</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- spread operator (...) :-
+        The JavaScript spread operator (...) allows us to quickly copy all or part of an existing array or object into another array or object. -->
+    <script>
+      function result(name, ...arguments) {
+        let sum = 0;
+        for (let i in arguments) {
+          sum += arguments[i];
+          //   sum = sum + arguments;     also write this
+        }
+        console.log(name);
+        console.log(sum);
+        document.write(` ${name} : ${sum} ${"<br>"}`);
+      }
+      let arry = [10, 20, 30];
+      result("Raj", ...arry);
+    </script>
+    <hr />
+
+    <!-- Spread operator with Array -->
+    <!-- example-2 -->
+
+    <script>
+      let arr1 = [10, 20, 30, 40];
+      let arr2 = arr1;
+      console.log(arr2);
+      // arr2 = [...arr1];   // remember this thing
+      arr1.push(50);
+      console.log(arr2);
+      console.log(...arr2);
+      console.log([...arr2]);
+    </script>
+
+    <!-- example-3 -->
+
+    <script>
+      function spread(name, ...arguments) {
+        let sum = 0;
+        for (let i in arguments) {
+          sum += arguments[i];
+        }
+        document.write(name + " : " + sum + "<br>");
+      }
+      spread("RD", 10, 20, 30);
+      let arr3 = [10, 20, 30, 40];
+      let arr4 = [50, 60];
+      // let arr5 = arr3.concat(arr4);
+      let arr5_concat = [...arr3, ...arr4]; // spread operator concatinathion
+      console.log(arr5_concat);
+      let arr6_concat = [100, ...arr3, ...arr4, 200];
+      console.log(arr6_concat);
+      document.write(arr5_concat + "<br>");
+      // document.write(`${arr5} ${"<br>"}`);    // also write this
+      spread("RAJ", ...arr5_concat);
+    </script>
+    <hr />
+
+    <!-- Spread operator with Object -->
+    <!-- example-4 -->
+
+    <script>
+      let obj1 = { name: "RD", course: "Civil" };
+      let obj2 = { age: 25 };
+      let obj3 = { ...obj1, ...obj2 }; // spread operator concatinathion
+      console.log(obj3);
+    </script>
+  </body>
+</html>
