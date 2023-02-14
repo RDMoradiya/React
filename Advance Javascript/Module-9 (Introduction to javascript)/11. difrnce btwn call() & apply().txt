@@ -1,5 +1,5 @@
 
-********************************* difference beetwen call() and apply() ***********************************
+********************************* difference between call() and apply() ***********************************
 
 1) --> The call() method takes arguments separately.
 
