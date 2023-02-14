@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>object literals</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- example-1 -->
+    <script>
+      let name = "Raj";
+      let course = "React JS";
+      let obj = {
+        name: name,
+        course: course,
+      };
+      console.log(obj);
+    </script>
+
+    <script>
+      let name1 = "Raj";
+      let course1 = "React JS";
+      let obj1 = {
+        name1,
+        course1,
+      };
+      console.log(obj1);
+    </script>
+    <script>
+      function abc() {
+        console.log("abc");
+      }
+      console.log(abc());
+    </script>
+
+    <!-- Example-2 ( Use variable as a property name ) -->
+
+    <script>
+      let n = "RAJ";
+      let object = {
+        [n]: "MORADIYA",
+        COURSE: "B.TECH",
+      };
+      console.log(object);
+      console.log(object[n]);
+      console.log(object.COURSE);
+      document.write(object[n] + "<br>");
+      document.write(object.COURSE + "<br>" + "<hr>");
+    </script>
+
+    <script>
+      let nam = "Student";
+      let objects = {
+        [nam + "Name"]: " PARTH MORADIYA",
+        COURSE: "WEB DEVELOPER",
+      };
+      console.log(objects);
+      console.log(objects[nam + "Name"]);
+      console.log(objects.COURSE);
+      document.write(objects[nam + "Name"] + "<br>");
+      document.write(objects.COURSE + "<br>" + "<hr>");
+    </script>
+
+    <!-- Example-3 ( With functions ) -->
+
+    <script>
+      let nem = "Student";
+      let objct = {
+        [nem + "Name"]: " RAJ MORADIYA",
+        COURSE: "WEB DEVELOPER",
+        Details: function () {
+          return `${this.StudentName} is student of ${this.COURSE}`;
+        },
+      };
+      console.log(objct);
+      console.log(objct.Details());
+      document.write(objct.Details() + "<br>" + "<hr>");
+    </script>
+
+    <script>
+      let Object = {
+        Name: "Raj Moradiya",
+        show: function () {
+          // return `${this.Name}`;    also you can write this
+          return this.Name;
+        },
+      };
+      console.log(Object.show());
+      document.write(Object.show() + "<br>" + "<hr>");
+    </script>
+
+    <script>
+      let Objects = {
+        Name: "Mital Moradiya",
+        show() {
+          // return `${this.Name}`;    also you can write this
+          return this.Name;
+        },
+      };
+      console.log(Objects.show());
+      document.write(Objects.show() + "<br>" + "<hr>");
+      // document.write(Objects["show"]() + "<br>" + "<hr>");   also you can write this
+    </script>
+
+    <!-- function with parameter with object -->
+
+    <script>
+      let fname = "DAHYABHAI ";
+      let lname = "MORADIYA";
+      let Course = "SHOP";
+
+      function study(fname, lname, Course) {
+        let fullname = fname + " " + lname;
+        return { fullname, Course }; // using object
+      }
+      console.log(study(fname, lname, Course));
+
+      // also you can write this
+
+      let x = study(fname, lname, Course);
+      document.write(x.fullname, "<br>", x.Course);
+    </script>
+  </body>
+</html>
