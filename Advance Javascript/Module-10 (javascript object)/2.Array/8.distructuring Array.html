@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Destructuring Array</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body>
+    <!-- example - 1 -->
+
+    <script>
+      let user = ["RAJ", 26, "SURAT"];
+      let [name, age = 20, city] = user;
+
+      console.log(name);
+      console.log(age);
+      console.log(city);
+    </script>
+
+    <script>
+      let users = ["MITAL", , "GADHADA"];
+      let [Name, Age = 20, City] = users;
+
+      document.write(Name + "<br>");
+      document.write(Age + "<br>");
+      document.write(City + "<br>" + "<hr>");
+    </script>
+
+    <!-- example - 2 ( with nested Array ) -->
+
+    <script>
+      let Users = ["PARTH", 25, "SURAT", ["MALE", 50000]];
+      let [Nam, Ag, Cit, [Gender, salary]] = Users;
+
+      document.write(Nam + "<br>");
+      document.write(Ag + "<br>");
+      document.write(Cit + "<br>");
+      document.write(Gender + "<br>");
+      document.write(salary + "<br>" + "<hr>");
+    </script>
+
+    <!-- example - 3 ( with rest operator ) -->
+
+    <script>
+      let User = ["PAPA", 51, "SURAT"];
+      let [Nem, ...args] = User; //rest operator
+
+      document.write(Nem + "<br>");
+      document.write(args + "<br>" + "<hr>");
+      console.log(args);
+    </script>
+
+    <!-- example - 3 ( with function ) -->
+
+    <script>
+      function useR([Nem, age = 25, city]) {
+        document.write(Nem + "<br>");
+        document.write(age + "<br>");
+        document.write(city + "<hr>");
+      }
+      //   useR(["MAA", 45, "SURAT"]);
+      useR(["MAA", , "SURAT"]);
+    </script>
+
+    <script>
+      function UseR() {
+        return ["BAA", 85, "SURAT"];
+      }
+      let [namE, aGe, ciTy] = UseR();
+      document.write(namE + "<br>");
+      document.write(aGe + "<br>");
+      document.write(ciTy + "<hr>");
+    </script>
+  </body>
+</html>
