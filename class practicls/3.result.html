@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Result</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <style>
+    * {
+      background-color: rgb(0, 0, 0);
+      color: white;
+    }
+    table td {
+      padding: 5px;
+    }
+    input {
+      text-align: center;
+    }
+    .glow-on-hover {
+      width: 150px;
+      height: 30px;
+      border: none;
+      outline: none;
+      color: #fff;
+      background: #111;
+      cursor: pointer;
+      position: relative;
+      z-index: 0;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:before {
+      content: "";
+      background: linear-gradient(
+        45deg,
+        #ff0000,
+        #ff7300,
+        #fffb00,
+        #48ff00,
+        #00ffd5,
+        #002bff,
+        #7a00ff,
+        #ff00c8,
+        #ff0000
+      );
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      background-size: 400%;
+      z-index: -1;
+      filter: blur(5px);
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      animation: glowing 20s linear infinite;
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+      border-radius: 10px;
+    }
+
+    .glow-on-hover:active {
+      color: #000;
+    }
+
+    .glow-on-hover:active:after {
+      background: transparent;
+    }
+
+    .glow-on-hover:hover:before {
+      opacity: 1;
+    }
+
+    .glow-on-hover:after {
+      z-index: -1;
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: #111;
+      left: 0;
+      top: 0;
+      border-radius: 10px;
+    }
+
+    @keyframes glowing {
+      0% {
+        background-position: 0 0;
+      }
+      50% {
+        background-position: 400% 0;
+      }
+      100% {
+        background-position: 0 0;
+      }
+    }
+    table:hover {
+      box-shadow: 0px 0px 30px 4px grey;
+    }
+  </style>
+  <script>
+    function result() {
+      // Selecting the elements
+      let maths = document.getElementById("maths");
+      let science = document.getElementById("science");
+      let english = document.getElementById("english");
+      let computer = document.getElementById("computer");
+      let printTotalMarks = document.getElementById("printTotalMarks");
+      let percentage = document.getElementById("percentage");
+      let grade = document.getElementById("grade");
+
+      // Checking the input value
+      if (
+        maths.value == "" ||
+        science.value == "" ||
+        english.value == "" ||
+        computer.value == ""
+      ) {
+        alert("Enter number First");
+        return false;
+      }
+
+      if (
+        maths.value > 100 ||
+        maths.value < 0 ||
+        science.value > 100 ||
+        science.value < 0 ||
+        english.value > 100 ||
+        english.value < 0 ||
+        computer.value > 100 ||
+        computer.value < 0
+      ) {
+        alert("Marks should be between 0 to 100!");
+        return false;
+      }
+
+      // calculating the total marks
+      let totalMarks =
+        Number(maths.value) +
+        Number(science.value) +
+        Number(english.value) +
+        Number(computer.value);
+
+      printTotalMarks.innerHTML = totalMarks;
+
+      // calculating the percentage
+
+      let totalPercentage = totalMarks / 4;
+      percentage.innerHTML = `${totalPercentage} %`;
+
+      // calculating the grade
+
+      if (totalPercentage > 90) {
+        grade.innerHTML = "A++";
+        return false;
+      } else if (totalPercentage > 80) {
+        grade.innerHTML = "A";
+        return false;
+      } else if (totalPercentage > 70) {
+        grade.innerHTML = "B";
+        return false;
+      } else if (totalPercentage > 50) {
+        grade.innerHTML = "C";
+        return false;
+      } else if (totalPercentage > 34) {
+        grade.innerHTML = "D";
+        return false;
+      } else if (totalPercentage < 35) {
+        grade.innerHTML = "Fail";
+        grade.style.color = "red";
+        return false;
+      }
+    }
+  </script>
+  <body>
+    <h1
+      style="
+        text-align: center;
+        margin: auto;
+        margin-top: 100px;
+        font-weight: bolder;
+        color: forestgreen;
+      "
+    >
+      <u>-: Mark Sheet :-</u>
+    </h1>
+    <table
+      border="1"
+      cellpadding="0"
+      cellspacing="0"
+      style="text-align: center; margin: auto; margin-top: 20px"
+    >
+      <tr>
+        <td>Maths :-</td>
+        <td>
+          <input type="text" name="" id="maths" /><span
+            style="color: red"
+            id="math"
+          ></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Science :-</td>
+        <td>
+          <input type="text" name="" id="science" /><span
+            style="color: red"
+            id="sci"
+          ></span>
+        </td>
+      </tr>
+      <tr>
+        <td>English :-</td>
+        <td>
+          <input type="text" name="" id="english" /><span
+            style="color: red"
+            id="eng"
+          ></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Computer :-</td>
+        <td>
+          <input type="text" name="" id="computer" /><span
+            style="color: red"
+            id="comp"
+          ></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Total :-</td>
+        <td>
+          <span type="text" id="printTotalMarks"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Percentage :-</td>
+        <td>
+          <span id="percentage"></span>
+        </td>
+      </tr>
+      <tr>
+        <td>Grade :-</td>
+        <td>
+          <span id="grade" style="font-weight: bold"></span>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" cellspacing="20">
+          <button type="button" class="glow-on-hover" onclick="result()">
+            Get Result
+          </button>
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>
