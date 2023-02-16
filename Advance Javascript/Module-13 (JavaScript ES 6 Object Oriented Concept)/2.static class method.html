@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Static class method</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- The static keyword is used to declare a static method.
+        -> The static method can be of any name.
+        -> A class can contain more than one static method.
+        -> If we declare more than one static method with a similar name, the JavaScript always invokes the last one.
+        -> The static method can be used to create utility functions.
+        -> We can use this keyword to call a static method within another static method.
+        -> We cannot use this keyword directly to call a static method within the non-static method. In such case, we can call the static method.
+        -> either using the class name or as the property of the constructor. -->
+
+  <!-- Example - 1 syntax -->
+  <script>
+    class Test {
+      static display() {
+        return "static method is invoked";
+      }
+
+      show() {
+        document.writeln(Test.display() + "<hr>");
+      }
+    }
+    var t = new Test();
+    t.show();
+  </script>
+
+  <!-- Example - 2 -->
+
+  <script>
+    class Teste {
+      static display1() {
+        return "static method is invoked";
+      }
+      static display2() {
+        return "static method is invoked again";
+      }
+    }
+    document.writeln(Teste.display1() + "<br>");
+    document.writeln(Teste.display2() + "<hr>");
+  </script>
+
+  <!-- Example - 3 -->
+
+  <script>
+    class Car {
+      constructor(name) {
+        this.name = name;
+      }
+      static hello() {
+        return "Hello!!";
+      }
+    }
+
+    let myCar = new Car("Ford");
+
+    //You can call 'hello()' on the Car Class:
+    document.write(Car.hello() + "<hr>");
+
+    // But NOT on  a Car Object:
+    // document.getElementById("demo").innerHTML = myCar.hello();
+    // this will raise an error.
+  </script>
+
+  <!-- Example - 4 -->
+
+  <script>
+    class Cars {
+      constructor(name) {
+        this.name = name;
+      }
+      static hello(x) {
+        return "Hello " + x.name;
+      }
+    }
+
+    let myCars = new Cars("Ford");
+    document.write(Cars.hello(myCars) + "<hr>");
+  </script>
+
+  <!-- Example - 5 -->
+
+  <script>
+    class TesT {
+      constructor() {
+        document.writeln(TesT.display() + "<br>");
+        document.writeln(this.constructor.display() + "<hr>");
+      }
+
+      static display() {
+        return "static method is invoked";
+      }
+    }
+    var t = new TesT();
+  </script>
+
+  <body></body>
+</html>
