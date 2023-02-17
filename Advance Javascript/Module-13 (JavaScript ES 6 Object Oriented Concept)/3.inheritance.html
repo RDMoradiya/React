@@ -8,6 +8,162 @@
     <link rel="icon" href="logo.png" />
   </head>
   <!-- inheritance :-
-       -> To create a class inheritance, use the extends keyword. -->
-  <body></body>
+       -> To create a class inheritance, use the "extends" keyword.
+       -> The "super()" method refers to the parent class.
+       -> By calling the "super()"" method in the "constructor" method, we call the parent's constructor method and gets access to the parent's properties and methods. -->
+  <body>
+    <h2 id="zero"></h2>
+    <h2 id="one"></h2>
+    <h2 id="two"></h2>
+    <h2 id="three"></h2>
+    <h2 id="four"></h2>
+    <p id="five"></p>
+    <p id="six"></p>
+  </body>
+
+  <!-- example - 1 -->
+
+  <script>
+    class Car {
+      constructor(brand) {
+        this.carname = brand;
+      }
+      present() {
+        return "I have a " + this.carname;
+      }
+    }
+
+    class Model extends Car {
+      constructor(brand, mod) {
+        super(brand);
+        this.model = mod;
+      }
+      show() {
+        return this.present() + ", it is a " + this.model;
+      }
+    }
+
+    let myCar = new Model("Ford", "Mustang");
+    document.getElementById("zero").innerHTML = myCar.show() + "<hr>";
+  </script>
+
+  <!-- example - 2 -->
+
+  <script>
+    class employee {
+      constructor() {
+        console.log("Hello");
+      }
+    }
+
+    class manager extends employee {}
+
+    let a = new manager();
+  </script>
+
+  <!-- example - 3 -->
+
+  <script>
+    class employe {
+      constructor(name) {
+        this.firstname = name;
+        document.getElementById(
+          "one"
+        ).innerHTML = `Hello : ${this.firstname} <hr>`;
+      }
+    }
+
+    class managr extends employe {}
+
+    let b = new managr("Raj Moradiya");
+  </script>
+
+  <!-- example - 4 -->
+
+  <script>
+    class employ {
+      constructor(name) {
+        this.firstname = name;
+        document.getElementById("two").innerHTML = this.firstname;
+      }
+    }
+
+    class manger extends employ {
+      constructor(name, salary) {
+        super(name); // also you can create a new variable
+        // this.name=name ;
+        this.salary = salary;
+        document.getElementById("three").innerHTML =
+          this.firstname + " " + this.salary + "<hr>";
+        //   this.name + " " + this.salary + "<hr>";
+      }
+    }
+
+    let c = new manger("Raj", 25000);
+  </script>
+
+  <!-- example - 5 -->
+
+  <script>
+    class Employee {
+      constructor(name) {
+        this.name = name;
+      }
+      fname() {
+        return `Your Name is ${this.name}`;
+      }
+    }
+    class Manager extends Employee {
+      constructor(name, age, salary) {
+        super(name);
+        this.age = age;
+        this.salary = salary;
+      }
+      show() {
+        document.getElementById(
+          "four"
+        ).innerHTML = `${this.name} , Your age is ${this.age} , and  salary is ${this.salary} <hr>`;
+      }
+    }
+
+    let d = new Manager("RD", 26, 30000);
+    d.show();
+
+    let e = new Employee("RD", 26);
+    console.log(d.fname());
+  </script>
+
+  <!-- example - 6 -->
+
+  <script>
+    class student {
+      constructor(name, age, salary) {
+        this.name = name;
+        this.age = age;
+        this.salary = salary;
+      }
+      info() {
+        document.getElementById("five").innerHTML = `<h1>Employee Class </h1>
+                        Name : ${this.name} <br>
+                        Age : ${this.age} <br>
+                        Salary : ${this.salary} `;
+      }
+    }
+    class People extends student {
+      info() {
+        let ta = 100;
+        let pa = 320;
+        let totalsalary = this.salary + ta + pa;
+        document.getElementById("six").innerHTML = `<h1>Manager Class </h1>
+                        Name : ${this.name} <br>
+                        Age : ${this.age} <br>
+                        Salary : ${totalsalary} <hr>`;
+      }
+    }
+    let f = new People("Parth", 20, 20000);
+    f.info();
+
+    let g = new student("Mital", 25, 25000);
+    g.info();
+  </script>
 </html>
