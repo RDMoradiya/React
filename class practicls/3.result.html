@@ -18,6 +18,10 @@
     input {
       text-align: center;
     }
+    #massage {
+      width: 100%;
+      text-align: center;
+    }
     .glow-on-hover {
       width: 150px;
       height: 30px;
@@ -116,8 +120,11 @@
         english.value == "" ||
         computer.value == ""
       ) {
-        alert("Enter number First");
+        document.getElementById("massage").innerHTML =
+          "Please Enter Numbers First";
         return false;
+      } else {
+        document.getElementById("massage").innerHTML = "";
       }
 
       if (
@@ -130,8 +137,11 @@
         computer.value > 100 ||
         computer.value < 0
       ) {
-        alert("Marks should be between 0 to 100!");
+        document.getElementById("massage").innerHTML =
+          "Marks should be between 0 to 100!";
         return false;
+      } else {
+        document.getElementById("massage").innerHTML = "";
       }
 
       // calculating the total marks
@@ -193,37 +203,25 @@
       <tr>
         <td>Maths :-</td>
         <td>
-          <input type="text" name="" id="maths" /><span
-            style="color: red"
-            id="math"
-          ></span>
+          <input type="text" name="" id="maths" />
         </td>
       </tr>
       <tr>
         <td>Science :-</td>
         <td>
-          <input type="text" name="" id="science" /><span
-            style="color: red"
-            id="sci"
-          ></span>
+          <input type="text" name="" id="science" />
         </td>
       </tr>
       <tr>
         <td>English :-</td>
         <td>
-          <input type="text" name="" id="english" /><span
-            style="color: red"
-            id="eng"
-          ></span>
+          <input type="text" name="" id="english" />
         </td>
       </tr>
       <tr>
         <td>Computer :-</td>
         <td>
-          <input type="text" name="" id="computer" /><span
-            style="color: red"
-            id="comp"
-          ></span>
+          <input type="text" name="" id="computer" />
         </td>
       </tr>
       <tr>
@@ -252,5 +250,6 @@
         </td>
       </tr>
     </table>
+    <p id="massage" style="color: yellow; font-weight: bold"></p>
   </body>
 </html>
