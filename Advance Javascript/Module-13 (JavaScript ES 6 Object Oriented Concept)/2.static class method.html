@@ -24,7 +24,7 @@
       }
 
       show() {
-        document.writeln(Test.display() + "<hr>");
+        document.write(Test.display() + "<hr>");
       }
     }
     var t = new Test();
@@ -42,8 +42,8 @@
         return "static method is invoked again";
       }
     }
-    document.writeln(Teste.display1() + "<br>");
-    document.writeln(Teste.display2() + "<hr>");
+    document.write(Teste.display1() + "<br>");
+    document.write(Teste.display2() + "<hr>");
   </script>
 
   <!-- Example - 3 -->
@@ -62,10 +62,6 @@
 
     //You can call 'hello()' on the Car Class:
     document.write(Car.hello() + "<hr>");
-
-    // But NOT on  a Car Object:
-    // document.getElementById("demo").innerHTML = myCar.hello();
-    // this will raise an error.
   </script>
 
   <!-- Example - 4 -->
@@ -89,8 +85,8 @@
   <script>
     class TesT {
       constructor() {
-        document.writeln(TesT.display() + "<br>");
-        document.writeln(this.constructor.display() + "<hr>");
+        document.write(TesT.display() + "<br>");
+        document.write(this.constructor.display() + "<hr>");
       }
 
       static display() {
