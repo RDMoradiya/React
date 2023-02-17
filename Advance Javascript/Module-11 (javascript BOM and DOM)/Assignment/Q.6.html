@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Q.6</title>
+    <link rel="icon" href="../logo.png" />
+    <!-- jQuery  -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+
+    <!-- bxSlider (4.2.14) -->
+
+    <!-- JavaScript only -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.14/jquery.bxslider.min.js"></script>
+
+    <!-- CSS only -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.14/jquery.bxslider.css"
+    />
+
+    <link rel="stylesheet" href="slider(bxslider).css" />
+    <script>
+      $(function () {
+        $(".slide-container").bxSlider({
+          // mode: "fade",
+          // automatically img scroll -- ( auto : true )
+          auto: true,
+        });
+      });
+    </script>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      .slide-container {
+        margin: 0px;
+        padding: 0px;
+        width: 100%;
+        height: auto;
+      }
+      .bx-wrapper {
+        border: none;
+      }
+      .slide {
+        width: 100%;
+        position: relative;
+      }
+      .slide-container {
+        width: 100%;
+      }
+      .slide img {
+        width: 100%;
+        height: 730px;
+      }
+      .caption {
+        position: absolute;
+        top: 250px;
+        width: 80%;
+        left: 10%;
+        text-align: center;
+      }
+      .caption h3 {
+        color: white;
+        font-weight: bold;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 15px;
+      }
+      .caption h1 {
+        color: white;
+        font-weight: bold;
+        text-transform: capitalize;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-size: 60px;
+        font-variant: normal;
+        padding-top: 10px;
+        padding-bottom: 30px;
+      }
+      .caption a {
+        color: white;
+        font-size: 16px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+          sans-serif;
+        font-weight: 600;
+        background-color: rgb(255, 102, 0);
+        border: none;
+        border-radius: 10px;
+        padding: 15px 25px;
+        margin-top: 20px;
+        line-height: 40px;
+        text-decoration: none;
+      }
+
+      /* dots */
+
+      .bx-wrapper .bx-pager {
+        padding-top: 20px;
+        position: absolute;
+        bottom: 50px;
+      }
+      .bx-wrapper .bx-pager.bx-default-pager a {
+        width: 15px;
+        height: 15px;
+        border-radius: 10px;
+        display: block;
+      }
+
+      .bx-wrapper .bx-pager.bx-default-pager a:hover,
+      .bx-wrapper .bx-pager.bx-default-pager a.active,
+      .bx-wrapper .bx-pager.bx-default-pager a:focus {
+        background: orangered;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="slide-container">
+      <!-- slide-1 -->
+      <div class="slide">
+        <img src="1.jpg" alt="" />
+        <div class="caption">
+          <h3>MAKE THE RIGHT MOVE.</h3>
+          <h1 class="title-hero-19">
+            Moving Your<br />
+            Products Across All <br />Borders.
+          </h1>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+      <!-- slide-2 -->
+      <div class="slide">
+        <img src="2.jpg" alt="" />
+        <div class="caption">
+          <h3>GO SMOOTHLY WITH SAFETY.</h3>
+          <h1>We Are Here To Move <br />Your Buiness.</h1>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+      <!-- slide-3 -->
+      <div class="slide">
+        <img src="3.jpg" alt="" />
+        <div class="caption">
+          <h3>MAKE THE RIGHT MOVE.</h3>
+          <h1 class="title-hero-19">
+            Moving Your<br />
+            Products Across All <br />Borders.
+          </h1>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+      <!-- slide-4 -->
+      <div class="slide">
+        <img src="4.jpg" alt="" />
+        <div class="caption">
+          <h3>GO SMOOTHLY WITH SAFETY.</h3>
+          <h1>We Are Here To Move <br />Your Buiness.</h1>
+          <a href="#">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Q.3</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    />
+    <link rel="icon" href="../logo.png" />
+    
+  </head>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto;
+}
+.container {
+  width: 100%;
+  height: auto;
+  background-color: aqua;
+}
+
+/* navigation */
+
+.navigation {
+  width: 85%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1px 0px;
+}
+
+/* Logo */
+
+.navigation .logo a {
+  font-size: 30px;
+  font-weight: 700;
+  color: black;
+  text-decoration: none;
+}
+
+/* Menubar */
+
+.navigation ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+.navigation ul li {
+  width: 80px;
+  text-align: center;
+  line-height: 30px;
+  display: inline-block;
+}
+.navigation ul li a {
+  display: block;
+  text-decoration: none;
+  /* padding: 10px; */
+  color: black;
+  font-weight: 700;
+}
+
+.navigation ul li a:hover {
+  color: green;
+  box-shadow: 1px 0px 15px black;
+  border-radius: 15px;
+}
+
+/* submenu */
+
+.submenu {
+  display: none;
+}
+.navigation ul :hover .submenu {
+  display: block;
+  background-color: rgb(143, 170, 229);
+  border-radius: 15px;
+  width: 260px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.submenu li a {
+  display: block;
+  width: 250px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* sub_menu */
+
+.sub_menu {
+  display: none;
+}
+.navigation ul :hover .sub_menu {
+  display: block;
+  background-color: rgb(143, 170, 229);
+  border-radius: 15px;
+  width: 155px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+.sub_menu li a {
+  display: block;
+  width: 145px;
+  text-align: left;
+  padding-left: 10px;
+}
+
+/* sub_sub_menu */
+
+.sub_sub_menu {
+  display: none;
+}
+.sub_sub_menu li a {
+  display: block;
+  width: 70px;
+  text-align: center;
+  padding: 0px 10px;
+}
+.navigation ul ul li:hover .sub_sub_menu {
+  display: block;
+  width: 90px;
+  left: 157px;
+  top: 0px;
+  background-color: rgb(143, 170, 229);
+  border-radius: 15px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+/* searchbar icons */
+
+.search,
+.theme {
+  color: black;
+  padding: 0px 10px;
+  line-height: 30px;
+}
+
+/* Bar-button */
+
+.bar_button {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 8px;
+  right: 50px;
+  display: none;
+}
+
+/* Theme */
+
+.dark_mode {
+  background-color: black;
+  color: white;
+}
+
+/* Media */
+
+@media (max-width: 900px) {
+  .bar_button {
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: block;
+    border-radius: 10px;
+    background-color: aqua;
+    box-shadow: 3px 3px 5px black;
+  }
+
+  .men_barlist {
+    display: none;
+  }
+  .show_menu {
+    position: absolute;
+    top: 48px;
+    right: 10px;
+    display: inline-block;
+    width: 100px;
+    text-align: center;
+    background-color: aqua;
+    border-radius: 15px;
+  }
+  .navigation ul li {
+    width: 100px;
+    text-align: center;
+    line-height: 30px;
+    display: inline-block;
+  }
+  .navigation .submenu {
+    display: none;
+  }
+  .navigation ul :hover .submenu {
+    display: block;
+    background-color: rgb(143, 170, 229);
+    border-radius: 15px;
+    width: 260px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+    top: 50px;
+  }
+  .navigation .sub_menu {
+    display: none;
+  }
+  .navigation ul :hover .sub_menu {
+    display: block;
+    background-color: rgb(143, 170, 229);
+    border-radius: 15px;
+    width: 155px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 100px;
+    top: 100px;
+  }
+  .sub_menu li a {
+    display: block;
+    width: 145px;
+    text-align: left;
+    padding-left: 10px;
+  }
+  .sub_sub_menu {
+    display: none;
+  }
+  .sub_sub_menu li a {
+    display: block;
+    width: 70px;
+    text-align: center;
+    padding: 0px 10px;
+  }
+  .navigation ul ul li:hover .sub_sub_menu {
+    display: block;
+    width: 90px;
+    left: -91px;
+    background-color: rgb(143, 170, 229);
+    border-radius: 15px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .search {
+    display: none;
+  }
+  .theme {
+    display: block;
+    position: absolute;
+    top: -40px;
+    right: 35px;
+    font-size: 20px;
+  }
+}
+
+  </style>
+  <body>
+</html>
+
+<div class="container">
+  <div class="navigation">
+    <h1 class="logo">
+      <a href="#"><i class="fas fa-truck-moving"></i>Transpolar</a>
+    </h1>
+<div class="men_barlist">
+    <ul >
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li>
+        <a href="#">
+          
+           Blog <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></a>
+        <ul class="submenu">
+          <li><a href="#">Blog with Right Sidebar</a></li>
+          <li><a href="#">Blog with Left Sidebar</a></li>
+          <li><a href="#">Blog without Sidebar</a></li>
+          <li><a href="#">Blog Single with Right Sidebar</a></li>
+          <li><a href="#">Blog Single with Left Sidebar</a></li>
+          <li><a href="#">Blog with Right Sidebar</a></li>
+        </ul>
+      </li>
+      <li>
+        <a href="#"
+          >Pages <i class="fa-solid fa-chevron-down" style="font-size: 10px;"></i></span
+        ></a>
+        <ul class="sub_menu">
+          <li>
+            <a href="#"
+              >Email Template <i class="fa-solid fa-plus" style="font-size: 10px;"></i>
+              
+              
+              </a>
+            <ul class="sub_sub_menu">
+              <li><a href="#">Gmail</a></li>
+              <li><a href="#">Yahoo</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Shortcodes</a></li>
+          <li><a href="#">Landing Page</a></li>
+          <li><a href="#">Error Page</a></li>
+        </ul>
+      </li>
+      <li><a href="#">Contact</a></li>
+      <a href="#" class="search"
+        ><span class="fa-solid fa-magnifying-glass"></span
+      ></a>
+      <a href="#" class="theme"><span class="fa-solid fa-moon"></span></a>
+    </ul>
+  </div>
+  </div>
+  <button class="bar_button">
+    <a href="#" class="rs_nav"><i class="fa-solid fa-bars"></i></a>
+  </button>
+</div>
+
+<script>
+
+  // Menubar
+let menus = document.querySelector(".men_barlist");
+let disp = document.querySelector(".bar_button");
+
+disp.addEventListener("click", function () {
+  menus.classList.toggle("show_menu");
+});
+
+// Theme
+
+let icon=document.querySelector(".fa-moon")
+let pagebody=document.querySelector("body")
+
+icon.addEventListener("click",function(){
+  pagebody.classList.toggle("dark_mode");
+
+  if(pagebody.classList.contains("dark_mode")==true){
+    icon.innerHTML ="<span class='fa-solid fa-sun'></span>";
+    icon.classList.remove("fa-moon")
+  }else{
+    icon.innerHTML="<span class='fa-solid fa-moon'></span>"
+  }
+})
+</script>
+</body>
