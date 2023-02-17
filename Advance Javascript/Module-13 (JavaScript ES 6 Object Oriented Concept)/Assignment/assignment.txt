@@ -1,0 +1,100 @@
+Q.1 What is JASON ?
+
+--> JSON stands for JavaScript Object Notation.
+--> JSON is a lightweight format for storing and transporting data.
+--> JSON is often used when data is sent from a server to a web page.
+--> JSON is "self-describing" and easy to understand.
+--> JSON is a format for storing and transporting data.
+--> JSON is often used when data is sent from a server to a web page.
+
+-----------------------------------------------------------------------------------
+
+Q.2 What is promises ?
+
+--> "Producing code" is code that can take some time.
+--> "Consuming code" is code that must wait for the result.
+--> A Promise is a JavaScript object that links producing code and consuming code.
+--> A Promise is a proxy for a value not necessarily known when the promise is created. It allows you to associate handlers with an asynchronous action's eventual success value or failure reason. This lets asynchronous methods return values like synchronous methods: instead of immediately returning the final value, the asynchronous method returns a promise to supply the value at some point in the future.
+
+-----------------------------------------------------------------------------------
+
+Q.3 Write a program of promises and handle that promises also ??
+
+--> <!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Promise</h2>
+
+<p id="demo"></p>
+
+<script>
+function myDisplayer(some) {
+  document.getElementById("demo").innerHTML = some;
+}
+
+let myPromise = new Promise(function(myResolve, myReject) {
+  let x = 0;
+
+// some code (try to change x to 5)
+
+  if (x == 0) {
+    myResolve("OK");
+  } else {
+    myReject("Error");
+  }
+});
+
+myPromise.then(
+  function(value) {myDisplayer(value);},
+  function(error) {myDisplayer(error);}
+);
+</script>
+
+</body>
+</html>
+
+-----------------------------------------------------------------------------------
+
+Q.4 Use fetch method for calling an api https://fakestoreapi.com/products ??
+
+--> <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      fetch("https://fakestoreapi.com/products")
+        .then((res) => res.json())
+        .then((json) => console.log(json));
+    </script>
+  </body>
+</html>
+
+-----------------------------------------------------------------------------------
+
+Q.5  Display all the product from the api in your HTML page ??
+
+--> <!DOCTYPE html>
+<html>
+<body>
+<h1>JavaScript Fetch API</h1>
+<h2>The fetch() Method</h2>
+<p id="demo">Fetch a file to change this text.</p>
+
+<script>
+getText("fetch_info.txt");
+
+async function getText(file) {
+  let myObject = await fetch(file);
+  let myText = await myObject.text();
+  document.getElementById("demo").innerHTML = myText;
+}
+</script>
+
+</body>
+</html>
