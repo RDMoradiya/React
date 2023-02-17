@@ -1,0 +1,23 @@
+
+------------------- OOP (Object oriented Programming) ---------------------------------
+
+--> also it is a "coding methodology"/"style"/"pattern"
+--> well organized.
+--> easier to debug.
+--> code more modules and reusable.
+
+--> main Two concepts are important.
+      1 --> class
+      2 --> Object
+
+      ex-1:- 
+            --> plane of building is a class.
+            --> using thr plan you build number of buildings is object.
+
+      ex-2:-
+            --> car -> class.
+            --> two types cars (1) maruti (2) hyundai -> object
+            --> color, engine, price, etc... -> properties of object
+            --> for each object -> same properties 
+                                -> value different
+    
