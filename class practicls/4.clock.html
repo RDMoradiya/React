@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Digital Clock</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <style>
+    section {
+      display: flex;
+      justify-content: center;
+      margin: 100px auto;
+      gap: 20px;
+    }
+    .hour,
+    .min,
+    .seconds,
+    .day_night {
+      width: 200px;
+      height: 200px;
+      background-color: black;
+      color: white;
+      font-size: 90px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 10px 10px 5px grey;
+      border-radius: 20px;
+    }
+  </style>
+  <body onload="showtime()">
+    <section>
+      <div class="hour"><h1 id="hrs"></h1></div>
+      <div class="min"><h1 id="mn"></h1></div>
+      <div class="seconds"><h1 id="sec"></h1></div>
+      <div class="day_night"><h1 id="ap" style="font-size: 110px"></h1></div>
+    </section>
+    <script>
+      function showtime() {
+        let d = new Date();
+        let h = d.getHours();
+        let m = d.getMinutes();
+        let s = d.getSeconds();
+        let a = "PM";
+
+        if (h > 12) {
+          h = h - 12;
+        }
+        if (h >= 12) {
+          a = "AM";
+        }
+
+        if (h < 10) {
+          h = "0" + h;
+        } else {
+          h;
+        }
+        // h = h < 10 ? "0" + h : h;
+        m = m < 10 ? "0" + m : m; //ternary operator
+        s = s < 10 ? "0" + s : s;
+
+        document.getElementById("hrs").innerHTML = h;
+        document.getElementById("mn").innerHTML = m;
+        document.getElementById("sec").innerHTML = s;
+        document.getElementById("ap").innerHTML = a;
+
+        setTimeout(showtime, 1000);
+      }
+    </script>
+  </body>
+</html>
