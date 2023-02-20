@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promise</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- 
+    A JavaScript Promise object can be :-
+        -> Pending
+        -> Fulfilled (resolve)
+        -> Rejected (reject)
+    -> The Promise object supports two properties: state and result.
+    -> While a Promise object is "pending" (working), the result is "undefined".
+    -> When a Promise object is "fulfilled", the result is a "value".
+    -> When a Promise object is "rejected", the result is an "error object".
+    -> Promise.then() takes two arguments, a callback for success and another for failure.
+   -->
+
+  <!-- example - 1 -->
+
+  <script>
+    // let lottry = new Promise(function (resolve, reject) {
+    let lottry = new Promise((resolve, reject) => {
+      let candrive = true;
+      if (candrive) {
+        resolve("<h1>Yes you can drive</h1><hr>");
+      } else {
+        reject("<h1>No you can't drive</h1><hr>");
+      }
+    });
+
+    //  ------------------------- 1st method to take variable
+    let x = function (result) {
+      document.write(result);
+    };
+    let y = (error) => {
+      document.write("error");
+    };
+
+    lottry.then(x).catch(y);
+
+    //  ----------------------- 2nd method use function
+    lottry
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  </script>
+
+  <!-- example - 2 -->
+
+  <script>
+    let age = new Promise((resolve, reject) => {
+      let age = 35;
+      if (age > 35) {
+        resolve("<h1>you are senior citizen</h1><hr>");
+      } else {
+        reject("<h1>you are Adult</h1><hr>");
+      }
+    });
+    age
+      .then((resolve) => {
+        document.write(resolve);
+      })
+      .catch((reject) => {
+        document.write(reject);
+      });
+  </script>
+
+  <!-- example - 3 -->
+
+  <script>
+    function prom(complete) {
+      return new Promise((resolve, reject) => {
+        if (complete) {
+          resolve("I am Successful<hr>");
+        } else {
+          reject("I am not Successful<hr>");
+        }
+      });
+    }
+    let onfulfillment = (result) => {
+      document.write(result);
+    };
+    let onRejection = (error) => {
+      document.write(error);
+    };
+
+    prom(false).then(onfulfillment).catch(onRejection);
+  </script>
+
+  <!-- example - 4 using parameters -->
+
+  <script>
+    function proms(complete) {
+      return new Promise((resolve, reject) => {
+        console.log("Fetching Data, Please Wait....");
+
+        setTimeout(() => {
+          if (complete) {
+            resolve("I am Successful");
+          } else {
+            reject("I am not Successful");
+          }
+        }, 3000);
+      });
+    }
+
+    proms(true)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  </script>
+
+  <!-- example - 5 using parameters -->
+
+  <script>
+    function proms(a, b) {
+      return new Promise((resolve, reject) => {
+        console.log("Fetching Data, Please Wait....");
+        let c = a / b;
+        setTimeout(() => {
+          if ((a, b)) {
+            resolve(`Answer is:${c}`);
+          } else {
+            reject("Failed to calculate");
+          }
+        }, 5000);
+      });
+    }
+
+    proms(10, 5)
+      .then((result) => {
+        console.log(result);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  </script>
+
+  <body></body>
+</html>
