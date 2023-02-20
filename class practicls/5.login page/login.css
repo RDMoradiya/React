@@ -22,14 +22,60 @@ input::placeholder {
   position: relative;
 }
 
-.right_content .circle {
-  width: 150px;
+.circle {
+  animation: float612 2.4s ease-in-out infinite;
   height: 150px;
-  border: 1px solid rgb(127, 86, 218);
-  border-radius: 50%;
-  background-color: rgb(127, 86, 218);
-  position: absolute;
-  top: 50%;
-  left: 50%;
+  width: 150px;
+  top: 35%;
+  left: 35%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
+  position: absolute;
+  background: radial-gradient(
+    circle at 75% 30%,
+    rgb(112, 62, 219) 5px,
+    rgb(127, 86, 218) 8%,
+    rgb(127, 86, 218) 60%,
+    rgb(127, 86, 218) 100%
+  );
+  box-shadow: inset 0 0 20px #c1aac6, inset 10px 0 46px rgb(127, 86, 218),
+    inset 88px 0px 60px #db9edf, inset -20px -60px 100px #fde9ea,
+    inset 0 50px 140px #fde9ea, 0 0 90px #fff;
+}
+
+@keyframes float612 {
+  0% {
+    transform: translatey(0px);
+  }
+
+  50% {
+    transform: translatey(-50px);
+  }
+
+  100% {
+    transform: translatey(0px);
+  }
+}
+
+.shadow {
+  background: rgb(127, 86, 218);
+  width: 150px;
+  height: 30px;
+  top: 65%;
+  left: 35%;
+  animation: expand6234 2.4s ease-in-out infinite;
+  position: absolute;
+  border-radius: 50%;
+}
+
+@keyframes expand6234 {
+  0%,
+  100% {
+    transform: scale(0.6);
+  }
+
+  50% {
+    transform: scale(0.3);
+    filter: blur(5px);
+  }
 }
