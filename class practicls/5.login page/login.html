@@ -58,7 +58,7 @@
               Welcome back! Please enter your details
             </p>
           </div>
-          <form action="">
+          <form action="" onsubmit="return validation()">
             <div class="row">
               <label for="" class="form-lable fw-semibold py-2">Email</label>
             </div>
@@ -68,7 +68,13 @@
                   type="text"
                   class="form-control"
                   placeholder="Enter your email"
+                  id="email"
                 />
+                <span
+                  style="color: red; font-size: 8px"
+                  id="eml"
+                  class="fw-bold"
+                ></span>
               </div>
             </div>
             <div class="row">
@@ -82,7 +88,13 @@
                   type="password"
                   class="form-control"
                   placeholder="Enter your password"
+                  id="pass"
                 />
+                <span
+                  style="color: red; font-size: 8px"
+                  id="ps"
+                  class="fw-bold"
+                ></span>
               </div>
             </div>
             <div class="row px-3 py-3 align-items-center">
@@ -152,8 +164,7 @@
         <!-- right content -->
         <div class="right_content rounded-3" style="width: 50%">
           <div class="circle"></div>
-          <!-- <div class="top w-100 border border-1 border-danger"></div>
-          <div class="bottom w-100 border border-1 border-danger"></div> -->
+          <div class="shadow"></div>
         </div>
       </div>
     </div>
