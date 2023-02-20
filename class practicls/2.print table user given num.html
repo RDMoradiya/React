@@ -14,10 +14,13 @@
     <span id="massage" style="color: red"></span>
     <br /><br />
 
+    <div id="viewtable"></div>
+
     <script>
       function result() {
         let x = document.getElementById("number");
         let y = document.getElementById("massage");
+        let z = document.getElementById("viewtable");
 
         if (x.value == "") {
           y.innerHTML = "Enter Number";
@@ -42,7 +45,29 @@
           document.write(`</tr>`);
         }
         document.write(`</table>`);
+
+        // for (let i = 1; i <= 10; i++) {
+        //   z.innerHTML += `
+        //   <table border="1" cellpadding="10" cellspacing="0" style="text-align: center;">
+        //     <tr>
+        //         <td>${x.value}</td>
+        //         <td> * </td>
+        //         <td>${i}</td>
+        //         <td> = </td>
+        //         <td>${x.value * i}</td>
+        //     <tr>
+        //   </table>`;
+        // }
       }
     </script>
+
+    <table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
   </body>
 </html>
