@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prototype</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- Prototype :-
+    -> All JavaScript objects inherit properties and methods from a prototype.
+    -> Date objects inherit from Date.prototype
+    -> Array objects inherit from Array.prototype
+    -> Person objects inherit from Person.prototype
+    -> The Object.prototype is on the top of the prototype inheritance chain:
+    Date objects, Array objects, and Person objects inherit from Object.prototype.
+ -->
+  <!-- example - 1 (The JavaScript prototype property allows you to add new properties to object constructors) -->
+  <script>
+    function Person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+    }
+
+    // Person.nationality = "English";      also you can write this
+    Person.prototype.nationality = "English";
+
+    let myFather = new Person("John", "Doe", 50, "blue");
+    document.write(
+      "The prototype property allows you to add new methods to objects constructors:" +
+        "<br>"
+    );
+    document.write(
+      "The nationality of my father is " + myFather.nationality + "<hr>"
+      //   "The nationality of my father is " + Person.nationality + "<hr>"      also you can write this
+    );
+  </script>
+
+  <!-- example - 2 (The JavaScript prototype property also allows you to add new methods to objects constructors) -->
+
+  <script>
+    function person(first, last, age, eye) {
+      this.firstName = first;
+      this.lastName = last;
+      this.age = age;
+      this.eyeColor = eye;
+    }
+
+    person.prototype.name = function () {
+      return this.firstName + " " + this.lastName;
+    };
+
+    const MyFather = new person("John", "Doe", 50, "blue");
+    document.write("My father is " + MyFather.name() + "<hr>");
+  </script>
+
+  <body></body>
+</html>
