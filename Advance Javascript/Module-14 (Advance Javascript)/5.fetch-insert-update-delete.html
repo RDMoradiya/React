@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>5.fetch-insert-update-delete</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+
+  <!-- !example - 1 for "INSERT" data to server -->
+
+  <script>
+    fetch("https://jsonplaceholder.typicode.com/posts", {
+      method: "POST",
+      //   POST-insert data, PUT-update data, DELETE-delete data, GET-read data (default)
+
+      body: JSON.stringify({ title: "foo", body: "bar", userId: 1 }),
+      //   JSON.stringify() inbuilt javascript function
+
+      headers: {
+        "Content-type": "application/json", // for json data
+        // "application/x-www-form-urlencoded"       for form data
+      },
+    })
+      .then((response) => response.json())
+      .then((json) => console.log(json));
+  </script>
+
+  <!-- !example - 2 for "UPDATE" data to server -->
+
+  <script>
+    fetch("https://jsonplaceholder.typicode.com/posts/1", {
+      method: "PUT",
+      body: JSON.stringify({
+        userId: 1,
+        id: 1,
+        title: "RD MORADIYA",
+        body: "Hello word",
+      }),
+
+      headers: {
+        "Content-type": "application/json",
+      },
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        console.log(result);
+      });
+  </script>
+
+  <!-- !example - 3 for "DELETE" data to server -->
+
+  <script>
+    fetch("https://jsonplaceholder.typicode.com/posts/1", {
+      method: "DELETE",
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        console.log(result);
+      });
+  </script>
+
+  <body>
+    <p>POST-insert data</p>
+    <p>PUT-update data</p>
+    <p>DELETE-delete data</p>
+    <p>GET-read data (default)</p>
+  </body>
+</html>
