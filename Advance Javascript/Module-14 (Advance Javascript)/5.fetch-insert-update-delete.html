@@ -43,11 +43,11 @@
         "Content-type": "application/json",
       },
     })
-      .then((response) => {
-        return response.json();
+      .then((Response) => {
+        return Response.json();
       })
-      .then((result) => {
-        console.log(result);
+      .then((Result) => {
+        console.log(Result);
       });
   </script>
 
@@ -57,18 +57,27 @@
     fetch("https://jsonplaceholder.typicode.com/posts/1", {
       method: "DELETE",
     })
-      .then((response) => {
-        return response.json();
+      .then((responsE) => {
+        return responsE.json();
       })
-      .then((result) => {
-        console.log(result);
+      .then((ResulT) => {
+        console.log(ResulT);
       });
   </script>
 
   <body>
+    <h1>method :-</h1>
     <p>POST-insert data</p>
     <p>PUT-update data</p>
     <p>DELETE-delete data</p>
     <p>GET-read data (default)</p>
+    <hr />
+    <h1>body :-</h1>
+    <p>JSON.stringify() inbuilt javascript function</p>
+    <hr />
+    <h1>Content-type</h1>
+    <p>"application/json" => for json data</p>
+    <p>"application/x-www-form-urlencoded" => for form data</p>
+    <hr />
   </body>
 </html>
