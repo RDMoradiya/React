@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fetch</title>
+    <link rel="icon" href="logo.png" />
+    <!-- bootstrap CDN -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+  </head>
+  <!-- fetch :-
+        -> The fetch() method starts the process of fetching a resource from a server.
+        -> The fetch() method returns a Promise that resolves to a Response object. -->
+
+  <script>
+    fetch(`https://fakestoreapi.com/products`)
+      .then((response) => {
+        return response.json();
+      })
+      .then((result) => {
+        let detail = document.querySelector("#detail");
+
+        for (let line of result) {
+          let html = `
+        <div class="py-4 col-3">
+            <h4>ID :- ${line.id}</h4>
+            <h5>TITLE :- ${line.title}</h5>
+            <p>PRICE :- ${line.price}</p>
+            <p>CATEGORY :- ${line.category}</p>
+            <p>DESCRIPTION :- ${line.description}</p>
+            <button class="btn btn-success">Buy Now</button>            
+        </div>
+        `;
+          detail.insertAdjacentHTML("beforeend", html);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  </script>
+  <body>
+    <div class="container-fluid">
+      <div class="row" id="detail"></div>
+    </div>
+  </body>
+</html>
