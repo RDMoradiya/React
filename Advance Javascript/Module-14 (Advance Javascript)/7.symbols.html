@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Symbols</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+
+  <!-- Symbol :-
+        -> Unique values -->
+  <script>
+    let x = Symbol();
+    let y = Symbol("Hello");
+    let z = Symbol("Hello");
+
+    console.log(x);
+    console.log(typeof x);
+    console.log(y);
+    console.log(z);
+    console.log(y == z);
+    console.log(y === z);
+    // alert(y);   shown error bcz it is not a string
+    alert(y.toString());
+    document.write(y.description + "<hr>");
+  </script>
+
+  <script>
+    let age = Symbol("age");
+    let salary = Symbol("salary");
+    let user = {
+      name: "Raj",
+      class: "Civil",
+      [age]: 25,
+      //   [age.description]: 25,
+    };
+
+    user[salary.description] = 25000;
+
+    console.log(user);
+    console.log(user[age]);
+    // console.log(user.age);
+    console.log(user.salary);
+
+    for (let key in user) {
+      console.log(key);
+    }
+
+    console.log(JSON.stringify(user));
+  </script>
+
+  <!--
+        ![age.description] : 25 => console.log(user.age) => 25  
+        !also loop work with all properties => loop, fetch,JSON
+        ?[age] : 25 => console.log(user[age]) => 25   
+        ?not work in any properties
+    -->
+  <body>
+    <h2>let y= Symbol("Hello")</h2>
+    <h3>document.write(y.description);</h3>
+    <h4>output = Hello</h4>
+    <h5>description = to print value of symbol</h5>
+    <hr />
+    <h2>let y= Symbol("Hello")</h2>
+    <h3>alert(y.toString());</h3>
+    <h4>output = Symbol(Hello)</h4>
+    <h5>toString = to print symbol on alert</h5>
+    <hr />
+  </body>
+</html>
