@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Generators</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body></body>
+  <script>
+    // normal function
+    function one() {
+      console.log("one");
+      console.log("two");
+      console.log("three");
+    }
+    one();
+
+    // Generator function
+
+    function* two() {
+      console.log("1");
+      yield "First";
+      console.log("2");
+      yield "Second";
+      console.log("3");
+      yield "Third";
+      //   yield;      only yield in generator function => undefine
+    }
+    let x = two();
+    console.log(x.next());
+    console.log(x.next().value);
+    console.log(x.next().done);
+    console.log(x.next());
+  </script>
+
+  <!-- example - 1 -->
+
+  <script>
+    function* three() {
+      yield "one";
+      yield "two";
+      yield "three";
+    }
+    let z = three();
+    console.log(z.next());
+    console.log(z.next().value);
+    console.log(z.next().done);
+    console.log(z.next());
+  </script>
+
+  <!-- example - 2 -->
+
+  <script>
+    function* four() {
+      let nums = 200;
+      while (true) {
+        yield nums++;
+      }
+    }
+    let g = four();
+    for (let x of g) {
+      if (x > 207) {
+        break;
+      } else {
+        console.log(x);
+      }
+    }
+  </script>
+
+  <!-- example - 3 -->
+
+  <script>
+    function* five() {
+      let Nums = yield;
+      console.log(`Result is : ${Nums}`);
+    }
+    let h = five();
+    h.next();
+    h.next(500);
+  </script>
+
+  <!-- example - 4 -->
+
+  <script>
+    function* six() {
+      yield "six";
+      yield* ["one", "two", "three"]; // because of "*" array print line by line
+    }
+    let q = six();
+    console.log(q.next().value);
+    console.log(q.next().value);
+    console.log(q.return("bye...")); // for stop the function use return()
+    console.log(q.next().value);
+    console.log(q.next().value);
+  </script>
+</html>
