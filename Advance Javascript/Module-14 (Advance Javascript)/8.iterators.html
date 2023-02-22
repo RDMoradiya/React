@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iterators</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body></body>
+
+  <!-- !example - 1 -->
+
+  <script>
+    let numbers = [100, 200, 300, 400];
+    console.log(numbers);
+
+    let print = numbers[Symbol.iterator]();
+    console.log(print.next());
+    print.next();
+    console.log(print.next().value);
+    console.log(print.next().done);
+    console.log(print.next());
+  </script>
+
+  <!-- !example - 2 -->
+
+  <script>
+    let num = [10, 20, 30, 40, 50, 60];
+    let pri = num[Symbol.iterator]();
+
+    let result = pri.next();
+
+    while (!result.done) {
+      console.log(result.value);
+      result = pri.next();
+    }
+  </script>
+
+  <!-- !example - 3 -->
+
+  <script>
+    let numb = "Raj Moradiya";
+    let prin = numb[Symbol.iterator]();
+
+    let resultt = prin.next();
+
+    while (!resultt.done) {
+      console.log(resultt.value);
+      resultt = prin.next();
+    }
+  </script>
+
+  <!-- !example - 4 -->
+
+  <script>
+    let numbe = ["PARTH Moradiya"];
+    for (let x of numbe) {
+      console.log(x);
+    }
+  </script>
+</html>
