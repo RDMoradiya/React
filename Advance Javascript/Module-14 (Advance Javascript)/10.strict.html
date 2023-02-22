@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict mod</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <!-- strict :-
+
+    -> The "use strict" directive was new in ECMAScript version 5.
+    -> It is a directive that is used to indicate that a program is to be run in strict mode.
+    -> You can use strict mode in all your programs. It helps you to write cleaner code, like preventing you from using undeclared variables.
+    -> Strict mode is declared by adding "use strict"; to the beginning of a script or a function.   -->
+
+  <script>
+    x = 10;
+    console.log(x);
+  </script>
+
+  <script>
+    "use strict";
+    y = 10;
+    console.log(x);
+  </script>
+
+  <script>
+    function abc() {
+      (a = 10), (b = 20);
+      console.log(a + b);
+    }
+    abc();
+  </script>
+
+  <script>
+    "use strict";
+    function xyz() {
+      (p = 10), (q = 20);
+      console.log(p + q);
+    }
+    xyz();
+  </script>
+  <body></body>
+</html>
