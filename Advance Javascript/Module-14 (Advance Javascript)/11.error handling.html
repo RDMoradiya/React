@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Error handling</title>
+    <link rel="icon" href="logo.png" />
+  </head>
+  <body></body>
+  <script>
+    blalala; //error
+  </script>
+
+  <script>
+    try {
+      console.log("start");
+      bsgshdgs(); //error
+      console.log("End");
+    } catch {
+      console.log("Error");
+    }
+  </script>
+
+  <script>
+    try {
+      console.log("First");
+      bsgshdgs(); //error
+      console.log("End");
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+
+  <script>
+    try {
+      let json = `{"name:"Raj","Age":26}`;
+      let user = JSON.parse(json);
+      console.log(user.name);
+      console.log(user.Age);
+    } catch (error) {
+      console.log(error);
+    }
+  </script>
+
+  <!-- !JS Throw Statement -->
+
+  <script>
+    try {
+      let jsons = `{"Age":26}`;
+      let users = JSON.parse(jsons);
+
+      if (!users.name) {
+        throw new Error("Name is required");
+      }
+
+      console.log(users.name);
+      console.log(users.Age);
+    } catch (errors) {
+      console.log(errors);
+    }
+  </script>
+
+  <!-- !Finally Statement -->
+
+  <script>
+    try {
+      let Jsons = `{"name":"RD","Age":26}`;
+      let Users = JSON.parse(Jsons);
+
+      if (!Users.name) {
+        throw new Error("Name is required");
+      }
+
+      console.log(Users.name);
+      console.log(Users.Age);
+    } catch (errors) {
+      console.log(errors);
+    } finally {
+      console.log("Finally");
+    }
+  </script>
+</html>
