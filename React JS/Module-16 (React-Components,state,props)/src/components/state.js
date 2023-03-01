@@ -2,6 +2,14 @@
 import React, { Component } from 'react'
 
 class State extends Component {
+    // changestate () {
+        changestate = () => {
+            console.log(this.state)
+            this.setState({ user: "Raj Dahyabhai Moradiya", years: "45" }, function () {
+                console.log(this.state)
+            }
+            );
+        }
     constructor() {
         super();
         this.state = {
@@ -9,14 +17,7 @@ class State extends Component {
             years: 26
         }
     }
-    // changestate () {
-    changestate = () => {
-        console.log(this.state)
-        this.setState({ user: "Raj Dahyabhai Moradiya", years: "45" }, function () {
-            console.log(this.state)
-        }
-        );
-    }
+    
     render() {
         return (
             <>
