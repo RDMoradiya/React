@@ -2,6 +2,8 @@ import React from 'react'
 import './Navigation.css'
 
 function Navigation(props) {
+
+
     return (
         <nav className='nav'>
             <ul>
@@ -16,7 +18,7 @@ function Navigation(props) {
                     </li>)
                 }
                 {props.isLoggedIn && (<li>
-                    <button onClick={props.onLogout}>Logout</button>
+                    <button onClick={props.onClick}>Logout</button>
                 </li>)}
             </ul>
         </nav>

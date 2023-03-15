@@ -16,15 +16,13 @@ function App() {
 
   const logoutHandler = () => {
     return (
-      setIsLoggedIn(true)
+      setIsLoggedIn(false)
     )
   }
 
-
-
   return (
     <>
-      <Header isAuthenticated={isLoggedIn} onLogout={logoutHandler} />
+      <Header isAuthenticated={isLoggedIn} onClick={logoutHandler} />
       <main>
         {isLoggedIn ? null : <Login onLogin={loginHandler} />}
         {!isLoggedIn ? null : <Home onLogout={logoutHandler} />}

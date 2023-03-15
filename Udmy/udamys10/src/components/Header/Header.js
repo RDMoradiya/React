@@ -7,7 +7,7 @@ function Header(props) {
     return (
         <header className='container-fluid header p-3'>
             <h1>A Typical Login Page</h1>
-            <Navigation isLoggedIn={props.isAuthenticated} onLogout={props.onLogout} />
+            <Navigation isLoggedIn={props.isAuthenticated} onClick={props.onClick} />
         </header>
     )
 }
