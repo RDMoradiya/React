@@ -1,17 +1,17 @@
-import React from 'react'
+import React from "react";
+import './App.css'
 import Button from './components/Button'
-import Image from './components/image/Image'
-function App() {
+import ImageList from "./components/image/ImageList";
 
 
-
+const App = () => {
 
   return (
-    <div className='container mt-5'>
+    <>
       <Button />
-      <Image />
-    </div>
-  );
+      <ImageList />
+    </>
+  )
 }
 
 export default App;
