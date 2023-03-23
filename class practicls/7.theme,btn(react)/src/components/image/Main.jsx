@@ -2,7 +2,7 @@ import React from 'react'
 
 const ImageStyle = {
     width: "100%",
-    height: "200px",
+    height: "250px",
     textAlign: "center"
 }
 

@@ -24,8 +24,8 @@ const ImageList = (props) => {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-10'><h1>Top Movies List :- {enteredMovieData.length}</h1></div>
-                <div className='col-2'>
+                <div className='col-md-10'><h1>Top Movies List :- {enteredMovieData.length}</h1></div>
+                <div className='col-md-2'>
                     <button className='btn btn-primary mb-2' onClick={hideHandler}>Hide</button>
                     <button className='btn btn-success mb-2 ms-2' onClick={showHandler}>Show</button>
                 </div>
@@ -36,7 +36,6 @@ const ImageList = (props) => {
                 <div className='row'>
                     <div className='col-10'>
                         <div className='row column-gap-2 justify-content-start'>
-
                             {
                                 enteredMovieData.map((item, index) => {
                                     return (
@@ -44,10 +43,10 @@ const ImageList = (props) => {
                                     )
                                 })
                             }
-
                         </div>
                     </div>
                     <div className='col-2'>
+                        <h2>WatchList :-</h2>
                         <ul className='list-group'>
                             {EnterdData.map((item, index) => {
                                 return (
