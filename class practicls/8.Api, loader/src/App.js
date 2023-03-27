@@ -1,8 +1,6 @@
 import React from "react";
 import './App.css'
-import Button from './components/Button'
-import ImageList from "./components/image/ImageList";
-import MainApi from "./components/APICalling/MainApi"
+import MainApi from "./components/MainApi"
 
 
 const App = () => {
@@ -10,8 +8,6 @@ const App = () => {
   return (
     <>
       <MainApi />
-      <Button />
-      <ImageList />
     </>
   )
 }
