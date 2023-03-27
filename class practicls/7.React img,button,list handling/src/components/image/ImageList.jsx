@@ -39,7 +39,7 @@ const ImageList = (props) => {
                             {
                                 enteredMovieData.map((item, index) => {
                                     return (
-                                        <Main key={index} MovieName={item.MovieName} MovieImage={item.MovieImage} MovieDetails={item.MovieDetails} link={item.link} onClick={watchListHandler} />
+                                        <Main key={index} MovieName={item.MovieName} MovieImage={item.MovieImage} MovieDetails={item.MovieDetails} link={item.link} onClick={() => watchListHandler(item.MovieDetails)} />
                                     )
                                 })
                             }

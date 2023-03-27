@@ -22,7 +22,7 @@ const Main = (props) => {
             <div className='card-footer'>
                 <p style={{ fontSize: "12px" }}><b>Direct By :</b> {props.MovieDetails}</p>
                 <a href={props.link} className='btn btn-primary' target='_new' style={{ fontSize: '12px' }} >Information</a>
-                <button className='btn btn-warning ms-1 p-2' style={{ fontSize: '12px' }} onClick={() => props.onClick(props.MovieName)}>WatchList</button>
+                <button className='btn btn-warning ms-1 p-2' style={{ fontSize: '12px' }} onClick={props.onClick}>WatchList</button>
             </div>
         </div>
     )
