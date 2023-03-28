@@ -32,9 +32,9 @@ const Form = () => {
                             autoComplete='password'
                             value={password} onChange={(e) => setPassword(e.target.value)} />
 
-                        {/*  for edit button */}
+
                         {
-                            isEdit ? <button className="btn" onClick={editFormHandler}>Edit</button> : <button className="btn">Submit</button>
+                            isEdit ? (<button className="btn" onClick={editFormHandler}>Edit</button>) : (<button className="btn" >Submit</button>)
                         }
 
                     </form>
