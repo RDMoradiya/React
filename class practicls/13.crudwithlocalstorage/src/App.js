@@ -4,7 +4,7 @@ import FormList from './components/FormList'
 
 export const formwrapper = createContext()
 
-const getLocalData = () => {                        // get data from local storage
+const getLocalData = () => {                                       // get data from local storage               
   const getLocalData = localStorage.getItem('userInfo')
 
   if (getLocalData) {
@@ -12,41 +12,40 @@ const getLocalData = () => {                        // get data from local stora
   } else {
     return []
   }
-
 }
 
 const App = () => {
 
-  const [userName, setUserName] = useState('')
+  const [userName, setUserName] = useState('')                      // for get data from form to table
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [userData, setUserData] = useState(getLocalData)
-  const [isEdit, setIsEdit] = useState(false)
-  const [editForm, setEditFrom] = useState(null)
+  const [isEdit, setIsEdit] = useState(false)                       // for form edit button
+  const [editForm, setEditFrom] = useState(null)                    // for form edit button handler
 
 
-  const SubmitHandler = (e) => {
+  const SubmitHandler = (e) => {                                    // for form form submit  
     e.preventDefault()
     let userdate = {
-      id: new Date().getTime().toString(),
+      id: new Date().getTime().toString(),                         // for random id's
       userName,
       email,
       password
     };
     setUserData([...userData, userdate])
-    localStorage.setItem('userInfo', JSON.stringify([...userData, userdate]));
+    localStorage.setItem('userInfo', JSON.stringify([...userData, userdate]));    // set data to local storage
     setUserName('')
     setEmail('')
     setPassword('')
   }
 
-  const DeleteHandler = (userid) => {
+  const DeleteHandler = (userid) => {                               // for delete button
     const filterData = userData.filter((item) => item.id !== userid)
     localStorage.setItem('userInfo', JSON.stringify(filterData));
     setUserData(filterData)
   }
 
-  const EditHandler = (itemData) => {
+  const EditHandler = (itemData) => {                               // for table edit button
     const { id, userName, email, password } = itemData
     setUserName(userName)
     setEmail(email)
@@ -55,7 +54,7 @@ const App = () => {
     setEditFrom(id)
   }
 
-  const editFormHandler = (e) => {
+  const editFormHandler = (e) => {                                    // for form edit button
     e.preventDefault()
     let editableData = userData.map((item) => {
       if (item.id === editForm) {
@@ -81,10 +80,6 @@ const App = () => {
       </formwrapper.Provider>
     </>
   )
-
 }
-
-
-
 
 export default App;
