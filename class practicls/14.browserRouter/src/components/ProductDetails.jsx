@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import Loader from "./Loader";
 import { ProductList } from "./ProductList";
 
 function ProductDetails() {
@@ -8,11 +9,17 @@ function ProductDetails() {
   const { id } = brandId;
 
   const [productDetails, setProductDetails] = useState({});
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     const findProduct = ProductList.find((item) => item.id === Number(id));
     setProductDetails(findProduct);
+    setIsLoading(false);
   }, [id]);
+
+  if (isLoading) {
+    return <Loader />;
+  }
 
   return (
     <div className="container mt-5">
@@ -30,7 +37,7 @@ function ProductDetails() {
           <div className="card-body">
             <p>{productDetails.desp}</p>
           </div>
-          ,
+
           <div className="card-footer">
             <p>
               <b>Price :- {productDetails.price}</b>

@@ -1,8 +1,19 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ProductList } from "../components/ProductList";
 import { Link } from "react-router-dom";
+import Loader from "../components/Loader";
 
 function Product() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setIsLoading(false);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <div className="container py-3">
       <h2>Products Page</h2>

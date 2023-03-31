@@ -1,24 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./Header.css";
 
 function Header() {
   return (
-    <div className="container">
-      <nav className="navbar navbar-expand-lg navbar-light bg-light">
-        <a className="navbar-brand" href="/">
-          Fruit Plaza
-        </a>
-        <button
-          className="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span className="navbar-toggler-icon" />
-        </button>
+    <div className="container navbare">
+      <nav className="navbar navbar-expand navbar-light bg-light">
+        <div>
+          <h1>
+            <a href="/">
+              Fruit <span>Juicy</span>
+            </a>
+          </h1>
+        </div>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav">
             <li className="nav-item active">
