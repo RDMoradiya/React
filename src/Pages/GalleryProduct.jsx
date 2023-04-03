@@ -10,9 +10,8 @@ function GalleryProduct() {
   const [apidetails, setApiDetails] = useState({});
   // const [isLoading, setIsLoading] = useState(true);
 
-  const data = useLocation();
+  const { state } = useLocation();
   const backButton = useNavigate();
-  const { state } = data;
 
   const {
     strDrink,
