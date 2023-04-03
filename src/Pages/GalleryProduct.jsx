@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import Loader from "../components/Loader";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+// import Loader from "../components/Loader";
 import "./GalleryProduct.css";
 
 function GalleryProduct() {
@@ -8,7 +8,11 @@ function GalleryProduct() {
   const { iddrink } = drinkId;
 
   const [apidetails, setApiDetails] = useState({});
-  const [isLoading, setIsLoading] = useState(true);
+  // const [isLoading, setIsLoading] = useState(true);
+
+  const data = useLocation();
+  const backButton = useNavigate();
+  const { state } = data;
 
   const {
     strDrink,
@@ -21,21 +25,23 @@ function GalleryProduct() {
     strIngredient3,
   } = apidetails;
 
-  const CocktailApifetch = () => {
-    fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${iddrink}`)
-      .then((resp) => resp.json())
-      .then((data) => {
-        setApiDetails(data.drinks[0]);
-        setIsLoading(false);
-      });
-  };
+  // const CocktailApifetch = () => {
+  //   fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${iddrink}`)
+  //     .then((resp) => resp.json())
+  //     .then((data) => {
+  //       setApiDetails(data.drinks[0]);
+  //       setIsLoading(false);
+  //     });
+  // };
 
   useEffect(() => {
-    CocktailApifetch();
-  });
-  if (isLoading) {
-    return <Loader />;
-  }
+    // CocktailApifetch();
+    setApiDetails(state);
+  }, [state]);
+
+  // if (isLoading) {
+  //   return <Loader />;
+  // }
 
   const Styled = {
     boxShadow:
@@ -47,7 +53,15 @@ function GalleryProduct() {
 
   return (
     <div className="container mt-5">
-      <h2>Products Details :- {iddrink} </h2>
+      <div className="d-flex justify-content-between">
+        <h2>Products Details :- {iddrink} </h2>
+        <button
+          className="btn btn-primary"
+          onClick={() => backButton(`/gallery`)}
+        >
+          Back
+        </button>
+      </div>
       <hr />
       <div className="row p-4 align-items-center" style={Styled}>
         <div className="col-md-5 col-auto">

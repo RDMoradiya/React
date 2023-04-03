@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Loader from "../components/Loader";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 function Gallery() {
   const [apiData, setApiData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   const fetchApi = () => {
     fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=`)
@@ -81,12 +84,20 @@ function Gallery() {
                     </p>
                   </div>
                   <div className="card-footer text-center shadow p-3">
-                    <Link
+                    <button
+                      className="btn btn-success"
+                      onClick={() =>
+                        navigate(`/gallery/${idDrink}`, { state: item })
+                      }
+                    >
+                      More info....
+                    </button>
+                    {/* <Link
                       to={`/gallery/${idDrink}`}
                       className="btn btn-success"
                     >
                       More info ...
-                    </Link>
+                    </Link> */}
                   </div>
                 </div>
               </div>

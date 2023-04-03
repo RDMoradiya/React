@@ -2,9 +2,12 @@ import React, { useEffect, useState } from "react";
 import { ProductList } from "../components/ProductList";
 // import { Link } from "react-router-dom";
 import Loader from "../components/Loader";
+import { useNavigate } from "react-router-dom";
 
 function Product() {
   const [isLoading, setIsLoading] = useState(true);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsLoading(false);
@@ -31,9 +34,14 @@ function Product() {
                 <h5>{name}</h5>
               </div>
               <div className="card-footer text-center p-3">
-                <button className="btn btn-danger">more Details ...</button>
+                <button
+                  className="btn btn-info"
+                  onClick={() => navigate(`/products/${id}`, { state: item })}
+                >
+                  more info ...
+                </button>
                 {/* <Link
-                  className="text-decoration-none text-white"
+                  className="btn btn-success text-decoration-none text-white"
                   to={`/product/${id}`}
                 >
                   more info ...
