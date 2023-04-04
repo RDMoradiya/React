@@ -5,8 +5,7 @@ import Loader from "./Loader";
 import { ProductList } from "./ProductList";
 
 function ProductDetails() {
-  const brandId = useParams();
-  const { id } = brandId;
+  const { id } = useParams();
 
   const [productDetails, setProductDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);

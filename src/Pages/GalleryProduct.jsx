@@ -4,8 +4,7 @@ import Loader from "../components/Loader";
 import "./GalleryProduct.css";
 
 function GalleryProduct() {
-  const drinkId = useParams();
-  const { iddrink } = drinkId;
+  const { iddrink } = useParams();
 
   const [apidetails, setApiDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);

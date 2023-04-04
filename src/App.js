@@ -17,11 +17,11 @@ const App = () => {
       <BrowserRouter>
         <Header />
         <Routes>
+          <Route path='*' element={<Pagenotfind />}></Route>
           <Route path='/' element={<Home />}></Route>
           <Route path='/gallery' element={<Gallery />}></Route>
-          <Route path='*' element={<Pagenotfind />}></Route>
-          <Route path='/gallery/:iddrink' element={<GalleryProduct />}></Route>
           <Route path='/products' element={<Product />}></Route>
+          <Route path='/gallery/:iddrink' element={<GalleryProduct />}></Route>
           <Route path='/product/:id' element={<ProductDetails />}></Route>
         </Routes>
       </BrowserRouter>
