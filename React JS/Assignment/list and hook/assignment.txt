@@ -1,0 +1,45 @@
+---------------------------------- Explain Life cycle in Class Component ---------------------
+
+Class LifeCycle extends React.Component {
+componentWillMount() {
+console.log(‘Test Component will mount!’)
+}
+
+componentDidMount() {
+console.log(‘Test Component did mount!)
+this.getItems();
+}
+
+getItems = () => {
+/***method to make API call***
+}
+
+render() {
+return (
+<div>
+<h3>Introducing the mounting methods!</h3>
+<div>
+)
+}
+}
+
+---------------------------------- Explain Life cycle in function Component ---------------------
+
+
+import React, { useState, useEffect } from "react";
+
+const Counter = () => {
+  const [count, setCount] = useState(0);
+  const [count2, setCount2] = useState(0);
+
+  return (
+    <div>
+      <h6> Counter </h6>
+      <p> current count: {count} </p>
+      <button onClick={() => setCount(count + 1)}>increment the count</button>
+      <button onClick={() => setCount2(count2 + 1)}>increment count 2</button>
+    </div>
+  );
+};
+
+export default Counter;
