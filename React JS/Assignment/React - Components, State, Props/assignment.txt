@@ -1,0 +1,68 @@
+Q-1 --> What is React Js?
+
+-React is a JavaScript library created by Facebook
+-React is a User Interface (UI) library
+-React is a tool for building UI components
+
+Q-2 --> What is NPM in React Js?
+
+-npm is the world's largest Software Registry.
+-The registry contains over 800,000 code packages.
+-Open-source developers use npm to share software.
+-Many organizations also use npm to manage private development.
+
+Q-3 --> What is Role of Node Js in react Js?
+
+NodeJS is a framework of JavaScript which is mainly used for working with the backend of our application or building the backend using JavaScript, whereas ReactJS is a JavaScript front-end library. It is mainly used for building the user interface or the frontend of our application.
+
+Q-4 --> What is CLI command In React Js?
+
+-Creating a new application. Create React App provides multiple ways to create React application.
+-Selecting a template. Create React App creates React -application using default template.
+-Installing a dependency.
+-Running the application.
+
+Q-5 --> What is Components in React Js?
+
+-Components are independent and reusable bits of code. They serve the same purpose as JavaScript functions, but work in isolation and return HTML.
+-Components come in two types, Class components and Function components, in this tutorial we will concentrate on Function components.
+
+Q-6 --> What is Header and Content Components in React Js?
+
+-Header component :- 
+Headers are compositions that extend standard navbar functionalities. They contain additional components like a jumbotron, sub-navbar, or image covers which serve as a containers for extra navigation elements - usually links, forms, or call-to-action buttons.
+
+-context component :-
+Context is primarily used when some data needs to be accessible by many components at different nesting levels. Apply it sparingly because it makes component reuse more difficult. If you only want to avoid passing some props through many levels, component composition is often a simpler solution than context.
+
+Q-7 --> How to install React Js on Windows, Linux Operating System? How to install NPM and How to check version of NPM?
+
+Step 1: Install Node.js installer for windows. Click on this link. Here install the LTS version (the one present on the left). Once downloaded open NodeJS without disturbing other settings, click on the Next button until it’s completely installed.
+
+Step 2: Open command prompt  to check whether it is completely installed or not type the command –> node -v
+
+Step 3: Now in the terminal run the below command -. npm install -g create-react-app 
+
+Step 4:Now Create a new folder where you want to make your react app using the below command -> mkdir newfolder
+
+Step 5: Now inside this folder run the command –> create-react-app reactfirst YOUR_APP_NAME
+
+Step 6: Now open the IDE of your choice for eg.  Visual studio code and open the folder where you have installed the react app newfolder (in the above example)  inside the folder you will see your app’s name reactapp (In our example). Use the terminal and move inside your app name folder.Use command  cd reactapp (your app name)
+
+Step 7: To start your app run the below command -> npm start
+
+Q-8 --> How to check version of React Js?
+
+-We can easily check the React version by using the command mentioned below on our command line.
+-npm view react version
+
+Q-9 --> How to change in components of React Js?
+
+-Inline editing and accessibility.
+-Create your inline edit component with an input.
+-Add CSS to make it "click to edit"
+-Allow users to save when they press Enter or Escape.
+-Only save on exit.
+-Adding validation on empty strings.
+-Creating a multiline inline edit.
+-Ensure your component's functionality with unit tests.
