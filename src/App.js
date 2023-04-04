@@ -22,12 +22,12 @@ const App = () => {
   const FormDataHandler = (username, email, password) => {
     setUserData((prev) => {
       return (
-        [...prev, { username: username, email: email, password: password }]
+        [...prev, { id: new Date().getTime().toString(), username: username, email: email, password: password }]
       )
     })
 
     // set value on local storage
-    localStorage.setItem('userdetail', JSON.stringify([...userData, { username: username, email: email, password: password }]))
+    localStorage.setItem('userdetail', JSON.stringify([...userData, { id: new Date().getTime().toString(), username: username, email: email, password: password }]))
   }
 
   return (
