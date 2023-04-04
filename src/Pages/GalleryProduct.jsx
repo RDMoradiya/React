@@ -1,14 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useLocation, useNavigate, useParams } from "react-router-dom";
-// import Loader from "../components/Loader";
 import "./GalleryProduct.css";
 
 function GalleryProduct() {
-  const drinkId = useParams();
-  const { iddrink } = drinkId;
+  const { iddrink } = useParams();
 
   const [apidetails, setApiDetails] = useState({});
-  // const [isLoading, setIsLoading] = useState(true);
 
   const { state } = useLocation();
   const backButton = useNavigate();
@@ -24,23 +21,9 @@ function GalleryProduct() {
     strIngredient3,
   } = apidetails;
 
-  // const CocktailApifetch = () => {
-  //   fetch(`https://www.thecocktaildb.com/api/json/v1/1/lookup.php?i=${iddrink}`)
-  //     .then((resp) => resp.json())
-  //     .then((data) => {
-  //       setApiDetails(data.drinks[0]);
-  //       setIsLoading(false);
-  //     });
-  // };
-
   useEffect(() => {
-    // CocktailApifetch();
     setApiDetails(state);
   }, [state]);
-
-  // if (isLoading) {
-  //   return <Loader />;
-  // }
 
   const Styled = {
     boxShadow:
