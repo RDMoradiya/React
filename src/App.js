@@ -20,8 +20,7 @@ const App = () => {
         setCocktailList(result.drinks)
         setIsLoading(false)
       })
-      .catch((error) => {
-        console.log(error)
+      .catch(() => {
         setIsLoading(false)
       })
   }, [drinkName])
