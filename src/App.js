@@ -8,9 +8,9 @@ const App = () => {
   const [userData, setUserData] = useState([])
 
   const FormDataHandler = (username, email, password) => {
-    setUserData((prev) => {
+    setUserData(() => {
       return (
-        [...prev, { username: username, email: email, password: password }]
+        [...userData, { username: username, email: email, password: password }]
       )
     })
   }
