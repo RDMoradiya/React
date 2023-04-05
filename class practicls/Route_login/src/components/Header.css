@@ -1,0 +1,46 @@
+.container {
+  position: relative;
+  --size-button: 40px;
+}
+h1 {
+  font-family: "Tulpen One", cursive;
+  font-size: 5em;
+}
+
+h1 a {
+  color: #3065a2;
+}
+
+a {
+  text-decoration: none;
+}
+.nav-Link {
+  font-family: "Tulpen One", cursive;
+  color: #3065a2;
+  font-size: 15px;
+}
+.navbar {
+  display: flex;
+  flex-direction: column;
+}
+
+#navbarNav {
+  margin-top: 20px;
+}
+.nav-item a {
+  padding: 10px 20px;
+  margin: 0px 7px;
+  border-radius: 20px;
+  display: block;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+  }
+}
