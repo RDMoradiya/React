@@ -47,10 +47,7 @@ function Gallery() {
             } = item;
 
             return (
-              <div
-                className="col-md-6 col-lg-4 col-xl-3 mb-5 py-5"
-                key={idDrink}
-              >
+              <div className="col-md-6 col-lg-4 col-xl-3 mb-5" key={idDrink}>
                 <div className="card" style={Styled}>
                   <div className="card-header">
                     <img

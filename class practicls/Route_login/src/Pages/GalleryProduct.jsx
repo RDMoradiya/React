@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { loginwrapper } from "../App";
 import Loader from "../components/Loader";
 import "./GalleryProduct.css";
 
 function GalleryProduct() {
   const { iddrink } = useParams();
+  const navigate = useNavigate();
+
+  const { AddListHandler, showAlert } = useContext(loginwrapper);
 
   const [apidetails, setApiDetails] = useState({});
   const [isLoading, setIsLoading] = useState(true);
@@ -46,8 +50,22 @@ function GalleryProduct() {
 
   return (
     <div className="container mt-5">
-      <h2>Products Details :- {iddrink} </h2>
+      <div className="d-flex justify-content-between align-items-center">
+        <h2>Products Details :- {iddrink} </h2>
+        <button
+          className="p-2"
+          style={Styled}
+          onClick={() => navigate("/gallery")}
+        >
+          back
+        </button>
+      </div>
       <hr />
+      {showAlert && (
+        <div className="alert alert-primary" role="alert">
+          Added To Your Cart !!!
+        </div>
+      )}
       <div className="row p-4 align-items-center" style={Styled}>
         <div className="col-md-5 col-auto">
           <div className="card-header text-center">
@@ -80,6 +98,23 @@ function GalleryProduct() {
               {strIngredient3 && <li>{strIngredient3}</li>}
             </ul>
           </div>
+          <button
+            className="btn btn-light border-1 border-dark"
+            style={Styled}
+            onClick={() =>
+              AddListHandler({
+                id: new Date().getTime().toString(),
+                image: strDrinkThumb,
+                name: strDrink,
+                info: strInstructions,
+                strIngredient1,
+                strIngredient2,
+                strIngredient3,
+              })
+            }
+          >
+            Add to WatchList
+          </button>
         </div>
       </div>
     </div>

@@ -1,18 +1,13 @@
 import React, { useContext } from "react";
-import { Link } from "react-router-dom";
 import "./Header.css";
+import { Link } from "react-router-dom";
 import { loginwrapper } from "../App";
 
 function Header() {
-  const { isLogin, setIsLogin } = useContext(loginwrapper);
-
-  const LogoutHandler = () => {
-    localStorage.removeItem("userData");
-    setIsLogin(false);
-  };
+  const { isLogin, LogoutHandler, cart } = useContext(loginwrapper);
 
   return (
-    <div className="container navbare">
+    <div className="container navbare mb-5">
       <nav className="navbar navbar-expand navbar-light bg-light">
         <div>
           <h1>
@@ -62,6 +57,30 @@ function Header() {
                 href="/"
               >
                 Products
+              </Link>
+            </li>
+
+            <li className="nav-item">
+              <Link
+                to="/cart"
+                className="nav-Link text-decoration-none"
+                href="/"
+              >
+                Cart
+                {cart.length === 0 ? null : (
+                  <span
+                    className="badge bg-success ms-1"
+                    style={{ color: "white" }}
+                  >
+                    {cart.length}
+                  </span>
+                )}
+                {/* <span
+                  className="badge bg-success ms-1"
+                  style={{ color: "white" }}
+                >
+                  {cart.length}
+                </span> */}
               </Link>
             </li>
             <li className="nav-item">
