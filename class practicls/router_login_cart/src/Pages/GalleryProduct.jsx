@@ -50,7 +50,7 @@ function GalleryProduct() {
 
   return (
     <div className="container mt-5">
-      <div className="d-flex justify-content-between align-items-center">
+      <div className="d-flex justify-content-between align-items-center topDetail">
         <h2>Products Details :- {iddrink} </h2>
         <button
           className="p-2"
