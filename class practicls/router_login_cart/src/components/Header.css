@@ -41,6 +41,12 @@ a {
 
 @media (max-width: 576px) {
   .navbar {
-    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  .navbar-nav {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 15px;
   }
 }

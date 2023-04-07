@@ -38,6 +38,7 @@ const App = () => {
   const [enteredPassword, setEnteredPassword] = useState("");
   const [cart, setCart] = useState(CartlocalDataHandler())
   const [showAlert, setShowAlert] = useState(false)
+  const [showProductAlert, setShowProductAlert] = useState(false)
 
   const submitHandler = (e) => {
     e.preventDefault()
@@ -63,6 +64,11 @@ const App = () => {
       setShowAlert(false)
     }, 2000)
   }
+  const removeProductAlert = () => {
+    setTimeout(() => {
+      setShowProductAlert(false)
+    }, 2000)
+  }
 
   const AddListHandler = (details) => {
     setCart([...cart, details])
@@ -79,7 +85,7 @@ const App = () => {
 
   return (
     <>
-      <loginwrapper.Provider value={{ isLogin, setIsLogin, enteredUserName, setEnteredUserName, enteredPassword, setEnteredPassword, submitHandler, LogoutHandler, AddListHandler, cart, setCart, showAlert, setShowAlert, RemoveCartData }}>
+      <loginwrapper.Provider value={{ isLogin, setIsLogin, enteredUserName, setEnteredUserName, enteredPassword, setEnteredPassword, submitHandler, LogoutHandler, AddListHandler, cart, setCart, showAlert, setShowAlert, RemoveCartData, showProductAlert, setShowProductAlert, removeProductAlert }}>
         <BrowserRouter>
           <Header />
           <Routes>
