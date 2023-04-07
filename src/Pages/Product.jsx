@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { ProductList } from "../components/ProductList";
 import { Link } from "react-router-dom";
+import "./Product.css";
 import Loader from "../components/Loader";
 
 function Product() {
@@ -38,7 +39,7 @@ function Product() {
           const { id, name, img } = item;
           return (
             <div
-              className="card mb-md-2 col-lg-3 col-xl-2 text-center "
+              className="card mb-md-2 col-sm-6 col-lg-4 col-xl-3 text-center "
               key={id}
               style={Styled}
             >
@@ -52,7 +53,7 @@ function Product() {
                     to={`/product/${id}`}
                     className="text-decoration-none text-black p-2"
                   >
-                    more details ...
+                    more details
                   </Link>
                 </button>
               </div>

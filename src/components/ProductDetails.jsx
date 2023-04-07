@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import "./ProductDetails.css";
 import Loader from "./Loader";
 import { ProductList } from "./ProductList";
 import { loginwrapper } from "../App";
@@ -68,19 +69,15 @@ function ProductDetails() {
         </div>
       )}
       <div className="row">
-        <div className="card col-8" style={Styled}>
+        <div className="card col-12" style={Styled}>
           <div className="card-header text-center">
-            <img
-              src={productDetails.img}
-              alt=""
-              style={{ width: "250px", height: "250px" }}
-            />
+            <img className="image" src={productDetails.img} alt="" />
           </div>
           <div className="card-body">
             <p>{productDetails.desp}</p>
           </div>
 
-          <div className="card-footer d-flex justify-content-between align-items-center">
+          <div className="card-footer d-flex justify-content-between align-items-center footer">
             <p className="mb-0">
               <b>Price :- {productDetails.price}</b>
             </p>

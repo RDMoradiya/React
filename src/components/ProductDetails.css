@@ -1,0 +1,28 @@
+@media (max-width: 768px) {
+  .card .card-footer {
+    flex-direction: column;
+    row-gap: 10px;
+  }
+  .card .card-header .image {
+    width: 250px;
+    height: 250px;
+  }
+  .card {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    width: 100%;
+  }
+  .card .card-header .image {
+    width: -webkit-fill-available;
+  }
+}
+
+@media (max-width: 992px) {
+  .card {
+    width: 100%;
+  }
+}

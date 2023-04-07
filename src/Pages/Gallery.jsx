@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import "./Gallery.css";
 import Loader from "../components/Loader";
 import { Link } from "react-router-dom";
 
@@ -47,7 +48,7 @@ function Gallery() {
 
             return (
               <div
-                className="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-5"
+                className="col-auto col-sm-6 col-md-6 col-lg-4 col-xl-3 mb-5"
                 key={idDrink}
               >
                 <div className="card" style={Styled}>
@@ -85,7 +86,7 @@ function Gallery() {
                       className="btn btn-light border-1 border-dark w-50"
                       style={Styled}
                     >
-                      More info ...
+                      More info
                     </Link>
                   </div>
                 </div>
