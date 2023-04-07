@@ -1,4 +1,9 @@
+* {
+  background-color: none;
+}
+
 .container {
+  background-color: none;
   position: relative;
   --size-button: 40px;
 }
