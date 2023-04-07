@@ -24,13 +24,6 @@ function Cart() {
     <div className="container mt-5">
       <h3>Cart Products :-</h3>
       <hr />
-
-      {cart === 0 && (
-        <div class="alert alert-dark" role="alert">
-          Your Cart is Empty !!!
-        </div>
-      )}
-
       <div className="row">
         {cart.map((item) => {
           const { id, image, name, info, strIngredient1, strIngredient2 } =

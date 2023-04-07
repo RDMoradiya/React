@@ -109,7 +109,6 @@ function GalleryProduct() {
                 info: strInstructions,
                 strIngredient1,
                 strIngredient2,
-                strIngredient3,
               })
             }
           >

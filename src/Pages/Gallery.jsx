@@ -16,7 +16,7 @@ function Gallery() {
   };
 
   useEffect(() => {
-    return fetchApi();
+    fetchApi();
   }, []);
 
   if (isLoading) {
@@ -27,7 +27,6 @@ function Gallery() {
     boxShadow:
       "rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px",
     borderRadius: "30px",
-    backgroundSize: "cover",
     height: "100%",
   };
 
@@ -47,7 +46,10 @@ function Gallery() {
             } = item;
 
             return (
-              <div className="col-md-6 col-lg-4 col-xl-3 mb-5" key={idDrink}>
+              <div
+                className="col-auto col-sm-6 col-md-4 col-lg-3 col-xl-3 mb-5"
+                key={idDrink}
+              >
                 <div className="card" style={Styled}>
                   <div className="card-header">
                     <img
@@ -80,7 +82,8 @@ function Gallery() {
                   <div className="card-footer text-center shadow p-3">
                     <Link
                       to={`/gallery/${idDrink}`}
-                      className="btn btn-success"
+                      className="btn btn-light border-1 border-dark w-50"
+                      style={Styled}
                     >
                       More info ...
                     </Link>
