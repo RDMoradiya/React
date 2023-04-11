@@ -28,8 +28,8 @@ export const ApiSlice = createSlice({
             state.apiData = action.payload
         },
         [ApiData.rejected]: (state) => {
-            state.isLoading = true
-        }
+            state.isLoading = false
+        },
     }
 });
 
