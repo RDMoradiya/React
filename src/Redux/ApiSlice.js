@@ -1,9 +1,9 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-export const ApiData = createAsyncThunk("apiData", async () => {
+export const ApiData = createAsyncThunk("ApiData", async () => {
     try {
         const resp = await fetch(`https://api.escuelajs.co/api/v1/products`);
-        const data = resp.json();
+        const data = await resp.json();
         return data
     } catch (error) {
         console.log(error);
