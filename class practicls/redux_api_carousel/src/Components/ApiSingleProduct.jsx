@@ -4,6 +4,17 @@ import { useParams, useNavigate } from "react-router-dom";
 import { getApiData } from "../Redux/ApiSlice";
 import Loader from "./Loader";
 
+//swiper
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-cards";
+import "./Swiper.css";
+
+// import required modules
+import { EffectCards } from "swiper";
+
 function ApiSingleProduct() {
   const { id } = useParams();
   const navigate = useNavigate();
@@ -43,11 +54,46 @@ function ApiSingleProduct() {
       <hr />
       <div className="row p-4">
         <div className="col-4 p-4" style={Styled}>
-          <img
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="mySwiper"
+          >
+            <SwiperSlide>
+              <img
+                src={images[0]}
+                alt="Product_image"
+                className="w-100 rounded-5"
+              />
+            </SwiperSlide>
+
+            {images[1] && (
+              <SwiperSlide>
+                <img
+                  src={images[1]}
+                  alt="Product_image"
+                  className="w-100 rounded-5"
+                />
+              </SwiperSlide>
+            )}
+
+            {images[2] && (
+              <SwiperSlide>
+                <img
+                  src={images[2]}
+                  alt="Product_image"
+                  className="w-100 rounded-5"
+                />
+              </SwiperSlide>
+            )}
+          </Swiper>
+
+          {/* <img
             src={images[0]}
             alt="Product_image"
             className="w-100 rounded-5"
-          />
+          /> */}
         </div>
         <div className="col-8 ">
           <div style={Styled} className="p-4 ps-5 h-100">
