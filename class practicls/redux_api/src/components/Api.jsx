@@ -25,7 +25,7 @@ const Api = () => {
             <div className="col-sm-6 col-lg-3 mb-3" key={id}>
               <div className="card h-100 p-3">
                 <div className="card-header p-0 pb-3">
-                  <img src={images} alt="" className="w-100" />
+                  <img src={images[0]} alt="" className="w-100" />
                 </div>
                 <h5 className="mt-2 mb-0">{title}</h5>
                 <hr />
