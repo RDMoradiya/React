@@ -60,33 +60,17 @@ function ApiSingleProduct() {
             modules={[EffectCards]}
             className="mySwiper"
           >
-            <SwiperSlide>
-              <img
-                src={images[0]}
-                alt="Product_image"
-                className="w-100 rounded-5"
-              />
-            </SwiperSlide>
-
-            {images[1] && (
-              <SwiperSlide>
-                <img
-                  src={images[1]}
-                  alt="Product_image"
-                  className="w-100 rounded-5"
-                />
-              </SwiperSlide>
-            )}
-
-            {images[2] && (
-              <SwiperSlide>
-                <img
-                  src={images[2]}
-                  alt="Product_image"
-                  className="w-100 rounded-5"
-                />
-              </SwiperSlide>
-            )}
+            {images.map((item) => {
+              return (
+                <SwiperSlide>
+                  <img
+                    src={item}
+                    alt="Product_image"
+                    className="w-100 rounded-5"
+                  />
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
 
           {/* <img
