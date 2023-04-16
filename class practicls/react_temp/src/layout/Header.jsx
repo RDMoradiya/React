@@ -45,6 +45,12 @@ function Header() {
               <span className="px-2">Cart</span>
             </NavLink>
           </li>
+          <li className="nav-item ">
+            <NavLink to="/login" className="nav-link text-white" href="/">
+              <i className="fa-sharp fa-solid fa-user"></i>
+              <span className="px-2">Login</span>
+            </NavLink>
+          </li>
         </ul>
         {/* <form className="form-inline my-2 my-lg-0 d-flex ps-3 pe-3">
           <input

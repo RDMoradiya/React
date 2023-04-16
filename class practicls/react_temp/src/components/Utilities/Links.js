@@ -21,7 +21,6 @@ export const Links = [{
 {
     id: 5,
     title: 'Contact',
-    link: 'http://localhost:3000/',
+    link: '/contact',
 },
-
 ]
