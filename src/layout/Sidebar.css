@@ -1,0 +1,34 @@
+.sides {
+  color: white;
+  width: 100%;
+  transition: all 0.35s;
+  display: block;
+  text-decoration: none;
+  position: relative;
+  transition: all 0.35s;
+}
+
+.sides span {
+  position: relative;
+  z-index: 2;
+}
+
+.sides:after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.349);
+  transition: all 0.35s;
+  border-radius: 10px;
+}
+
+.sides:hover {
+  color: orangered;
+}
+
+.sides:hover:after {
+  width: 100%;
+}
