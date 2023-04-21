@@ -1,15 +1,33 @@
-import { useContext } from "react";
+import { useState, useContext, useEffect } from "react";
 import Modal from "../UI/Modal";
 import classes from "./Cart.module.css";
 import { foodwrapper } from "../../App";
+import CartItem from "./CartItem";
 
-const Cart = (props) => {
+const Cart = () => {
   const { hideCartHandler, cart } = useContext(foodwrapper);
+
+  const [totalCount, setTotalCount] = useState(0);
+
+  useEffect(() => {
+    let total = 0;
+
+    cart.forEach((item) => {
+      total += item.price;
+    });
+
+    setTotalCount(total);
+  }, [cart]);
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
-      {cart.map((item, index) => (
-        <li key={index}>{item.name}</li>
+      {cart.map((item) => (
+        <CartItem
+          id={item.id}
+          key={item.id}
+          name={item.name}
+          price={item.price}
+        />
       ))}
     </ul>
   );
@@ -19,7 +37,7 @@ const Cart = (props) => {
       {cartItems}
       <div className={classes.total}>
         <span>Total Amount</span>
-        <span>₹ 149</span>
+        <span>₹ {totalCount}</span>
       </div>
       <div className={classes.actions}>
         <button className={classes["button--alt"]} onClick={hideCartHandler}>
