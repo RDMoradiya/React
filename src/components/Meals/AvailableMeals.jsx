@@ -31,7 +31,7 @@ const DUMMY_MEALS = [
 
 const AvailableMeals = () => {
   const mealsList = DUMMY_MEALS.map((meal) => {
-    const { id, name, price = ` ${meal.price.toFixed(2)}`, description } = meal;
+    const { id, name, price, description } = meal;
     return (
       <li className="meal" key={id}>
         <div>
