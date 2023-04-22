@@ -7,7 +7,7 @@ import CartItem from "./CartItem";
 const Cart = () => {
   const { hideCartHandler, cart } = useContext(foodwrapper);
 
-  const [totalCount, setTotalCount] = useState(0);
+  const [totalCount, setTotalCount] = useState();
 
   useEffect(() => {
     let total = 0;
@@ -18,6 +18,11 @@ const Cart = () => {
 
     setTotalCount(total);
   }, [cart]);
+
+  // const orderHandler = () => {
+  //   setCart([]);
+  //   localStorage.removeItem("Details");
+  // };
 
   const cartItems = (
     <ul className={classes["cart-items"]}>
@@ -43,7 +48,10 @@ const Cart = () => {
         <button className={classes["button--alt"]} onClick={hideCartHandler}>
           Close
         </button>
-        <button className={classes.button}>Order</button>
+        <button className={classes.button}>
+          {/* <button className={classes.button} onClick={orderHandler}> */}
+          Order
+        </button>
       </div>
     </Modal>
   );

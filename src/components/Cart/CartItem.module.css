@@ -50,9 +50,9 @@
   font: inherit;
   font-weight: bold;
   font-size: 1.25rem;
-  color: #8a2b06;
-  border: 1px solid #8a2b06;
-  width: 3rem;
+  color: #0b7919;
+  border: 1px solid #0b7919;
+  width: 30px;
   text-align: center;
   border-radius: 6px;
   background-color: transparent;
@@ -63,15 +63,16 @@
 
 .cart-item .button:hover,
 .cart-item .button:active {
-  background-color: #8a2b06;
+  background-color: #b94517;
   color: white;
+  border: none;
 }
 
 .delet {
   font: inherit;
   cursor: pointer;
-  background-color: #8a2b06;
-  border: 1px solid #8a2b06;
+  background-color: #0b7919;
+  border: none;
   color: white;
   /* padding: 5px 5px; */
   height: 27px;
@@ -81,6 +82,5 @@
 
 .delet:hover,
 .delet:active {
-  background-color: #641e03;
-  border-color: #641e03;
+  background-color: #b94517;
 }

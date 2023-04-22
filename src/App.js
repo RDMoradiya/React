@@ -10,6 +10,7 @@ function App() {
   const [cartIsShown, setCartIsShown] = useState(false); //for cart popup
   const [cart, setCart] = useState(localDataHandler()); //cart
 
+
   const showCartHandler = () => {
     setCartIsShown(true);
   };

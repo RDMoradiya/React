@@ -20,7 +20,6 @@ const MealItemForm = (props) => {
     event.preventDefault();
     const data = [...cart, { id, name, price, description }];
     setCart(data);
-    console.log(data);
     localStorage.setItem("Details", JSON.stringify(data));
   };
 
