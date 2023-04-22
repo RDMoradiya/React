@@ -1,0 +1,29 @@
+Q-1 --> What is Redux?
+--> React Redux is the official React binding for Redux. It allows React components to read data from a Redux Store, and dispatch Actions to the Store to update data. Redux helps apps to scale by providing a sensible way to manage state through a unidirectional data flow model. React Redux is conceptually simple. It subscribes to the Redux store, checks to see if the data which your component wants have changed, and re-renders your component.
+
+Q-2 --> What is Redux Thunk used for?
+--> Redux Thunk is a popular middleware for React Redux. You can create services that return a function hence the name Thunk. The creators of Thunk call this function ‘action creators’.
+--> For me personally, it makes more sense to think of these thunk functions as services since they don’t return actions. Remember that actions are plain objects. Your thunk function will call dispatch, so you’ll be calling dispatch at least twice. Once from your component when you call your service. And then again inside of your thunk function to trigger your reducer.
+--> Redux Thunk looks for these special functions and handles the dispatching for you. This pattern allows you to centralize and re-use these services in different components. This especially comes handy when you are making asynchronous API requests and you need to dispatch on promise success and error.
+
+Q-3 --> What is Pure Component? 
+--> Now, ReactJS has provided us a Pure Component. If we extend a class with Pure Component, there is no need for shouldComponentUpdate() Lifecycle Method. ReactJS Pure Component Class compares current state and props with new props and states to decide whether the React component should re-render itself or  Not.
+--> In simple words, If the previous value of state or props and the new value of state or props is the same, the component will not re-render itself. Since Pure Components restricts the re-rendering when there is no use of re-rendering of the component. Pure Components are Class Components which extends React.PureComponent. 
+
+==> When to use Pure Component over Component?
+--> Both functional-based and class-based components have the same downside: they always re-render when their parent component re-renders even if the props don’t change. 
+--> Also, class-based components always re-render when its state is updated (this.setState is called) even if the new state is equal to the old state.
+--> Moreover, when a parent component re-renders, all of its children are also re-rendered, and their children too, and so on.
+--> That behavior may mean a lot of wasted re-renderings. Indeed, if our component only depends on its props and state, then it shouldn’t re-render if neither of them changed, no matter what happened to its parent component.
+--> That is precisely what PureComponent does - it stops the vicious re-rendering cycle. PureComponent does not re-render unless its props and state change.
+
+Q-4 --> What is the second argument that can optionally be passed tosetState and what is
+its purpose?
+--> The second argument that can optionally be passed to setState is a callback function which gets called immediately after the setState is completed and the components get re-rendered. 
+--> If you want your program to update the value of a state using setState and then perform certain actions on the updated value of state then you must specify those actions in a function which should be the second argument of the setState. If we would not do so then those actions will be performed on the previous value of state because of asynchronous nature of setState.
+
+Q-5 --> Search data?
+github link :- https://github.com/RDMoradiya/React/tree/cocktailapi_search
+
+Q-6 --> Create Login registration with CRUD Application using API (Redux)
+github link :- https://github.com/RDMoradiya/React/tree/crud_with_localstorage
