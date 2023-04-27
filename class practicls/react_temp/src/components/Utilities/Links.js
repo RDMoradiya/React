@@ -18,9 +18,4 @@ export const Links = [{
     title: 'Product List',
     link: '/product-list',
 },
-{
-    id: 5,
-    title: 'Contact',
-    link: '/contact',
-},
 ]
