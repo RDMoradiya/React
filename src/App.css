@@ -2,3 +2,11 @@
   margin: 0;
   padding: 0;
 }
+
+.err {
+  border: 10px solid red !important;
+}
+
+.err:focus {
+  box-shadow: 10px 10px 10px solid red !important;
+}

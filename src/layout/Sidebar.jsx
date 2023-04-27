@@ -1,5 +1,4 @@
 import React from "react";
-import ListGroup from "react-bootstrap/ListGroup";
 import { Links } from "../components/Utilities/Links";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
@@ -8,7 +7,11 @@ const Sidebar = () => {
   return (
     <div
       className="text-white d-none d-md-block"
-      style={{ height: "100vh", backgroundColor: "rgb(8, 61, 123)" }}
+      style={{
+        minHeight: "100vh",
+        backgroundColor: "rgb(8, 61, 123)",
+        height: "100%",
+      }}
     >
       <div className="w-100 text-center pt-3 pb-3 d-flex align-items-center justify-content-center">
         <a href="/" className="text-white">
@@ -31,11 +34,11 @@ const Sidebar = () => {
           </span>
         </a>
       </div>
-      <ListGroup>
+      <ul className="list-group">
         {Links.map((item) => {
           const { id, title, link } = item;
           return (
-            <ListGroup.Item
+            <li
               key={id}
               className="mainside m-0 p-0 border-0 text-white"
               style={{ background: "rgb(8, 61, 123)" }}
@@ -46,10 +49,10 @@ const Sidebar = () => {
               >
                 <span>{title}</span>
               </NavLink>
-            </ListGroup.Item>
+            </li>
           );
         })}
-      </ListGroup>
+      </ul>
     </div>
   );
 };
