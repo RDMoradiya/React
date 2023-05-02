@@ -32,3 +32,17 @@
 .sides:hover:after {
   width: 100%;
 }
+
+.side_button {
+  position: absolute;
+  padding-right: 5%;
+  top: 5%;
+  right: 0;
+}
+
+.sbutton {
+  padding: 2px 5px;
+  border-radius: 50%;
+  background: transparent;
+  border: 1px solid white;
+}

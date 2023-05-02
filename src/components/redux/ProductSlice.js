@@ -6,7 +6,7 @@ export const getAllProducts = createAsyncThunk('product/getProducts', async () =
         const response = await axios.get(`http://localhost:8000/product/products`)
         return response.data.data.products
     } catch (error) {
-        console.log('e', error);
+        console.log(error.response.data.message);
     }
 })
 
@@ -22,13 +22,24 @@ export const createProduct = createAsyncThunk("product/addproduct", async (formV
 
 export const deleteproduct = createAsyncThunk("product/deleteproduct", async (id, { dispatch }) => {
     try {
-        const response = await axios.delete(`http://localhost:8000/product/${id}`)
-
+        const response = await axios.delete(`http://localhost:8000/product/${id}`,)
         if (response.status === 200) {
             dispatch(getAllProducts())
         }
     } catch (error) {
-        console.log(error)
+        console.log(error.response.data.message)
+    }
+})
+
+export const editProduct = createAsyncThunk("product/edit", async ({ id, formValue }, { dispatch }) => {
+    try {
+        const response = await axios.patch(`http://localhost:8000/product/${id}`, formValue)
+        const data = await response
+        if (data.status === 200) {
+            dispatch(getAllProducts())
+        }
+    } catch (error) {
+        console.log(error.response.data.message)
     }
 })
 
@@ -37,7 +48,6 @@ const productSlice = createSlice({
     initialState: {
         productList: [],
         loading: true,
-        addProductLoading: false
     },
     reducers: {
 

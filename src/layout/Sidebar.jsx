@@ -2,11 +2,15 @@ import React from "react";
 import { Links } from "../components/Utilities/Links";
 import { NavLink } from "react-router-dom";
 import "./Sidebar.css";
+import { useDispatch } from "react-redux";
+import { closeMenu } from "../components/redux/menuSlice";
 
 const Sidebar = () => {
+  const dispatch = useDispatch();
+
   return (
     <div
-      className="text-white d-none d-md-block"
+      className="text-white"
       style={{
         minHeight: "100vh",
         backgroundColor: "rgb(8, 61, 123)",
@@ -34,6 +38,12 @@ const Sidebar = () => {
           </span>
         </a>
       </div>
+      <div className="side_button d-block d-md-none">
+        <button onClick={() => dispatch(closeMenu())} className="sbutton">
+          <i className="fa-solid fa-circle-xmark text-white"></i>
+        </button>
+      </div>
+
       <ul className="list-group">
         {Links.map((item) => {
           const { id, title, link } = item;

@@ -4,10 +4,12 @@ import { getAllProducts } from "../redux/ProductSlice";
 import { useDispatch, useSelector } from "react-redux";
 import Loader from "../Utilities/Loader";
 import { deleteproduct } from "../redux/ProductSlice";
+import { useNavigate } from "react-router-dom";
 
 function Products() {
   const dispatch = useDispatch();
   const { loading, productList } = useSelector((state) => state.product);
+  const navigate = useNavigate();
 
   useEffect(() => {
     dispatch(getAllProducts());
@@ -43,12 +45,19 @@ function Products() {
                   <td>{qty}</td>
                   <td>
                     <button
-                      className="btn btn-danger"
+                      className="btn btn-danger px-2 py-1"
                       onClick={() => dispatch(deleteproduct(_id))}
                     >
-                      Delete
+                      <i className="fa-solid fa-circle-xmark"></i>
                     </button>
-                    <button className="btn btn-warning mx-3">Edit</button>
+                    <button
+                      className="btn btn-success mx-1 px-2 py-1"
+                      onClick={() =>
+                        navigate(`/edit-product/${name}`, { state: item })
+                      }
+                    >
+                      <i className="fa-solid fa-pen-to-square"></i>
+                    </button>
                   </td>
                 </tr>
               );

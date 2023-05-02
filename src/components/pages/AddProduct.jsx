@@ -1,10 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./AddProduct.css";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import { useDispatch } from "react-redux";
-import { createProduct } from "../redux/ProductSlice";
-import { useNavigate } from "react-router-dom";
+import { createProduct, editProduct } from "../redux/ProductSlice";
+import { useLocation, useNavigate } from "react-router-dom";
 
 let initialValues = {
   name: "",
@@ -17,9 +17,27 @@ const AddProduct = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const { state } = useLocation();
+  const [formValue, setFormValue] = useState(initialValues);
+
+  useEffect(() => {
+    setFormValue(initialValues);
+
+    if (state) {
+      setFormValue(state);
+    }
+  }, [state]);
+
   const HandleSubmit = (values) => {
-    dispatch(createProduct(values));
-    navigate("/product-list");
+    if (state) {
+      const { _id, price, name, qty, category } = values;
+      const updatedValue = { price, name, qty, category };
+      dispatch(editProduct({ id: _id, formValue: updatedValue }));
+      navigate("/product-list");
+    } else {
+      dispatch(createProduct(values));
+      navigate("/product-list");
+    }
   };
 
   const formValidation = Yup.object().shape({
@@ -36,14 +54,17 @@ const AddProduct = () => {
 
   return (
     <>
-      <div className="container p-4">
+      <div className="container p-4 mt-5">
         <div className="row">
           <div className="form-box col-md-6 m-auto p-4">
-            <h4 className="text-center mb-4">Add New Product</h4>
+            <h4 className="text-center mb-4">
+              {state ? "Edit Product" : "Add New Product"}
+            </h4>
             <Formik
-              initialValues={initialValues}
+              initialValues={formValue}
               onSubmit={HandleSubmit}
               validationSchema={formValidation}
+              enableReinitialize="true"
             >
               {() => {
                 return (
@@ -112,9 +133,15 @@ const AddProduct = () => {
                       />
                     </div>
                     <div className="text-center">
-                      <button type="submit" className="btn btn-primary w-50">
-                        Submit
-                      </button>
+                      {state ? (
+                        <button type="submit" className="btn btn-success w-50">
+                          Edit
+                        </button>
+                      ) : (
+                        <button type="submit" className="btn btn-primary w-50">
+                          Add
+                        </button>
+                      )}
                     </div>
                   </Form>
                 );
