@@ -1,16 +1,17 @@
 import React from "react";
 // import { NavLink } from "react-bootstrap";
 import "./Header.css";
+import { useDispatch } from "react-redux";
+import { openMenu } from "../components/redux/menuSlice";
 
 function Header() {
+  const dispatch = useDispatch();
+
   return (
-    <div className="text-start pt-1 ps-1">
+    <div className="text-start pt-1 ps-1 d-block d-md-none ">
       {/* <div className="text-start pt-1 ps-1 d-md-none d-block"> */}
-      <button
-        className="btn btn-primary"
-        style={{ backgroundColor: "rgb(8, 61, 123)" }}
-      >
-        Open
+      <button className="btn btn-primary" style={{ backgroundColor: "rgb(8, 61, 123)" }} onClick={() => dispatch(openMenu())}>
+        <i className="fa-solid fa-shop text-end" style={{ fontSize: "18px" }}></i>
       </button>
     </div>
     // <nav
