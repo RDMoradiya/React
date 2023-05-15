@@ -16,12 +16,6 @@
   padding: 24px;
 }
 
-/*checkbox to switch from sign up to login*/
-#chk {
-  display: none;
-}
-
-/*Login*/
 .login {
   position: relative;
   width: 100%;
@@ -48,32 +42,6 @@ label {
   border-radius: 4px;
 }
 
-/*Register*/
-.register {
-  background: rgb(24, 84, 153);
-  border-radius: 60% / 10%;
-  transform: translateY(18%);
-  transition: 0.8s ease-in-out;
-}
-
-.register label {
-  color: white;
-  transform: scale(0.6);
-}
-
-#chk:checked ~ .register {
-  transform: translateY(-58%);
-}
-
-#chk:checked ~ .register label {
-  transform: scale(1);
-  /* margin: 10% 0 5%; */
-}
-
-#chk:checked ~ .login label {
-  transform: scale(0.6);
-  margin: 5% 0 5%;
-}
 /*Button*/
 .form button {
   width: 100%;

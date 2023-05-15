@@ -1,21 +1,17 @@
-export const Links = [{
-    id: 1,
-    title: 'Home',
-    link: '/',
-},
-{
-    id: 2,
-    title: 'Dashboard',
-    link: '/dashboard',
-},
-{
-    id: 3,
-    title: 'Add Product',
-    link: '/add-product',
-},
-{
-    id: 4,
-    title: 'Product List',
-    link: '/product-list',
-},
+export const Links = [
+    {
+        id: 1,
+        title: 'Dashboard',
+        link: '/dashboard',
+    },
+    {
+        id: 2,
+        title: 'Add Product',
+        link: '/add-product',
+    },
+    {
+        id: 3,
+        title: 'Product List',
+        link: '/product-list',
+    },
 ]

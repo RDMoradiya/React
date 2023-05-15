@@ -10,15 +10,8 @@ function Header() {
   return (
     <div className="text-start pt-1 ps-1 d-block d-md-none ">
       {/* <div className="text-start pt-1 ps-1 d-md-none d-block"> */}
-      <button
-        className="btn btn-primary"
-        style={{ backgroundColor: "rgb(8, 61, 123)" }}
-        onClick={() => dispatch(openMenu())}
-      >
-        <i
-          className="fa-solid fa-shop text-end"
-          style={{ fontSize: "18px" }}
-        ></i>
+      <button className="btn btn-primary" style={{ backgroundColor: "rgb(8, 61, 123)" }} onClick={() => dispatch(openMenu())}>
+        <i className="fa-solid fa-shop text-end" style={{ fontSize: "18px" }}></i>
       </button>
     </div>
     // <nav
